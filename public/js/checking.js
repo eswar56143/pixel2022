@@ -1,22 +1,15 @@
-$(document).ready(function(){
-    // alert('hi hello');
-    function userAvailability(query='') {
-        // $("#loaderIcon").show();
-        $.ajax({
-            url: "/emailCheck",
-            data:{query:query},
-            dataType:'json',
-            type: "POST",
-            success:function(data){
-               alert(data);
-            },
-            error:function (){
-                alert("error")
-            }
-        });
-    }
-    $(document).on('keyup', '#email', function(){
-        let query = $(this).val();
-        userAvailability(query);
+function userAvailability() {
+    let email = $("#email").val();
+    $.ajax({
+        type:'POST',
+        url: '{{ route("emailCheck") }}',
+        datatype: 'json',
+        data : {
+            '_token' : '{{csrf_token()}}',
+            'email': email,
+        },
+        success: function(result){
+            $("#user-availability-status1").html(result);
+        },
     });
-});
+}
