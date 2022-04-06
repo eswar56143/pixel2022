@@ -73,12 +73,12 @@
                             </div>
                             <div class="input-box">
                                 <input type="email"  placeholder="Email" id="email"  name="email" onblur="userAvailability()" required="required"><br>
-                                <span id="user-availability-status1" style="font-size:15px; color: red; background-color: white" </span>
+                                <span id="user-availability-status1" style="font-size:15px; color: red; background-color: white"> </span>
                             </div>
 
                             <div class="input-box">
                                 <input type="tel" name="contact" placeholder="Phone Number" minlength="10" maxlength="10" required>
-    u                        </div>
+                            </div>
                             <div class="input-box">
                                 <select name="branch" style="color: #333;">
                                     <option value="Choose Your Branch" style="color: #333;">Choose Your Branch</option>

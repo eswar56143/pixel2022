@@ -50,6 +50,10 @@ form .input-box input,select{
 .input-box input:valid{
   border-color: #ebb52f;
 }
+.input-box .error {
+    margin-top: 5px;
+    color: red;
+}
 form .policy{
   display: flex;
   align-items: center;
@@ -88,3 +92,4 @@ form .text h3 a:hover{
   text-decoration: underline;
   width:60px;
 }
+

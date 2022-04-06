@@ -28,13 +28,14 @@ Route::get('/privacy-policy', function () {
     return view('privacyPolicy');
 });
 
+
 Route::post('/register', [registrationController::class, 'register']);
 Route::get('/payment', [paymentController::class, 'index'])->name('payment');
 Route::post('/payment', [paymentController::class, 'payment']);
 Route::post('/status', [paymentController::class, 'checkout']);
 Route::post('/emailCheck', [checkController::class, 'emailCheck'])->name('emailCheck');
 
-Route::get('/emailCheck', [checkController::class, 'emailCheck']);
+
 
 Route::get('/events/code-combat', [eventsController::class, 'codeCombat']);
 Route::get('/events/debug', [eventsController::class, 'debug']);
@@ -44,3 +45,5 @@ Route::get('/events/meme-gram', [eventsController::class, 'memeGram']);
 Route::get('/events/paper-presentation', [eventsController::class, 'paperPresentation']);
 Route::get('/events/natyakshetra', [eventsController::class, 'natyakshetra']);
 Route::get('/events/quiz', [eventsController::class, 'quiz']);
+
+

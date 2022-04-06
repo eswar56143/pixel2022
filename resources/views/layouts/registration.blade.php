@@ -30,7 +30,15 @@
                     <input type="text" name="name" placeholder="Full Name" required>
                 </div>
                 <div class="input-box">
-                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input type="email" id="email" name="email"
+                           onblur="userAvailability()" placeholder="Email Address" required><br>
+
+                </div>
+                <div class="error">
+                    <span id="user-availability-status1" style="color: #cc0033;
+                        font-family: Helvetica, Arial, sans-serif; font-size: 13px;font-weight: bold; line-height: 20px;
+                        ">
+                    </span>
                 </div>
                 <div class="input-box">
                     <input type="tel" name="contact" placeholder="Phone Number" pattern="[6-9]{1}[0-9]{9}" required>
@@ -55,7 +63,7 @@
                     <input type="text" name="location" placeholder="Your Town/City" required>
                 </div>
                 <div class="register" style="display: inline;">
-                    <button type="submit" style="background-color: transparent">
+                    <button type="submit" style="background-color: transparent" id="submit">
                         <a data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9c3" href="#" style="z-index: -1; opacity: 2"
 {{--                       onclick="document.getElementById('register').submit();"--}}
                        class="btn navi-2 w-inline-block">
