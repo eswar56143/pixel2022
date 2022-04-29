@@ -5,7 +5,6 @@
 <ol>
     <li><h3>php server</h3>  <a href="https://www.apachefriends.org/index.html">click here to download xampp </a></li> 
     <li><h3>Composer</h3>  <a href="https://getcomposer.org/download/">click here to download Composer </a></li> 
-    <li><h3>Nord.js</h3>  <a href="https://nodejs.org/en/download/">click here to download Nord.js </a></li>
 </ol>
 
 <h3>Steps to perform </h3>
