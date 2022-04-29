@@ -22,3 +22,6 @@
     <li>Run "php artisan serve"</li>
     <li>Now you can access the project from the address provided by "php artisan serve" </li> 
 </ul>
+
+
+** For more details contact me through email: mekalaeswar123456@gmail.com **
