@@ -12,7 +12,6 @@
 <ul>
     <li>Install laravel framework by running "composer global require laravel/installer" command in your terminal</li>
     <li>Pull InstaClone project from git or download the zip and extract in your local machine</li>
-    
     <li>Rename ".env.example" file to ".env" inside your project root (windows won't let you do it, so you have to open your console and change directory(cd) to your project root directory and run "mv .env.example .env" command)</li>
     <li>Modify the database information in ".env" file as "DB_CONNECTION={Your datbase details}"</li>    
     <li>Providde details such as mail server details, Razorpay details etc.</li>
