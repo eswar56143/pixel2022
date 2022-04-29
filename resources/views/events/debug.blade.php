@@ -3,8 +3,11 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Debugging -Pixel 2022</title>
     <meta content="Debugging" name="description" />
+    <meta name="_token" content="{{ csrf_token() }}">
+
 
     <!-- Styles -->
     <link href="{{asset('css/main-script.css')}}" rel="stylesheet" type="text/css" />
@@ -13,8 +16,10 @@
     <link href="{{ asset('css/preloader.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
+    <script src="{{ asset('js/preload.js') }}"></script>
+    <script src="{{ asset('js/checking.js') }}" ></script>
     <script src="{{asset('js/webfont.js')}}" type="text/javascript"></script>
-    <script src="{{ asset('js/preload.js') }}" defer></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
     <script type="text/javascript">
         WebFont.load({
@@ -24,23 +29,7 @@
         });
     </script>
 </head>
-
 <script type="text/javascript">
-    function userAvailability() {
-        let email = $("#email").val();
-        $.ajax({
-            type:'POST',
-            url: '{{ route("emailCheck") }}',
-            datatype: 'json',
-            data : {
-                '_token' : '{{csrf_token()}}',
-                'email': email,
-            },
-            success: function(result){
-                $("#user-availability-status1").html(result);
-            },
-        });
-    }
     ! function(o, c) {
         var n = c.documentElement,
             t = " w-mod-";
@@ -58,7 +47,7 @@
 </style>
 </head>
 
-<body id="body" onload="preload()">
+<body id="body">
 
 @include('layouts.preload')
 
@@ -98,7 +87,7 @@
         <div class="w-layout-grid main-grid">
             <div id="w-node-_6ca352aa-f456-95fb-2b6c-2f7d864c63d1-ce4392dc" class="content centered">
                 <div class="show-item-onload margin-paragraph" style="display: flex;flex-direction: row;align-items: center;">
-                    <img src="../images/event-icons/debug 1.svg" style="min-height: 10px; max-height: 120px;">
+                    <img src="../images/event-icons/debug.png" style="min-height: 10px; max-height: 120px;">
                     <h1 class="display-1 small">Debugging Apocalypse</h1>
                 </div>
             </div>
@@ -132,25 +121,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="register" style="max-width: 300px; min-width: 50px ;display: inline; padding: 1rem;">
-                        <a data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9c3" href="https://webflow.com/templates/html/conferencos-conference-website-template" target="_blank" class="btn  w-inline-block" style="pointer-events: none;">
-                            <div class="bg-color yellow" style="background-color: grey;"></div>
-                            <img src="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/5d73a5847149d55967004dcb_Orion_entrance.svg" alt="" class="btn-icon" />
-                            <div style="-webkit-transform: translate3d(0, 0, 0)
-                                    scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
-                                    skew(0, 0);
-                                    -moz-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
-                                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                                    -ms-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
-                                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                                    transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
-                                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);" class="btn-label">
-                                Register for Event
-                            </div>
-
-                        </a>
+                    <div class="register centered" style="max-width: 300px; min-width: 50px ;display: inline; padding: 1rem;">
+                        <p class="centered">Registrations for Debugging are closed.</p>
                     </div>
-                    <h4 style="font-size: 20px;align-content: center;"> &nbsp; &nbsp;*&nbsp;&nbsp;Registration will open soon..</h4>
+
                 </div>
                 <div style="height: 50px;">
 
@@ -165,7 +139,7 @@
                     <img src="../images/events/debug.png" style="width: 100%;margin-top: 1rem;max-height: 280px; margin-bottom: 1rem;" alt="">
 
                     <p>The Debugging apocalypse tests your logical and critical thinking skills, you will be provided with pieces of code that are faulty or incomplete and you are expected to rectify, correct and fill the code so that it works properly.</p>
-                    <p>This is an in person event, and you need to be present to participate, computers will be provided by us. </p>
+                    <p>This is an in person event you have to be present for the event, the event will be held using a pen and a paper. </p>
                     <p>
                     <h5>Registration Rules</h5>
                     <ul>
@@ -173,10 +147,10 @@
                             This is a one-person event.
                         </li>
                         <li>
-                            Payment of rupees 500 should be paid by one person from each team.
+                            Payment of rupees 200 should be paid by each individual.
                         </li>
                         <li>
-                            Register using the same E-mail Id that was provided during Pixel Registration.
+                            Pay using the same E-mail Id that was provided during Pixel Registration.
                         </li>
                     </ul>
                     </p>
@@ -184,7 +158,7 @@
                     <p>
                     <ul>
                         <li>
-                            Instructins will be provided before the start of the event itself.
+                            Instructions will be provided before the start of the event itself.
                         </li>
                         <li>
                             Knowledge of C Programming Language is Mandatory.
@@ -192,22 +166,20 @@
                         <li>
                             Any form of malpractice will not be tolerated and would result in termination of the candiate from the event,
                         </li>
-                        <li>
-                            Winners will be declared based on the fulfillment of the requirements present in the problem statement.
-                        </li>
+                        
                     </ul>
                     </p>
                     <div id="w-node-_147ce491-59b4-98ea-0255-9dd00d533727-cd4392e2">
                         <div class=" grid-contact border" style="padding: 1rem;">
                             <ul>
                                 <li>
-                                    <h6>Winners will receive exiting prizes.</h6>
+                                    <h6>Winners will receive exciting prizes.</h6>
                                 </li>
                                 <li>
                                     <h6>Participation Certificates will be awarded to every participant.</h6>
                                 </li>
                                 <li>
-                                    <h6>Food will be Provided.</h6>
+                                    <h6>Lunch will be Provided.</h6>
                                 </li>
                             </ul>
                         </div>
@@ -235,17 +207,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="w-node-_147ce491-59b4-98ea-0255-9dd00d533734-cd4392e2" class="section padding-2rem">
+                            <div id="w-node-_147ce491-59b4-98ea-0255-9dd00d533734-cd4392e2" class="section padding-2rem centeredx`">
                                 <div class="line-left"></div>
                                 <div class="content centered">
                                     <div class="show-item-onload margin-paragraph">
                                         <div class="font-yellow uppercase">N Bhavya sri</div>
                                     </div>
-                                    <div class="show-item-onload">
-                                        <a href="mailto:nalluribhavyasri123@gmail.com" class="link-block w-inline-block">
-                                            <div class="uppercase">
-                                                <p style="color:white">Mail Id:</p>nalluribhavyasri123@gmail.com</div>
-                                        </a>
+
+                                    <div class="show-item-onload margin-paragraph"><br>
+                                        <div class="font-yellow uppercase">B ANIL KUMAR</div>
                                     </div>
                                 </div>
                             </div>
@@ -281,6 +251,10 @@
 <!-- Registration  Page -->
 @include('layouts.registration')
 <!-- Registration Page -->
+
+<!-- CDRegistration -->
+@include('layouts.CDRegistration')
+<!-- CDRegistration -->
 
 
 <script src="{{asset('js/jquery-3.5.1.min.js')}}?site=5d70f6f0c8ca5de04b4392d5" type="text/javascript" crossorigin="anonymous"></script>

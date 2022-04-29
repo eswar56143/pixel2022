@@ -3,8 +3,11 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Hackathon-Pixel 2022</title>
     <meta content="Hackathon" name="description" />
+    <meta name="_token" content="{{ csrf_token() }}">
+
 
     <!-- Styles -->
     <link href="{{asset('css/main-script.css')}}" rel="stylesheet" type="text/css" />
@@ -13,8 +16,10 @@
     <link href="{{ asset('css/preloader.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
+    <script src="{{ asset('js/preload.js') }}"></script>
     <script src="{{asset('js/webfont.js')}}" type="text/javascript"></script>
-    <script src="{{ asset('js/preload.js') }}" defer></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="{{ asset('js/checking.js') }}" ></script>
 
     <script type="text/javascript">
         WebFont.load({
@@ -24,23 +29,44 @@
         });
     </script>
 </head>
+<script>
+    window.onload = function() {
+        createOptions(1);
+    };
+
+    function createOptions(id) {
+
+      
+        document.getElementById('team-member-details').style.display = "none";
+        if ({{$event->count()}} == 1) {
+            var teamDetails = document.getElementById("team-details");
+            teamDetails.style.display = "none";
+
+        }
+        else {
+            const select = document.getElementById("team-size");
+            select.setAttribute('required', '');
+            const teamName = document.getElementById("t_name");
+            teamName.setAttribute('required', '');
+
+
+            var str = " <option value='' style='color: #333;''>Select the Team Size</option>"
+            @foreach($event as $eve)
+                str += "<option + value=" + "'[ " + {{$eve->team_size}} + "," + {{$eve->amount}} + "]' " + " style='color: #333;'>" + {{$eve->team_size}} +
+                    " Members - Rs." + {{$eve->amount}} + "</option>";
+
+            @endforeach
+
+            document.getElementById("team-size").innerHTML = str;
+        }
+        var payableAmount = document.getElementById('amount');
+        payableAmount.innerHTML = '';
+
+    }
+
+</script>
 
 <script type="text/javascript">
-    function userAvailability() {
-        let email = $("#email").val();
-        $.ajax({
-            type:'POST',
-            url: '{{ route("emailCheck") }}',
-            datatype: 'json',
-            data : {
-                '_token' : '{{csrf_token()}}',
-                'email': email,
-            },
-            success: function(result){
-                $("#user-availability-status1").html(result);
-            },
-        });
-    }
     ! function(o, c) {
         var n = c.documentElement,
             t = " w-mod-";
@@ -58,7 +84,7 @@
 </style>
 </head>
 
-<body id="body" onload="preload()">
+<body id="body">
 
 @include('layouts.preload')
 <!-- header -->
@@ -83,66 +109,9 @@
             </div>
         </a>
     </div>
-    <nav role="navigation" class="nav-menu w-nav-menu">
-        <!-- <div class="nav-menu-wrapper margin-tablet">
-            <div class="display-none-mobile">
-                <div class="caption font-white">Share</div>
-                <div class="separator-line-horiz white"></div>
-            </div>
-            <a href="https://www.instagram.com/fouroomdotco/" target="_blank" class="icn-social-small facebook w-inline-block"></a>
-            <a href="https://www.instagram.com/fouroomdotco/" target="_blank" class="icn-social-small twitter w-inline-block"></a>
-            <a href="https://www.instagram.com/fouroomdotco/" target="_blank" class="icn-social-small linkedin w-inline-block"></a>
-        </div> -->
-        <div class="nav-menu-wrapper" style="margin-left: auto;
-                padding-right: 5px;">
-            <a href="/#about" class="btn navi-1 w-inline-block">
-                <div class="btn-label">About</div>
-                <div class="btn-hover purple"></div>
-            </a>
-
-            <a href="/#events" class="btn navi-1 w-inline-block">
-                <div class="btn-label">Events</div>
-                <div class="btn-hover purple"></div>
-            </a>
-            <a href="/#schedule" class="btn navi-1 w-inline-block">
-                <div class="btn-label">Event-Schedule</div>
-                <div class="btn-hover purple"></div>
-            </a>
-            <a href="/#gallery" class="btn navi-1 w-inline-block">
-                <div class="btn-label">Gallery</div>
-                <div class="btn-hover purple"></div>
-            </a>
-            <a href="/#recs" class="btn navi-1 w-inline-block">
-                <div class="btn-label">Sponsers</div>
-                <div class="btn-hover purple"></div>
-            </a>
-            <a data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9bf" href="/#contactUs" class="btn navi-1 w-inline-block">
-                <div class="btn-label">Contact Us</div>
-                <div class="btn-hover purple"></div>
-            </a>
-            <a data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9bf1" href="#" class="btn navi-1 w-inline-block">
-                <div class="btn-label">FAQ</div>
-                <div class="btn-hover purple"></div>
-            </a>
-
-            <a data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9bf2" href="#" class="btn navi-2 w-inline-block">
-                <div class="bg-color yellow"></div>
-                <img src="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/5d73a5847149d55967004dcb_Orion_entrance.svg" alt="" class="btn-icon" />
-                <div style="-webkit-transform: translate3d(0, 0, 0)
-                        scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
-                        skew(0, 0);
-                        -moz-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
-                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                        -ms-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
-                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                        transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
-                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);" class="btn-label">
-                    Register Now
-                </div>
-
-            </a>
-        </div>
-    </nav>
+        <!-- navbar -->
+        @include('layouts.navbar')
+    <!-- navbar end -->
     <!-- TODO -->
     <div class="menu-button w-nav-button">
         <div class="w-icon-nav-menu" style="font-size: 40px;"></div>
@@ -154,7 +123,7 @@
         <div class="w-layout-grid main-grid">
             <div id="w-node-_6ca352aa-f456-95fb-2b6c-2f7d864c63d1-ce4392dc" class="content centered">
                 <div class="show-item-onload margin-paragraph" style="display: flex;flex-direction: row;align-items: center;">
-                    <img src="../images/event-icons/coding.svg" style="min-height: 10px; max-height: 120px;">
+                    <img src="../images/event-icons/hack.png" style="min-height: 10px; max-height: 120px;">
                     <h1 class="display-1 small">Online Hackathon</h1>
                 </div>
             </div>
@@ -172,7 +141,7 @@
                             <div class="content horizontal middle ">
                                 <img src="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/5d74eab37a6dfa8086237033_Orion_timekeeping.svg " alt=" " class="icn-32 " />
                                 <div class="margin-left ">
-                                    <h5 class="display-3 font-yellow ">April 29, 2022</h5>
+                                    <h5 class="display-3 font-yellow ">April 25-26, 2022</h5>
                                     <div>Dates</div>
                                 </div>
                             </div>
@@ -188,27 +157,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="register" style="max-width: 300px; min-width: 50px ;display: inline; padding: 1rem;">
-                        <a data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9c3" href="https://webflow.com/templates/html/conferencos-conference-website-template" target="_blank" class="btn  w-inline-block" style="pointer-events: none;">
-                            <div class="bg-color yellow" style="background-color: grey;"></div>
-                            <img src="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/5d73a5847149d55967004dcb_Orion_entrance.svg" alt="" class="btn-icon" />
-                            <div style="-webkit-transform: translate3d(0, 0, 0)
-                                    scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
-                                    skew(0, 0);
-                                    -moz-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
-                                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                                    -ms-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
-                                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                                    transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
-                                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);" class="btn-label">
-                                Register for event
-                            </div>
-
-                        </a>
-                    </div>
-                    <h4 style="font-size: 20px;align-content: center;"> &nbsp; &nbsp;*&nbsp;&nbsp;Registration will open soon..</h4>
-
-                </div>
+                    <div class="register centered" style="max-width: 300px; min-width: 50px ;display: inline; padding: 1rem;">
+                        <p class="centered">Registrations for hackthon are closed.</p>
+                        </div>
+               </div>
                 <div style="height: 50px;">
 
                 </div>
@@ -230,11 +182,21 @@
                             A team can contain 2 to 4 members.
                         </li>
                         <li>
-                            Payment of rupees 500 should be paid by one person from each team.
+                            Payment of rupees 350 should be paid by each team.
                         </li>
                         <li>
-                            Register using the same E-mail Id that was provided during Pixel Registration.
+                            The last date for the registration is April 24rd 5:00PM.
                         </li>
+                        <li>
+                            The problem statement is sent to your registered email on April 24rd 6:00PM.
+                        </li>
+                        <li>
+                            The solution must be sent to <a href="mailto:pixel.jntua@gmail.com">pixel.jntua@gmail.com</a> on or before April 26th 6:00PM.
+                        </li>
+                        <li>
+                            Pay using the same E-mail Id that was provided during Pixel Registration.
+                        </li>
+                     
                     </ul>
                     </p>
                     <h5>Event Rules</h5>
@@ -249,20 +211,19 @@
                         <li>
                             Winners will be declared based on the fulfillment of the requirements present in the problem statement.
                         </li>
+
                     </ul>
                     </p>
                     <div id="w-node-_147ce491-59b4-98ea-0255-9dd00d533727-cd4392e2">
                         <div class=" grid-contact border" style="padding: 1rem;">
                             <ul>
                                 <li>
-                                    <h6>Winners will receive exiting prizes.</h6>
+                                    <h6>Winners will receive exciting prizes.</h6>
                                 </li>
                                 <li>
                                     <h6>Participation Certificates will be awarded to every participant.</h6>
                                 </li>
-                                <li>
-                                    <h6>Food will be Provided.</h6>
-                                </li>
+
                             </ul>
                         </div>
                         <div class="hover-line white" style="margin-bottom: -2.5rem; padding: 0.01rem;"></div>
@@ -297,10 +258,9 @@
                                     <div class="show-item-onload margin-paragraph">
                                         <div class="font-yellow uppercase">M Farheen</div>
                                     </div>
-                                    <div class="show-item-onload">
-                                        <div class="uppercase">
-                                            <p style="color: white;">Mail Id:</p><a href="mailto:farheenmhmd05@gmail.com" class="link-block w-inline-block">farheenmhmd05@gmail.com9</a>
-                                        </div>
+
+                                    <div class="show-item-onload margin-paragraph">
+                                        <div class="font-yellow uppercase"><br>K BHANU PRASANA</div>
                                     </div>
                                 </div>
                             </div>
@@ -339,6 +299,9 @@
 @include('layouts.registration')
 <!-- Registration Page -->
 
+<!-- EventRegistration -->
+@include('layouts.team-details')
+<!-- EventRegistration -->
 
 <script src="{{asset('js/jquery-3.5.1.min.js')}}?site=5d70f6f0c8ca5de04b4392d5" type="text/javascript" crossorigin="anonymous"></script>
 <script src="{{asset('js/main-script.js')}}" type="text/javascript"></script>

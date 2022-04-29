@@ -1,9 +1,9 @@
-<div class="section" id="contactUs" style="padding: 0rem; margin-bottom: 2em">
+<div class="section" id="contactUs" style="padding: 1.5rem; ">
     <div class="bg-color dark-grey"></div>
 
 
-    <div class="container">
-        <h2 class="display-2 small content centered" style="margin: 2rem;">Contact US </h2>
+    <div class="container " >
+        <h2 class="display-2 small content centered" style="margin: 2rem;">Contact Us </h2>
 
         <div class="w-layout-grid
                                             grid-conference-info border
@@ -16,19 +16,10 @@
                                                     centered">
                     <div class="font-yellow
                                                         uppercase
-                                                        margin-paragraph">Join Events
+                                                        margin-paragraph">Address
                     </div>
-                    <div class="margin-paragraph">Become part of eventws, contact us today to take the first step of your journey with us!
-                    </div>
-                    <a href="mailto:pixel.jntua@gmail.com" class="link-block
-                                                        margin-right
-                                                        w-inline-block">
-                        <div class="uppercase
-                                                            font-white">Contact Us
-                        </div>
-                        <div class="hover-line
-                                                            white"></div>
-                    </a>
+                    <div class="margin-paragraph">JNTUACEA,Sir Mokshagundam Vishveshwariah Road, Anantapur, Andhra Pradesh 515002    </div>
+                    
                 </div>
             </div>
             <div id="w-node-_234090fd-b8e2-b374-7a8d-2642bc85cd60-cd4392e2" class="section
@@ -38,7 +29,7 @@
                                                     centered">
                     <div class="font-yellow
                                                         uppercase
-                                                        margin-paragraph">Mail Ids
+                                                        margin-paragraph">Mail Id
                     </div>
                     <a href="mailto:pixel.jntua@gmail.com" target="_blank" class="horizontal
                                                         centered
@@ -68,17 +59,17 @@
         <div class="content centered">
             <div class="horizontal
                                                 margin-paragraph_2x">
-                <a href="https://www.instagram.com/pixel2022/" target="_blank" class="icn-social-big
+                <a href="https://www.instagram.com/pixel.2k22/" target="_blank" class="icn-social-big
                                                     facebook
                                                     w-inline-block"></a>
-                <a href="https://www.instagram.com/pixel2022/" target="_blank" class="icn-social-big
+                <a href="https://twitter.com/pixel_jntuacea" target="_blank" class="icn-social-big
                                                     twitter
                                                     w-inline-block"></a>
-                <a href="https://www.instagram.com/pixel_jntuacea" target="_blank" class="icn-social-big
+                <a href="mailto:pixel.jntua@gmail.com" target="_blank" class="icn-social-big
                                                     linkedin
                                                     w-inline-block"></a>
             </div>
-            <div class="horizontal">
+            <div class="horizontal centered">
 
                 <a href="/" class="link-block
                                                     margin-right
@@ -88,7 +79,7 @@
                     <div class="hover-line
                                                         white"></div>
                 </a>
-                <a href="#events" class="link-block
+                <a href="/#events" class="link-block
                                                     margin-right
                                                     w-inline-block" data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9bf">
                     <div class="uppercase
@@ -96,7 +87,7 @@
                     <div class="hover-line
                                                         white"></div>
                 </a>
-                <a href="#gallery" class="link-block
+                <a href="/#gallery" class="link-block
                                                     margin-right
                                                     w-inline-block" data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9bf">
                     <div class="uppercase
@@ -127,6 +118,15 @@
                         w-inline-block">
                     <div class="uppercase
                             font-white">Privacy Policy
+                    </div>
+                    <div class="hover-line
+                            white"></div>
+                </a>
+                <a href="/refund-policy" class="link-block
+                        margin-right
+                        w-inline-block">
+                    <div class="uppercase
+                            font-white">Refund Policy
                     </div>
                     <div class="hover-line
                             white"></div>

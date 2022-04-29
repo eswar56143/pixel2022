@@ -14,45 +14,45 @@
         return t[r].call(i.exports, i, i.exports, n), (i.l = !0), i.exports;
     }
     (n.m = t),
-    (n.c = e),
-    (n.d = function(t, e, r) {
-        n.o(t, e) || Object.defineProperty(t, e, { enumerable: !0, get: r });
-    }),
-    (n.r = function(t) {
-        "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(t, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(t, "__esModule", { value: !0 });
-    }),
-    (n.t = function(t, e) {
-        if ((1 & e && (t = n(t)), 8 & e)) return t;
-        if (4 & e && "object" == typeof t && t && t.__esModule) return t;
-        var r = Object.create(null);
-        if ((n.r(r), Object.defineProperty(r, "default", { enumerable: !0, value: t }), 2 & e && "string" != typeof t))
-            for (var i in t)
-                n.d(
-                    r,
-                    i,
-                    function(e) {
-                        return t[e];
-                    }.bind(null, i)
-                );
-        return r;
-    }),
-    (n.n = function(t) {
-        var e =
-            t && t.__esModule ?
+        (n.c = e),
+        (n.d = function(t, e, r) {
+            n.o(t, e) || Object.defineProperty(t, e, { enumerable: !0, get: r });
+        }),
+        (n.r = function(t) {
+            "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(t, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(t, "__esModule", { value: !0 });
+        }),
+        (n.t = function(t, e) {
+            if ((1 & e && (t = n(t)), 8 & e)) return t;
+            if (4 & e && "object" == typeof t && t && t.__esModule) return t;
+            var r = Object.create(null);
+            if ((n.r(r), Object.defineProperty(r, "default", { enumerable: !0, value: t }), 2 & e && "string" != typeof t))
+                for (var i in t)
+                    n.d(
+                        r,
+                        i,
+                        function(e) {
+                            return t[e];
+                        }.bind(null, i)
+                    );
+            return r;
+        }),
+        (n.n = function(t) {
+            var e =
+                t && t.__esModule ?
 
-            function() {
-                return t.default;
-            } :
-            function() {
-                return t;
-            };
-        return n.d(e, "a", e), e;
-    }),
-    (n.o = function(t, e) {
-        return Object.prototype.hasOwnProperty.call(t, e);
-    }),
-    (n.p = ""),
-    n((n.s = 121));
+                    function() {
+                        return t.default;
+                    } :
+                    function() {
+                        return t;
+                    };
+            return n.d(e, "a", e), e;
+        }),
+        (n.o = function(t, e) {
+            return Object.prototype.hasOwnProperty.call(t, e);
+        }),
+        (n.p = ""),
+        n((n.s = 121));
 })([
     function(t, e) {
         t.exports = function(t) {
@@ -72,50 +72,50 @@
         var o = n(171);
         Object.keys(o).forEach(function(t) {
             "default" !== t &&
-                "__esModule" !== t &&
-                (Object.prototype.hasOwnProperty.call(i, t) ||
-                    Object.defineProperty(e, t, {
-                        enumerable: !0,
-                        get: function() {
-                            return o[t];
-                        },
-                    }));
+            "__esModule" !== t &&
+            (Object.prototype.hasOwnProperty.call(i, t) ||
+                Object.defineProperty(e, t, {
+                    enumerable: !0,
+                    get: function() {
+                        return o[t];
+                    },
+                }));
         });
         var a = n(85);
         Object.keys(a).forEach(function(t) {
             "default" !== t &&
-                "__esModule" !== t &&
-                (Object.prototype.hasOwnProperty.call(i, t) ||
-                    Object.defineProperty(e, t, {
-                        enumerable: !0,
-                        get: function() {
-                            return a[t];
-                        },
-                    }));
+            "__esModule" !== t &&
+            (Object.prototype.hasOwnProperty.call(i, t) ||
+                Object.defineProperty(e, t, {
+                    enumerable: !0,
+                    get: function() {
+                        return a[t];
+                    },
+                }));
         });
         var u = n(172);
         Object.keys(u).forEach(function(t) {
             "default" !== t &&
-                "__esModule" !== t &&
-                (Object.prototype.hasOwnProperty.call(i, t) ||
-                    Object.defineProperty(e, t, {
-                        enumerable: !0,
-                        get: function() {
-                            return u[t];
-                        },
-                    }));
+            "__esModule" !== t &&
+            (Object.prototype.hasOwnProperty.call(i, t) ||
+                Object.defineProperty(e, t, {
+                    enumerable: !0,
+                    get: function() {
+                        return u[t];
+                    },
+                }));
         });
         var c = n(173);
         Object.keys(c).forEach(function(t) {
             "default" !== t &&
-                "__esModule" !== t &&
-                (Object.prototype.hasOwnProperty.call(i, t) ||
-                    Object.defineProperty(e, t, {
-                        enumerable: !0,
-                        get: function() {
-                            return c[t];
-                        },
-                    }));
+            "__esModule" !== t &&
+            (Object.prototype.hasOwnProperty.call(i, t) ||
+                Object.defineProperty(e, t, {
+                    enumerable: !0,
+                    get: function() {
+                        return c[t];
+                    },
+                }));
         });
         var s = r(n(174));
         e.IX2EngineActionTypes = s;
@@ -148,60 +148,60 @@
 
         function h(t) {
             r.env() && (f(t.design) && c.on("__wf_design", t.design), f(t.preview) && c.on("__wf_preview", t.preview)),
-                f(t.destroy) && c.on("__wf_destroy", t.destroy),
-                t.ready &&
-                f(t.ready) &&
-                (function(t) {
-                    if (p) return void t.ready();
-                    if (l.contains(o, t.ready)) return;
-                    o.push(t.ready);
-                })(t);
+            f(t.destroy) && c.on("__wf_destroy", t.destroy),
+            t.ready &&
+            f(t.ready) &&
+            (function(t) {
+                if (p) return void t.ready();
+                if (l.contains(o, t.ready)) return;
+                o.push(t.ready);
+            })(t);
         }
 
         function E(t) {
             f(t.design) && c.off("__wf_design", t.design),
-                f(t.preview) && c.off("__wf_preview", t.preview),
-                f(t.destroy) && c.off("__wf_destroy", t.destroy),
-                t.ready &&
-                f(t.ready) &&
-                (function(t) {
-                    o = l.filter(o, function(e) {
-                        return e !== t.ready;
-                    });
-                })(t);
+            f(t.preview) && c.off("__wf_preview", t.preview),
+            f(t.destroy) && c.off("__wf_destroy", t.destroy),
+            t.ready &&
+            f(t.ready) &&
+            (function(t) {
+                o = l.filter(o, function(e) {
+                    return e !== t.ready;
+                });
+            })(t);
         }
         (d.config.hideBackface = !1),
-        (d.config.keepInherited = !0),
-        (r.define = function(t, e, n) {
-            i[t] && E(i[t]);
-            var r = (i[t] = e(u, l, n) || {});
-            return h(r), r;
-        }),
-        (r.require = function(t) {
-            return i[t];
-        }),
-        (r.push = function(t) {
-            p ? f(t) && t() : a.push(t);
-        }),
-        (r.env = function(t) {
-            var e = window.__wf_design,
-                n = void 0 !== e;
-            return t ?
-                "design" === t ?
-                n && e :
-                "preview" === t ?
-                n && !e :
-                "slug" === t ?
-                n && window.__wf_slug :
-                "editor" === t ?
-                window.WebflowEditor :
-                "test" === t ?
-                window.__wf_test :
-                "frame" === t ?
-                window !== window.top :
-                void 0 :
-                n;
-        });
+            (d.config.keepInherited = !0),
+            (r.define = function(t, e, n) {
+                i[t] && E(i[t]);
+                var r = (i[t] = e(u, l, n) || {});
+                return h(r), r;
+            }),
+            (r.require = function(t) {
+                return i[t];
+            }),
+            (r.push = function(t) {
+                p ? f(t) && t() : a.push(t);
+            }),
+            (r.env = function(t) {
+                var e = window.__wf_design,
+                    n = void 0 !== e;
+                return t ?
+                    "design" === t ?
+                        n && e :
+                        "preview" === t ?
+                            n && !e :
+                            "slug" === t ?
+                                n && window.__wf_slug :
+                                "editor" === t ?
+                                    window.WebflowEditor :
+                                    "test" === t ?
+                                        window.__wf_test :
+                                        "frame" === t ?
+                                            window !== window.top :
+                                            void 0 :
+                    n;
+            });
         var g,
             _ = navigator.userAgent.toLowerCase(),
             m = (r.env.touch = "ontouchstart" in window || (window.DocumentTouch && document instanceof window.DocumentTouch)),
@@ -209,9 +209,9 @@
             I = (r.env.ios = /(ipod|iphone|ipad)/.test(_));
         (r.env.safari = /safari/.test(_) && !y && !I),
         m &&
-            s.on("touchstart mousedown", function(t) {
-                g = t.target;
-            }),
+        s.on("touchstart mousedown", function(t) {
+            g = t.target;
+        }),
             (r.validClick = m ?
 
                 function(t) {
@@ -233,16 +233,16 @@
                     });
                 })),
                 t && e && t.on(e, r.up),
-                (r.on = function(t) {
-                    "function" == typeof t && (l.contains(n, t) || n.push(t));
-                }),
-                (r.off = function(t) {
-                    n = arguments.length ?
-                        l.filter(n, function(e) {
-                            return e !== t;
-                        }) : [];
-                }),
-                r
+                    (r.on = function(t) {
+                        "function" == typeof t && (l.contains(n, t) || n.push(t));
+                    }),
+                    (r.off = function(t) {
+                        n = arguments.length ?
+                            l.filter(n, function(e) {
+                                return e !== t;
+                            }) : [];
+                    }),
+                    r
             );
         }
 
@@ -254,11 +254,11 @@
             b && (b.reject(), c.off("load", b.resolve)), (b = new u.Deferred()), c.on("load", b.resolve);
         }
         (r.resize = w(c, T)),
-        (r.scroll = w(c, "scroll.webflow resize.webflow orientationchange.webflow load.webflow")),
-        (r.redraw = w()),
-        (r.location = function(t) {
-            window.location = t;
-        }),
+            (r.scroll = w(c, "scroll.webflow resize.webflow orientationchange.webflow load.webflow")),
+            (r.redraw = w()),
+            (r.location = function(t) {
+                window.location = t;
+            }),
         r.env() && (r.location = function() {}),
             (r.ready = function() {
                 (p = !0), v ? ((v = !1), l.each(i, h)) : l.each(o, O), l.each(a, O), r.resize.up();
@@ -408,30 +408,30 @@
         var r =
             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ?
 
-            function(t) {
-                return typeof t;
-            } :
-            function(t) {
-                return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t;
-            };
+                function(t) {
+                    return typeof t;
+                } :
+                function(t) {
+                    return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t;
+                };
         (e.clone = c),
-        (e.addLast = l),
-        (e.addFirst = d),
-        (e.removeLast = p),
-        (e.removeFirst = v),
-        (e.insert = h),
-        (e.removeAt = E),
-        (e.replaceAt = g),
-        (e.getIn = _),
-        (e.set = m),
-        (e.setIn = y),
-        (e.update = I),
-        (e.updateIn = b),
-        (e.merge = T),
-        (e.mergeDeep = w),
-        (e.mergeIn = O),
-        (e.omit = A),
-        (e.addDefaults = S);
+            (e.addLast = l),
+            (e.addFirst = d),
+            (e.removeLast = p),
+            (e.removeFirst = v),
+            (e.insert = h),
+            (e.removeAt = E),
+            (e.replaceAt = g),
+            (e.getIn = _),
+            (e.set = m),
+            (e.setIn = y),
+            (e.update = I),
+            (e.updateIn = b),
+            (e.merge = T),
+            (e.mergeDeep = w),
+            (e.mergeIn = O),
+            (e.omit = A),
+            (e.addDefaults = S);
         /*!
          * Timm
          *
@@ -612,24 +612,24 @@
             return (n =
                 "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ?
 
-                function(t) {
-                    return typeof t;
-                } :
-                function(t) {
-                    return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t;
-                })(t);
+                    function(t) {
+                        return typeof t;
+                    } :
+                    function(t) {
+                        return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t;
+                    })(t);
         }
 
         function r(e) {
             return (
                 "function" == typeof Symbol && "symbol" === n(Symbol.iterator) ?
-                (t.exports = r = function(t) {
-                    return n(t);
-                }) :
-                (t.exports = r = function(t) {
-                    return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : n(t);
-                }),
-                r(e)
+                    (t.exports = r = function(t) {
+                        return n(t);
+                    }) :
+                    (t.exports = r = function(t) {
+                        return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : n(t);
+                    }),
+                    r(e)
             );
         }
         t.exports = r;
@@ -679,7 +679,7 @@
                         }
                         return t;
                     }),
-                n.apply(this, arguments)
+                    n.apply(this, arguments)
             );
         }
         t.exports = n;
@@ -739,10 +739,10 @@
                     return arguments;
                 })()
             ) ?
-            r :
-            function(t) {
-                return i(t) && a.call(t, "callee") && !u.call(t, "callee");
-            };
+                r :
+                function(t) {
+                    return i(t) && a.call(t, "callee") && !u.call(t, "callee");
+                };
         t.exports = c;
     },
     function(t, e, n) {
@@ -866,14 +866,14 @@
                 var e = !0;
                 return (
                     p(),
-                    l.push(t),
-                    function() {
-                        if (e) {
-                            (e = !1), p();
-                            var n = l.indexOf(t);
-                            l.splice(n, 1);
+                        l.push(t),
+                        function() {
+                            if (e) {
+                                (e = !1), p();
+                                var n = l.indexOf(t);
+                                l.splice(n, 1);
+                            }
                         }
-                    }
                 );
             }
 
@@ -891,34 +891,34 @@
             }
             return (
                 E({ type: o.INIT }),
-                ((u = {
-                    dispatch: E,
-                    subscribe: h,
-                    getState: v,
-                    replaceReducer: function(t) {
-                        if ("function" != typeof t) throw new Error("Expected the nextReducer to be a function.");
-                        (c = t), E({ type: o.INIT });
-                    },
-                })[i.default] = function() {
-                    var t,
-                        e = h;
-                    return (
-                        ((t = {
-                            subscribe: function(t) {
-                                if ("object" != typeof t) throw new TypeError("Expected the observer to be an object.");
+                    ((u = {
+                        dispatch: E,
+                        subscribe: h,
+                        getState: v,
+                        replaceReducer: function(t) {
+                            if ("function" != typeof t) throw new Error("Expected the nextReducer to be a function.");
+                            (c = t), E({ type: o.INIT });
+                        },
+                    })[i.default] = function() {
+                        var t,
+                            e = h;
+                        return (
+                            ((t = {
+                                subscribe: function(t) {
+                                    if ("object" != typeof t) throw new TypeError("Expected the observer to be an object.");
 
-                                function n() {
-                                    t.next && t.next(v());
-                                }
-                                return n(), { unsubscribe: e(n) };
-                            },
-                        })[i.default] = function() {
-                            return this;
-                        }),
-                        t
-                    );
-                }),
-                u
+                                    function n() {
+                                        t.next && t.next(v());
+                                    }
+                                    return n(), { unsubscribe: e(n) };
+                                },
+                            })[i.default] = function() {
+                                return this;
+                            }),
+                                t
+                        );
+                    }),
+                    u
             );
         }
     },
@@ -1107,7 +1107,7 @@
                 }
             return e;
         }),
-        (t.exports = h);
+            (t.exports = h);
     },
     function(t, e, n) {
         var r = n(57);
@@ -1355,15 +1355,15 @@
                             p = (f[t] = s[t] = new a());
                         return (
                             (p.constructor = s),
-                            (s.mixin = function(e) {
-                                return (f[t] = s[t] = r(s, e)[t]), s;
-                            }),
-                            (s.open = function(t) {
-                                if (((l = {}), o(t) ? (l = t.call(s, p, d, s, u)) : i(t) && (l = t), i(l)))
-                                    for (var n in l) e.call(l, n) && (p[n] = l[n]);
-                                return o(p.init) || (p.init = u), s;
-                            }),
-                            s.open(c)
+                                (s.mixin = function(e) {
+                                    return (f[t] = s[t] = r(s, e)[t]), s;
+                                }),
+                                (s.open = function(t) {
+                                    if (((l = {}), o(t) ? (l = t.call(s, p, d, s, u)) : i(t) && (l = t), i(l)))
+                                        for (var n in l) e.call(l, n) && (p[n] = l[n]);
+                                    return o(p.init) || (p.init = u), s;
+                                }),
+                                s.open(c)
                         );
                     };
                 })("prototype", {}.hasOwnProperty),
@@ -1647,25 +1647,25 @@
                             if ("object" == o) {
                                 var s = 0;
                                 p.call(
-                                        this,
-                                        t,
-                                        function(t, e) {
-                                            t.span > s && (s = t.span), t.stop(), t.animate(e);
-                                        },
-                                        function(t) {
-                                            "wait" in t && (s = c(t.wait, 0));
-                                        }
-                                    ),
+                                    this,
+                                    t,
+                                    function(t, e) {
+                                        t.span > s && (s = t.span), t.stop(), t.animate(e);
+                                    },
+                                    function(t) {
+                                        "wait" in t && (s = c(t.wait, 0));
+                                    }
+                                ),
                                     d.call(this),
-                                    s > 0 && ((this.timer = new W({ duration: s, context: this })), (this.active = !0), e && (this.timer.complete = a));
+                                s > 0 && ((this.timer = new W({ duration: s, context: this })), (this.active = !0), e && (this.timer.complete = a));
                                 var v = this,
                                     h = !1,
                                     E = {};
                                 P(function() {
                                     p.call(v, t, function(t) {
-                                            t.active && ((h = !0), (E[t.name] = t.nextStyle));
-                                        }),
-                                        h && v.$el.css(E);
+                                        t.active && ((h = !0), (E[t.name] = t.nextStyle));
+                                    }),
+                                    h && v.$el.css(E);
                                 });
                             }
                         }
@@ -1754,7 +1754,7 @@
                         }
                         N.backface && H.hideBackface && z(this.el, N.backface.css, "hidden");
                     }),
-                    m("add", i),
+                        m("add", i),
                         m("start", o),
                         m("wait", function(t) {
                             (t = c(t, 0)), this.active ? this.queue.push({ options: t }) : ((this.timer = new W({ duration: t, context: this, complete: a })), (this.active = !0));
@@ -1790,8 +1790,8 @@
                             i.each(function(t, e) {
                                 o.push(n(e, r));
                             }),
-                            (this.children = o),
-                            this
+                                (this.children = o),
+                                this
                         );
                     };
                 }),
@@ -1814,7 +1814,7 @@
                         (this.$el = t), (this.el = t[0]);
                         var o = e[0];
                         n[2] && (o = n[2]),
-                            K[o] && (o = K[o]),
+                        K[o] && (o = K[o]),
                             (this.name = o),
                             (this.type = n[1]),
                             (this.duration = c(e[1], this.duration, i)),
@@ -1829,80 +1829,80 @@
                             (this.unit = r.unit || this.unit || H.defaultUnit),
                             (this.angle = r.angle || this.angle || H.defaultAngle),
                             H.fallback || r.fallback ?
-                            (this.animate = this.fallback) :
-                            ((this.animate = this.transition), (this.string = this.name + A + this.duration + "ms" + ("ease" != this.ease ? A + l[this.ease][0] : "") + (this.delay ? A + this.delay + "ms" : "")));
+                                (this.animate = this.fallback) :
+                                ((this.animate = this.transition), (this.string = this.name + A + this.duration + "ms" + ("ease" != this.ease ? A + l[this.ease][0] : "") + (this.delay ? A + this.delay + "ms" : "")));
                     }),
-                    (t.set = function(t) {
-                        (t = this.convert(t, this.type)), this.update(t), this.redraw();
-                    }),
-                    (t.transition = function(t) {
-                        (this.active = !0), (t = this.convert(t, this.type)), this.auto && ("auto" == this.el.style[this.name] && (this.update(this.get()), this.redraw()), "auto" == t && (t = e.call(this))), (this.nextStyle = t);
-                    }),
-                    (t.fallback = function(t) {
-                        var n = this.el.style[this.name] || this.convert(this.get(), this.type);
-                        (t = this.convert(t, this.type)),
-                        this.auto && ("auto" == n && (n = this.convert(this.get(), this.type)), "auto" == t && (t = e.call(this))),
-                            (this.tween = new U({ from: n, to: t, duration: this.duration, delay: this.delay, ease: this.ease, update: this.update, context: this }));
-                    }),
-                    (t.get = function() {
-                        return Y(this.el, this.name);
-                    }),
-                    (t.update = function(t) {
-                        z(this.el, this.name, t);
-                    }),
-                    (t.stop = function() {
-                        (this.active || this.nextStyle) && ((this.active = !1), (this.nextStyle = null), z(this.el, this.name, this.get()));
-                        var t = this.tween;
-                        t && t.context && t.destroy();
-                    }),
-                    (t.convert = function(t, e) {
-                        if ("auto" == t && this.auto) return t;
-                        var i,
-                            o = "number" == typeof t,
-                            a = "string" == typeof t;
-                        switch (e) {
-                            case _:
-                                if (o) return t;
-                                if (a && "" === t.replace(E, "")) return +t;
-                                i = "number(unitless)";
-                                break;
-                            case m:
-                                if (a) {
-                                    if ("" === t && this.original) return this.original;
-                                    if (e.test(t)) return "#" == t.charAt(0) && 7 == t.length ? t : n(t);
-                                }
-                                i = "hex or rgb string";
-                                break;
-                            case y:
-                                if (o) return t + this.unit;
-                                if (a && e.test(t)) return t;
-                                i = "number(px) or string(unit)";
-                                break;
-                            case I:
-                                if (o) return t + this.unit;
-                                if (a && e.test(t)) return t;
-                                i = "number(px) or string(unit or %)";
-                                break;
-                            case b:
-                                if (o) return t + this.angle;
-                                if (a && e.test(t)) return t;
-                                i = "number(deg) or string(angle)";
-                                break;
-                            case T:
-                                if (o) return t;
-                                if (a && I.test(t)) return t;
-                                i = "number(unitless) or string(unit or %)";
-                        }
-                        return (
-                            (function(t, e) {
-                                s("Type warning: Expected: [" + t + "] Got: [" + (0, r.default)(e) + "] " + e);
-                            })(i, t),
-                            t
-                        );
-                    }),
-                    (t.redraw = function() {
-                        this.el.offsetHeight;
-                    });
+                        (t.set = function(t) {
+                            (t = this.convert(t, this.type)), this.update(t), this.redraw();
+                        }),
+                        (t.transition = function(t) {
+                            (this.active = !0), (t = this.convert(t, this.type)), this.auto && ("auto" == this.el.style[this.name] && (this.update(this.get()), this.redraw()), "auto" == t && (t = e.call(this))), (this.nextStyle = t);
+                        }),
+                        (t.fallback = function(t) {
+                            var n = this.el.style[this.name] || this.convert(this.get(), this.type);
+                            (t = this.convert(t, this.type)),
+                            this.auto && ("auto" == n && (n = this.convert(this.get(), this.type)), "auto" == t && (t = e.call(this))),
+                                (this.tween = new U({ from: n, to: t, duration: this.duration, delay: this.delay, ease: this.ease, update: this.update, context: this }));
+                        }),
+                        (t.get = function() {
+                            return Y(this.el, this.name);
+                        }),
+                        (t.update = function(t) {
+                            z(this.el, this.name, t);
+                        }),
+                        (t.stop = function() {
+                            (this.active || this.nextStyle) && ((this.active = !1), (this.nextStyle = null), z(this.el, this.name, this.get()));
+                            var t = this.tween;
+                            t && t.context && t.destroy();
+                        }),
+                        (t.convert = function(t, e) {
+                            if ("auto" == t && this.auto) return t;
+                            var i,
+                                o = "number" == typeof t,
+                                a = "string" == typeof t;
+                            switch (e) {
+                                case _:
+                                    if (o) return t;
+                                    if (a && "" === t.replace(E, "")) return +t;
+                                    i = "number(unitless)";
+                                    break;
+                                case m:
+                                    if (a) {
+                                        if ("" === t && this.original) return this.original;
+                                        if (e.test(t)) return "#" == t.charAt(0) && 7 == t.length ? t : n(t);
+                                    }
+                                    i = "hex or rgb string";
+                                    break;
+                                case y:
+                                    if (o) return t + this.unit;
+                                    if (a && e.test(t)) return t;
+                                    i = "number(px) or string(unit)";
+                                    break;
+                                case I:
+                                    if (o) return t + this.unit;
+                                    if (a && e.test(t)) return t;
+                                    i = "number(px) or string(unit or %)";
+                                    break;
+                                case b:
+                                    if (o) return t + this.angle;
+                                    if (a && e.test(t)) return t;
+                                    i = "number(deg) or string(angle)";
+                                    break;
+                                case T:
+                                    if (o) return t;
+                                    if (a && I.test(t)) return t;
+                                    i = "number(unitless) or string(unit or %)";
+                            }
+                            return (
+                                (function(t, e) {
+                                    s("Type warning: Expected: [" + t + "] Got: [" + (0, r.default)(e) + "] " + e);
+                                })(i, t),
+                                    t
+                            );
+                        }),
+                        (t.redraw = function() {
+                            this.el.offsetHeight;
+                        });
                 }),
                 X = f(k, function(t, e) {
                     t.init = function() {
@@ -1913,12 +1913,12 @@
                     (t.init = function() {
                         e.init.apply(this, arguments), (this.animate = this.fallback);
                     }),
-                    (t.get = function() {
-                        return this.$el[this.name]();
-                    }),
-                    (t.update = function(t) {
-                        this.$el[this.name](t);
-                    });
+                        (t.get = function() {
+                            return this.$el[this.name]();
+                        }),
+                        (t.update = function(t) {
+                            this.$el[this.name](t);
+                        });
                 }),
                 V = f(k, function(t, e) {
                     function n(t, e) {
@@ -1928,44 +1928,44 @@
                     (t.init = function() {
                         e.init.apply(this, arguments), this.current || ((this.current = {}), q.perspective && H.perspective && ((this.current.perspective = H.perspective), z(this.el, this.name, this.style(this.current)), this.redraw()));
                     }),
-                    (t.set = function(t) {
-                        n.call(this, t, function(t, e) {
+                        (t.set = function(t) {
+                            n.call(this, t, function(t, e) {
                                 this.current[t] = e;
                             }),
-                            z(this.el, this.name, this.style(this.current)),
-                            this.redraw();
-                    }),
-                    (t.transition = function(t) {
-                        var e = this.values(t);
-                        this.tween = new B({ current: this.current, values: e, duration: this.duration, delay: this.delay, ease: this.ease });
-                        var n,
-                            r = {};
-                        for (n in this.current) r[n] = n in e ? e[n] : this.current[n];
-                        (this.active = !0), (this.nextStyle = this.style(r));
-                    }),
-                    (t.fallback = function(t) {
-                        var e = this.values(t);
-                        this.tween = new B({ current: this.current, values: e, duration: this.duration, delay: this.delay, ease: this.ease, update: this.update, context: this });
-                    }),
-                    (t.update = function() {
-                        z(this.el, this.name, this.style(this.current));
-                    }),
-                    (t.style = function(t) {
-                        var e,
-                            n = "";
-                        for (e in t) n += e + "(" + t[e] + ") ";
-                        return n;
-                    }),
-                    (t.values = function(t) {
-                        var e,
-                            r = {};
-                        return (
-                            n.call(this, t, function(t, n, i) {
-                                (r[t] = n), void 0 === this.current[t] && ((e = 0), ~t.indexOf("scale") && (e = 1), (this.current[t] = this.convert(e, i)));
-                            }),
-                            r
-                        );
-                    });
+                                z(this.el, this.name, this.style(this.current)),
+                                this.redraw();
+                        }),
+                        (t.transition = function(t) {
+                            var e = this.values(t);
+                            this.tween = new B({ current: this.current, values: e, duration: this.duration, delay: this.delay, ease: this.ease });
+                            var n,
+                                r = {};
+                            for (n in this.current) r[n] = n in e ? e[n] : this.current[n];
+                            (this.active = !0), (this.nextStyle = this.style(r));
+                        }),
+                        (t.fallback = function(t) {
+                            var e = this.values(t);
+                            this.tween = new B({ current: this.current, values: e, duration: this.duration, delay: this.delay, ease: this.ease, update: this.update, context: this });
+                        }),
+                        (t.update = function() {
+                            z(this.el, this.name, this.style(this.current));
+                        }),
+                        (t.style = function(t) {
+                            var e,
+                                n = "";
+                            for (e in t) n += e + "(" + t[e] + ") ";
+                            return n;
+                        }),
+                        (t.values = function(t) {
+                            var e,
+                                r = {};
+                            return (
+                                n.call(this, t, function(t, n, i) {
+                                    (r[t] = n), void 0 === this.current[t] && ((e = 0), ~t.indexOf("scale") && (e = 1), (this.current[t] = this.convert(e, i)));
+                                }),
+                                    r
+                            );
+                        });
                 }),
                 U = f(function(e) {
                     function n() {
@@ -1984,54 +1984,54 @@
                         var n = t.from,
                             i = t.to;
                         void 0 === n && (n = r.from),
-                            void 0 === i && (i = r.to),
+                        void 0 === i && (i = r.to),
                             (this.unit = t.unit || ""),
                             "number" == typeof n && "number" == typeof i ? ((this.begin = n), (this.change = i - n)) : this.format(i, n),
                             (this.value = this.begin + this.unit),
                             (this.start = M()), !1 !== t.autoplay && this.play();
                     }),
-                    (e.play = function() {
-                        var t;
-                        this.active || (this.start || (this.start = M()), (this.active = !0), (t = this), 1 === c.push(t) && P(n));
-                    }),
-                    (e.stop = function() {
-                        var e, n, r;
-                        this.active && ((this.active = !1), (e = this), (r = t.inArray(e, c)) >= 0 && ((n = c.slice(r + 1)), (c.length = r), n.length && (c = c.concat(n))));
-                    }),
-                    (e.render = function(t) {
-                        var e,
-                            n = t - this.start;
-                        if (this.delay) {
-                            if (n <= this.delay) return;
-                            n -= this.delay;
-                        }
-                        if (n < this.duration) {
-                            var r = this.ease(n, 0, 1, this.duration);
-                            return (
-                                (e = this.startRGB ?
-                                    (function(t, e, n) {
-                                        return o(t[0] + n * (e[0] - t[0]), t[1] + n * (e[1] - t[1]), t[2] + n * (e[2] - t[2]));
-                                    })(this.startRGB, this.endRGB, r) :
-                                    (function(t) {
-                                        return Math.round(t * s) / s;
-                                    })(this.begin + r * this.change)),
-                                (this.value = e + this.unit),
-                                void this.update.call(this.context, this.value)
-                            );
-                        }
-                        (e = this.endHex || this.begin + this.change), (this.value = e + this.unit), this.update.call(this.context, this.value), this.complete.call(this.context), this.destroy();
-                    }),
-                    (e.format = function(t, e) {
-                        if (((e += ""), "#" == (t += "").charAt(0))) return (this.startRGB = i(e)), (this.endRGB = i(t)), (this.endHex = t), (this.begin = 0), void(this.change = 1);
-                        if (!this.unit) {
-                            var n = e.replace(E, "");
-                            n !== t.replace(E, "") && u("tween", e, t), (this.unit = n);
-                        }
-                        (e = parseFloat(e)), (t = parseFloat(t)), (this.begin = this.value = e), (this.change = t - e);
-                    }),
-                    (e.destroy = function() {
-                        this.stop(), (this.context = null), (this.ease = this.update = this.complete = a);
-                    });
+                        (e.play = function() {
+                            var t;
+                            this.active || (this.start || (this.start = M()), (this.active = !0), (t = this), 1 === c.push(t) && P(n));
+                        }),
+                        (e.stop = function() {
+                            var e, n, r;
+                            this.active && ((this.active = !1), (e = this), (r = t.inArray(e, c)) >= 0 && ((n = c.slice(r + 1)), (c.length = r), n.length && (c = c.concat(n))));
+                        }),
+                        (e.render = function(t) {
+                            var e,
+                                n = t - this.start;
+                            if (this.delay) {
+                                if (n <= this.delay) return;
+                                n -= this.delay;
+                            }
+                            if (n < this.duration) {
+                                var r = this.ease(n, 0, 1, this.duration);
+                                return (
+                                    (e = this.startRGB ?
+                                        (function(t, e, n) {
+                                            return o(t[0] + n * (e[0] - t[0]), t[1] + n * (e[1] - t[1]), t[2] + n * (e[2] - t[2]));
+                                        })(this.startRGB, this.endRGB, r) :
+                                        (function(t) {
+                                            return Math.round(t * s) / s;
+                                        })(this.begin + r * this.change)),
+                                        (this.value = e + this.unit),
+                                        void this.update.call(this.context, this.value)
+                                );
+                            }
+                            (e = this.endHex || this.begin + this.change), (this.value = e + this.unit), this.update.call(this.context, this.value), this.complete.call(this.context), this.destroy();
+                        }),
+                        (e.format = function(t, e) {
+                            if (((e += ""), "#" == (t += "").charAt(0))) return (this.startRGB = i(e)), (this.endRGB = i(t)), (this.endHex = t), (this.begin = 0), void(this.change = 1);
+                            if (!this.unit) {
+                                var n = e.replace(E, "");
+                                n !== t.replace(E, "") && u("tween", e, t), (this.unit = n);
+                            }
+                            (e = parseFloat(e)), (t = parseFloat(t)), (this.begin = this.value = e), (this.change = t - e);
+                        }),
+                        (e.destroy = function() {
+                            this.stop(), (this.context = null), (this.ease = this.update = this.complete = a);
+                        });
                     var c = [],
                         s = 1e3;
                 }),
@@ -2039,9 +2039,9 @@
                     (t.init = function(t) {
                         (this.duration = t.duration || 0), (this.complete = t.complete || a), (this.context = t.context), this.play();
                     }),
-                    (t.render = function(t) {
-                        t - this.start < this.duration || (this.complete.call(this.context), this.destroy());
-                    });
+                        (t.render = function(t) {
+                            t - this.start < this.duration || (this.complete.call(this.context), this.destroy());
+                        });
                 }),
                 B = f(U, function(t, e) {
                     (t.init = function(t) {
@@ -2050,20 +2050,20 @@
                             (n = t.values[e]), this.current[e] !== n && this.tweens.push(new U({ name: e, from: this.current[e], to: n, duration: t.duration, delay: t.delay, ease: t.ease, autoplay: !1 }));
                         this.play();
                     }),
-                    (t.render = function(t) {
-                        var e,
-                            n,
-                            r = !1;
-                        for (e = this.tweens.length; e--;)(n = this.tweens[e]).context && (n.render(t), (this.current[n.name] = n.value), (r = !0));
-                        return r ? void(this.update && this.update.call(this.context)) : this.destroy();
-                    }),
-                    (t.destroy = function() {
-                        if ((e.destroy.call(this), this.tweens)) {
-                            var t;
-                            for (t = this.tweens.length; t--;) this.tweens[t].destroy();
-                            (this.tweens = null), (this.current = null);
-                        }
-                    });
+                        (t.render = function(t) {
+                            var e,
+                                n,
+                                r = !1;
+                            for (e = this.tweens.length; e--;)(n = this.tweens[e]).context && (n.render(t), (this.current[n.name] = n.value), (r = !0));
+                            return r ? void(this.update && this.update.call(this.context)) : this.destroy();
+                        }),
+                        (t.destroy = function() {
+                            if ((e.destroy.call(this), this.tweens)) {
+                                var t;
+                                for (t = this.tweens.length; t--;) this.tweens[t].destroy();
+                                (this.tweens = null), (this.current = null);
+                            }
+                        });
                 }),
                 H = (e.config = { debug: !1, defaultUnit: "px", defaultAngle: "deg", keepInherited: !1, hideBackface: !1, perspective: "", fallback: !N.transition, agentTests: [] });
             (e.fallback = function(t) {
@@ -2072,7 +2072,7 @@
                 var e = new RegExp(H.agentTests.join("|"), "i");
                 H.fallback = e.test(navigator.userAgent);
             }),
-            e.fallback("6.0.[2-5] Safari"),
+                e.fallback("6.0.[2-5] Safari"),
                 (e.tween = function(t) {
                     return new U(t);
                 }),
@@ -2132,7 +2132,7 @@
                 },
                 q = {};
             N.transform && ((Q.transform = [V]), (q = { x: [I, "translateX"], y: [I, "translateY"], rotate: [b], rotateX: [b], rotateY: [b], scale: [_], scaleX: [_], scaleY: [_], skew: [b], skewX: [b], skewY: [b] })),
-                N.transform && N.backface && ((q.z = [I, "translateZ"]), (q.rotateZ = [b]), (q.scaleZ = [_]), (q.perspective = [y]));
+            N.transform && N.backface && ((q.z = [I, "translateZ"]), (q.rotateZ = [b]), (q.scaleZ = [_]), (q.perspective = [y]));
             var $ = /ms/,
                 Z = /s|\./;
             return (t.tram = e);
@@ -2429,14 +2429,14 @@
             });
         var r = n(43),
             i =
-            Object.assign ||
-            function(t) {
-                for (var e = 1; e < arguments.length; e++) {
-                    var n = arguments[e];
-                    for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (t[r] = n[r]);
-                }
-                return t;
-            };
+                Object.assign ||
+                function(t) {
+                    for (var e = 1; e < arguments.length; e++) {
+                        var n = arguments[e];
+                        for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (t[r] = n[r]);
+                    }
+                    return t;
+                };
 
         function o() {
             for (var t = arguments.length, e = Array(t), n = 0; n < t; n++) e[n] = arguments[n];
@@ -2455,8 +2455,8 @@
                         (u = e.map(function(t) {
                             return t(f);
                         })),
-                        (s = r.default.apply(void 0, u)(c.dispatch)),
-                        i({}, c, { dispatch: s })
+                            (s = r.default.apply(void 0, u)(c.dispatch)),
+                            i({}, c, { dispatch: s })
                     );
                 };
             };
@@ -2501,9 +2501,9 @@
                 if (!i(e)) {
                     var c = r(n, 3);
                     (e = o(e)),
-                    (n = function(t) {
-                        return c(u[t], t, u);
-                    });
+                        (n = function(t) {
+                            return c(u[t], t, u);
+                        });
                 }
                 var s = t(e, n, a);
                 return s > -1 ? u[c ? e[s] : s] : void 0;
@@ -2592,8 +2592,8 @@
                 }
                 if (_) {
                     if (!i(e, function(t, e) {
-                            if (!o(_, e) && (m === t || s(m, t, n, c, f))) return _.push(e);
-                        })) {
+                        if (!o(_, e) && (m === t || s(m, t, n, c, f))) return _.push(e);
+                    })) {
                         g = !1;
                         break;
                     }
@@ -2620,14 +2620,14 @@
             a = Object.getOwnPropertySymbols,
             u = a ?
 
-            function(t) {
-                return null == t ? [] :
-                    ((t = Object(t)),
-                        r(a(t), function(e) {
-                            return o.call(t, e);
-                        }));
-            } :
-            i;
+                function(t) {
+                    return null == t ? [] :
+                        ((t = Object(t)),
+                            r(a(t), function(e) {
+                                return o.call(t, e);
+                            }));
+                } :
+                i;
         t.exports = u;
     },
     function(t, e) {
@@ -2661,7 +2661,7 @@
                 t.webpackPolyfill ||
                 ((t.deprecate = function() {}),
                     (t.paths = []),
-                    t.children || (t.children = []),
+                t.children || (t.children = []),
                     Object.defineProperty(t, "loaded", {
                         enumerable: !0,
                         get: function() {
@@ -2675,7 +2675,7 @@
                         },
                     }),
                     (t.webpackPolyfill = 1)),
-                t
+                    t
             );
         };
     },
@@ -2927,16 +2927,16 @@
                         return e;
                     })(e, h, t, s) :
                     0 === E ?
-                    h :
-                    (function(t, e, n, r, a) {
-                        var u,
-                            c,
-                            s = 0;
-                        do {
-                            (u = d((c = e + (n - e) / 2), r, a) - t) > 0 ? (n = c) : (e = c);
-                        } while (Math.abs(u) > i && ++s < o);
-                        return c;
-                    })(e, c, c + u, t, s);
+                        h :
+                        (function(t, e, n, r, a) {
+                            var u,
+                                c,
+                                s = 0;
+                            do {
+                                (u = d((c = e + (n - e) / 2), r, a) - t) > 0 ? (n = c) : (e = c);
+                            } while (Math.abs(u) > i && ++s < o);
+                            return c;
+                        })(e, c, c + u, t, s);
             }
             return function(n) {
                 return t === e && s === f ? n : 0 === n ? 0 : 1 === n ? 1 : d(h(n), e, f);
@@ -3053,13 +3053,13 @@
         Object.defineProperty(e, "__esModule", { value: !0 }),
             (e.observeRequests = function(t) {
                 P({
-                        store: t,
-                        select: function(t) {
-                            var e = t.ixRequest;
-                            return e.preview;
-                        },
-                        onChange: et,
-                    }),
+                    store: t,
+                    select: function(t) {
+                        var e = t.ixRequest;
+                        return e.preview;
+                    },
+                    onChange: et,
+                }),
                     P({
                         store: t,
                         select: function(t) {
@@ -3193,236 +3193,236 @@
                 a = t.testManual,
                 u = n.getState().ixSession;
             i && n.dispatch((0, m.rawDataImported)(i)),
-                u.active ||
-                (n.dispatch((0, m.sessionInitialized)({ hasBoundaryNodes: Boolean(document.querySelector(A)), reducedMotion: document.body.hasAttribute("data-wf-ix-vacation") && window.matchMedia("(prefers-reduced-motion)").matches })),
-                    o &&
-                    ((function(t) {
-                            var e = t.getState().ixData.eventTypeMap;
-                            ft(t),
-                                (0, v.default)(e, function(e, n) {
-                                    var i = I.default[n];
-                                    i
-                                        ?
-                                        (function(t) {
-                                            var e = t.logic,
-                                                n = t.store,
-                                                i = t.events;
-                                            !(function(t) {
-                                                if (J) {
-                                                    var e = {},
-                                                        n = "";
-                                                    for (var r in t) {
-                                                        var i = t[r],
-                                                            o = i.eventTypeId,
-                                                            a = i.target,
-                                                            u = y.getQuerySelector(a);
-                                                        e[u] || (o !== g.EventTypeConsts.MOUSE_CLICK && o !== g.EventTypeConsts.MOUSE_SECOND_CLICK) || ((e[u] = !0), (n += u + "{cursor: pointer;touch-action: manipulation;}"));
-                                                    }
-                                                    if (n) {
-                                                        var c = document.createElement("style");
-                                                        (c.textContent = n), document.body.appendChild(c);
-                                                    }
-                                                }
-                                            })(i);
-                                            var o = e.types,
-                                                a = e.handler,
-                                                u = n.getState().ixData,
-                                                l = u.actionLists,
-                                                d = lt(i, pt);
-                                            if ((0, f.default)(d)) {
-                                                (0, v.default)(d, function(t, e) {
-                                                    var o = i[e],
-                                                        a = o.action,
-                                                        f = o.id,
-                                                        d = o.mediaQueries,
-                                                        p = void 0 === d ? u.mediaQueryKeys : d,
-                                                        v = a.config.actionListId;
-                                                    if ((Y(p, u.mediaQueryKeys) || n.dispatch((0, m.mediaQueriesDefined)()), a.actionTypeId === g.ActionTypeConsts.GENERAL_CONTINUOUS_ACTION)) {
-                                                        var h = Array.isArray(o.config) ? o.config : [o.config];
-                                                        h.forEach(function(e) {
-                                                            var i = e.continuousParameterGroupId,
-                                                                o = (0, s.default)(l, "".concat(v, ".continuousParameterGroups"), []),
-                                                                a = (0, c.default)(o, function(t) {
-                                                                    var e = t.id;
-                                                                    return e === i;
-                                                                }),
-                                                                u = (e.smoothing || 0) / 100,
-                                                                d = (e.restingState || 0) / 100;
-                                                            a &&
-                                                                t.forEach(function(t, i) {
-                                                                    var o = f + O + i;
-                                                                    !(function(t) {
-                                                                        var e = t.store,
-                                                                            n = t.eventStateKey,
-                                                                            i = t.eventTarget,
-                                                                            o = t.eventId,
-                                                                            a = t.eventConfig,
-                                                                            u = t.actionListId,
-                                                                            c = t.parameterGroup,
-                                                                            f = t.smoothing,
-                                                                            l = t.restingValue,
-                                                                            d = e.getState(),
-                                                                            p = d.ixData,
-                                                                            v = d.ixSession,
-                                                                            h = p.events[o],
-                                                                            E = h.eventTypeId,
-                                                                            g = {},
-                                                                            _ = {},
-                                                                            m = [],
-                                                                            I = c.continuousActionGroups,
-                                                                            b = c.id;
-                                                                        U(E, a) && (b = W(n, b));
-                                                                        var T = v.hasBoundaryNodes && i ? y.getClosestElement(i, A) : null;
-                                                                        I.forEach(function(t) {
-                                                                                var e = t.keyframe,
-                                                                                    n = t.actionItems;
-                                                                                n.forEach(function(t) {
-                                                                                    var n = t.actionTypeId,
-                                                                                        o = t.config.target;
-                                                                                    if (o) {
-                                                                                        var a = o.boundaryMode ? T : null,
-                                                                                            u = z(o) + O + n;
-                                                                                        if (
-                                                                                            ((_[u] = (function() {
-                                                                                                var t,
-                                                                                                    e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-                                                                                                    n = arguments.length > 1 ? arguments[1] : void 0,
-                                                                                                    i = arguments.length > 2 ? arguments[2] : void 0,
-                                                                                                    o = (0, r.default)(e);
-                                                                                                return (
-                                                                                                    o.some(function(e, r) {
-                                                                                                        return e.keyframe === n && ((t = r), !0);
-                                                                                                    }),
-                                                                                                    null == t && ((t = o.length), o.push({ keyframe: n, actionItems: [] })),
-                                                                                                    o[t].actionItems.push(i),
-                                                                                                    o
-                                                                                                );
-                                                                                            })(_[u], e, t)), !g[u])
-                                                                                        ) {
-                                                                                            g[u] = !0;
-                                                                                            var c = t.config;
-                                                                                            N({ config: c, event: h, eventTarget: i, elementRoot: a, elementApi: y }).forEach(function(t) {
-                                                                                                m.push({ element: t, key: u });
-                                                                                            });
-                                                                                        }
-                                                                                    }
-                                                                                });
-                                                                            }),
-                                                                            m.forEach(function(t) {
-                                                                                var n = t.element,
-                                                                                    r = t.key,
-                                                                                    i = _[r],
-                                                                                    a = (0, s.default)(i, "[0].actionItems[0]", {}),
-                                                                                    c = a.actionTypeId,
-                                                                                    d = Q(c) ? q(c)(n, a) : null,
-                                                                                    p = D({ element: n, actionItem: a, elementApi: y }, d);
-                                                                                _t({
-                                                                                    store: e,
-                                                                                    element: n,
-                                                                                    eventId: o,
-                                                                                    actionListId: u,
-                                                                                    actionItem: a,
-                                                                                    destination: p,
-                                                                                    continuous: !0,
-                                                                                    parameterId: b,
-                                                                                    actionGroups: i,
-                                                                                    smoothing: f,
-                                                                                    restingValue: l,
-                                                                                    pluginInstance: d,
-                                                                                });
-                                                                            });
-                                                                    })({ store: n, eventStateKey: o, eventTarget: t, eventId: f, eventConfig: e, actionListId: v, parameterGroup: a, smoothing: u, restingValue: d });
-                                                                });
-                                                        });
-                                                    }
-                                                    (a.actionTypeId === g.ActionTypeConsts.GENERAL_START_ACTION || T(a.actionTypeId)) && vt({ store: n, actionListId: v, eventId: f });
-                                                });
-                                                var p = function(t) {
-                                                        var e = n.getState(),
-                                                            r = e.ixSession;
-                                                        dt(d, function(e, o, c) {
-                                                            var s = i[o],
-                                                                f = r.eventState[c],
-                                                                l = s.action,
-                                                                d = s.mediaQueries,
-                                                                p = void 0 === d ? u.mediaQueryKeys : d;
-                                                            if (B(p, r.mediaQueryKey)) {
-                                                                var v = function() {
-                                                                    var r = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                                                                        i = a({ store: n, element: e, event: s, eventConfig: r, nativeEvent: t, eventStateKey: c }, f);
-                                                                    (0, E.default)(i, f) || n.dispatch((0, m.eventStateChanged)(c, i));
-                                                                };
-                                                                if (l.actionTypeId === g.ActionTypeConsts.GENERAL_CONTINUOUS_ACTION) {
-                                                                    var h = Array.isArray(s.config) ? s.config : [s.config];
-                                                                    h.forEach(v);
-                                                                } else v();
-                                                            }
-                                                        });
-                                                    },
-                                                    _ = (0, h.default)(p, tt),
-                                                    I = function(t) {
-                                                        var e = t.target,
-                                                            r = void 0 === e ? document : e,
-                                                            i = t.types,
-                                                            o = t.throttle;
-                                                        i.split(" ")
-                                                            .filter(Boolean)
-                                                            .forEach(function(t) {
-                                                                var e = o ? _ : p;
-                                                                r.addEventListener(t, e), n.dispatch((0, m.eventListenerAdded)(r, [t, e]));
+            u.active ||
+            (n.dispatch((0, m.sessionInitialized)({ hasBoundaryNodes: Boolean(document.querySelector(A)), reducedMotion: document.body.hasAttribute("data-wf-ix-vacation") && window.matchMedia("(prefers-reduced-motion)").matches })),
+            o &&
+            ((function(t) {
+                var e = t.getState().ixData.eventTypeMap;
+                ft(t),
+                    (0, v.default)(e, function(e, n) {
+                        var i = I.default[n];
+                        i
+                            ?
+                            (function(t) {
+                                var e = t.logic,
+                                    n = t.store,
+                                    i = t.events;
+                                !(function(t) {
+                                    if (J) {
+                                        var e = {},
+                                            n = "";
+                                        for (var r in t) {
+                                            var i = t[r],
+                                                o = i.eventTypeId,
+                                                a = i.target,
+                                                u = y.getQuerySelector(a);
+                                            e[u] || (o !== g.EventTypeConsts.MOUSE_CLICK && o !== g.EventTypeConsts.MOUSE_SECOND_CLICK) || ((e[u] = !0), (n += u + "{cursor: pointer;touch-action: manipulation;}"));
+                                        }
+                                        if (n) {
+                                            var c = document.createElement("style");
+                                            (c.textContent = n), document.body.appendChild(c);
+                                        }
+                                    }
+                                })(i);
+                                var o = e.types,
+                                    a = e.handler,
+                                    u = n.getState().ixData,
+                                    l = u.actionLists,
+                                    d = lt(i, pt);
+                                if ((0, f.default)(d)) {
+                                    (0, v.default)(d, function(t, e) {
+                                        var o = i[e],
+                                            a = o.action,
+                                            f = o.id,
+                                            d = o.mediaQueries,
+                                            p = void 0 === d ? u.mediaQueryKeys : d,
+                                            v = a.config.actionListId;
+                                        if ((Y(p, u.mediaQueryKeys) || n.dispatch((0, m.mediaQueriesDefined)()), a.actionTypeId === g.ActionTypeConsts.GENERAL_CONTINUOUS_ACTION)) {
+                                            var h = Array.isArray(o.config) ? o.config : [o.config];
+                                            h.forEach(function(e) {
+                                                var i = e.continuousParameterGroupId,
+                                                    o = (0, s.default)(l, "".concat(v, ".continuousParameterGroups"), []),
+                                                    a = (0, c.default)(o, function(t) {
+                                                        var e = t.id;
+                                                        return e === i;
+                                                    }),
+                                                    u = (e.smoothing || 0) / 100,
+                                                    d = (e.restingState || 0) / 100;
+                                                a &&
+                                                t.forEach(function(t, i) {
+                                                    var o = f + O + i;
+                                                    !(function(t) {
+                                                        var e = t.store,
+                                                            n = t.eventStateKey,
+                                                            i = t.eventTarget,
+                                                            o = t.eventId,
+                                                            a = t.eventConfig,
+                                                            u = t.actionListId,
+                                                            c = t.parameterGroup,
+                                                            f = t.smoothing,
+                                                            l = t.restingValue,
+                                                            d = e.getState(),
+                                                            p = d.ixData,
+                                                            v = d.ixSession,
+                                                            h = p.events[o],
+                                                            E = h.eventTypeId,
+                                                            g = {},
+                                                            _ = {},
+                                                            m = [],
+                                                            I = c.continuousActionGroups,
+                                                            b = c.id;
+                                                        U(E, a) && (b = W(n, b));
+                                                        var T = v.hasBoundaryNodes && i ? y.getClosestElement(i, A) : null;
+                                                        I.forEach(function(t) {
+                                                            var e = t.keyframe,
+                                                                n = t.actionItems;
+                                                            n.forEach(function(t) {
+                                                                var n = t.actionTypeId,
+                                                                    o = t.config.target;
+                                                                if (o) {
+                                                                    var a = o.boundaryMode ? T : null,
+                                                                        u = z(o) + O + n;
+                                                                    if (
+                                                                        ((_[u] = (function() {
+                                                                            var t,
+                                                                                e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+                                                                                n = arguments.length > 1 ? arguments[1] : void 0,
+                                                                                i = arguments.length > 2 ? arguments[2] : void 0,
+                                                                                o = (0, r.default)(e);
+                                                                            return (
+                                                                                o.some(function(e, r) {
+                                                                                    return e.keyframe === n && ((t = r), !0);
+                                                                                }),
+                                                                                null == t && ((t = o.length), o.push({ keyframe: n, actionItems: [] })),
+                                                                                    o[t].actionItems.push(i),
+                                                                                    o
+                                                                            );
+                                                                        })(_[u], e, t)), !g[u])
+                                                                    ) {
+                                                                        g[u] = !0;
+                                                                        var c = t.config;
+                                                                        N({ config: c, event: h, eventTarget: i, elementRoot: a, elementApi: y }).forEach(function(t) {
+                                                                            m.push({ element: t, key: u });
+                                                                        });
+                                                                    }
+                                                                }
                                                             });
+                                                        }),
+                                                            m.forEach(function(t) {
+                                                                var n = t.element,
+                                                                    r = t.key,
+                                                                    i = _[r],
+                                                                    a = (0, s.default)(i, "[0].actionItems[0]", {}),
+                                                                    c = a.actionTypeId,
+                                                                    d = Q(c) ? q(c)(n, a) : null,
+                                                                    p = D({ element: n, actionItem: a, elementApi: y }, d);
+                                                                _t({
+                                                                    store: e,
+                                                                    element: n,
+                                                                    eventId: o,
+                                                                    actionListId: u,
+                                                                    actionItem: a,
+                                                                    destination: p,
+                                                                    continuous: !0,
+                                                                    parameterId: b,
+                                                                    actionGroups: i,
+                                                                    smoothing: f,
+                                                                    restingValue: l,
+                                                                    pluginInstance: d,
+                                                                });
+                                                            });
+                                                    })({ store: n, eventStateKey: o, eventTarget: t, eventId: f, eventConfig: e, actionListId: v, parameterGroup: a, smoothing: u, restingValue: d });
+                                                });
+                                            });
+                                        }
+                                        (a.actionTypeId === g.ActionTypeConsts.GENERAL_START_ACTION || T(a.actionTypeId)) && vt({ store: n, actionListId: v, eventId: f });
+                                    });
+                                    var p = function(t) {
+                                            var e = n.getState(),
+                                                r = e.ixSession;
+                                            dt(d, function(e, o, c) {
+                                                var s = i[o],
+                                                    f = r.eventState[c],
+                                                    l = s.action,
+                                                    d = s.mediaQueries,
+                                                    p = void 0 === d ? u.mediaQueryKeys : d;
+                                                if (B(p, r.mediaQueryKey)) {
+                                                    var v = function() {
+                                                        var r = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+                                                            i = a({ store: n, element: e, event: s, eventConfig: r, nativeEvent: t, eventStateKey: c }, f);
+                                                        (0, E.default)(i, f) || n.dispatch((0, m.eventStateChanged)(c, i));
                                                     };
-                                                Array.isArray(o) ? o.forEach(I) : "string" == typeof o && I(e);
-                                            }
-                                        })({ logic: i, store: t, events: e }) :
-                                        console.warn("IX2 event type not configured: ".concat(n));
-                                }),
-                                t.getState().ixSession.eventListeners.length &&
-                                (function(t) {
-                                    var e = function() {
-                                        ft(t);
-                                    };
-                                    st.forEach(function(n) {
-                                            window.addEventListener(n, e), t.dispatch((0, m.eventListenerAdded)(window, [n, e]));
-                                        }),
-                                        e();
-                                })(t);
-                        })(n), -1 === (e = document.documentElement).className.indexOf(R) && (e.className += " ".concat(R)),
-                        n.getState().ixSession.hasDefinedMediaQueries &&
-                        (function(t) {
-                            P({
-                                store: t,
-                                select: function(t) {
-                                    return t.ixSession.mediaQueryKey;
-                                },
-                                onChange: function() {
-                                    ut(t), F({ store: t, elementApi: y }), at({ store: t, allowEvents: !0 }), nt();
-                                },
-                            });
-                        })(n)),
-                    n.dispatch((0, m.sessionStarted)()),
-                    (function(t, e) {
-                        !(function n(r) {
-                            var i = t.getState(),
-                                o = i.ixSession,
-                                a = i.ixParameters;
-                            o.active &&
-                                (t.dispatch((0, m.animationFrameChanged)(r, a)),
-                                    e ?
-                                    (function(t, e) {
-                                        var n = P({
-                                            store: t,
-                                            select: function(t) {
-                                                return t.ixSession.tick;
-                                            },
-                                            onChange: function(t) {
-                                                e(t), n();
-                                            },
-                                        });
-                                    })(t, n) :
-                                    requestAnimationFrame(n));
-                        })(window.performance.now());
-                    })(n, a));
+                                                    if (l.actionTypeId === g.ActionTypeConsts.GENERAL_CONTINUOUS_ACTION) {
+                                                        var h = Array.isArray(s.config) ? s.config : [s.config];
+                                                        h.forEach(v);
+                                                    } else v();
+                                                }
+                                            });
+                                        },
+                                        _ = (0, h.default)(p, tt),
+                                        I = function(t) {
+                                            var e = t.target,
+                                                r = void 0 === e ? document : e,
+                                                i = t.types,
+                                                o = t.throttle;
+                                            i.split(" ")
+                                                .filter(Boolean)
+                                                .forEach(function(t) {
+                                                    var e = o ? _ : p;
+                                                    r.addEventListener(t, e), n.dispatch((0, m.eventListenerAdded)(r, [t, e]));
+                                                });
+                                        };
+                                    Array.isArray(o) ? o.forEach(I) : "string" == typeof o && I(e);
+                                }
+                            })({ logic: i, store: t, events: e }) :
+                            console.warn("IX2 event type not configured: ".concat(n));
+                    }),
+                t.getState().ixSession.eventListeners.length &&
+                (function(t) {
+                    var e = function() {
+                        ft(t);
+                    };
+                    st.forEach(function(n) {
+                        window.addEventListener(n, e), t.dispatch((0, m.eventListenerAdded)(window, [n, e]));
+                    }),
+                        e();
+                })(t);
+            })(n), -1 === (e = document.documentElement).className.indexOf(R) && (e.className += " ".concat(R)),
+            n.getState().ixSession.hasDefinedMediaQueries &&
+            (function(t) {
+                P({
+                    store: t,
+                    select: function(t) {
+                        return t.ixSession.mediaQueryKey;
+                    },
+                    onChange: function() {
+                        ut(t), F({ store: t, elementApi: y }), at({ store: t, allowEvents: !0 }), nt();
+                    },
+                });
+            })(n)),
+                n.dispatch((0, m.sessionStarted)()),
+                (function(t, e) {
+                    !(function n(r) {
+                        var i = t.getState(),
+                            o = i.ixSession,
+                            a = i.ixParameters;
+                        o.active &&
+                        (t.dispatch((0, m.animationFrameChanged)(r, a)),
+                            e ?
+                                (function(t, e) {
+                                    var n = P({
+                                        store: t,
+                                        select: function(t) {
+                                            return t.ixSession.tick;
+                                        },
+                                        onChange: function(t) {
+                                            e(t), n();
+                                        },
+                                    });
+                                })(t, n) :
+                                requestAnimationFrame(n));
+                    })(window.performance.now());
+                })(n, a));
         }
 
         function ut(t) {
@@ -3587,7 +3587,7 @@
                         });
                     }
                 }),
-                x
+                    x
             );
         }
 
@@ -3627,11 +3627,11 @@
             r.dispatch((0, m.instanceAdded)((0, a.default)({ instanceId: E, elementId: w, origin: x, refType: A, skipMotion: S, skipToValue: n }, o))),
                 yt(document.body, "ix2-animation-started", E),
                 f ?
-                (function(t, e) {
-                    var n = t.getState().ixParameters;
-                    t.dispatch((0, m.instanceStarted)(e, 0)), t.dispatch((0, m.animationFrameChanged)(performance.now(), n)), It(t.getState().ixInstances[e], t);
-                })(r, E) :
-                (P({
+                    (function(t, e) {
+                        var n = t.getState().ixParameters;
+                        t.dispatch((0, m.instanceStarted)(e, 0)), t.dispatch((0, m.animationFrameChanged)(performance.now(), n)), It(t.getState().ixInstances[e], t);
+                    })(r, E) :
+                    (P({
                         store: r,
                         select: function(t) {
                             return t.ixInstances[E];
@@ -3737,10 +3737,10 @@
             i = n(308),
             o = r ?
 
-            function(t) {
-                return r.get(t);
-            } :
-            i;
+                function(t) {
+                    return r.get(t);
+                } :
+                i;
         t.exports = o;
     },
     function(t, e, n) {
@@ -3821,61 +3821,61 @@
                 d = n.indexOf,
                 p = (n.lastIndexOf, Array.isArray, Object.keys),
                 v =
-                (o.bind,
-                    (t.each = t.forEach = function(n, r, i) {
-                        if (null == n) return n;
-                        if (c && n.forEach === c) n.forEach(r, i);
-                        else if (n.length === +n.length) {
-                            for (var o = 0, a = n.length; o < a; o++)
-                                if (r.call(i, n[o], o, n) === e) return;
-                        } else {
-                            var u = t.keys(n);
-                            for (o = 0, a = u.length; o < a; o++)
-                                if (r.call(i, n[u[o]], u[o], n) === e) return;
-                        }
-                        return n;
-                    }));
+                    (o.bind,
+                        (t.each = t.forEach = function(n, r, i) {
+                            if (null == n) return n;
+                            if (c && n.forEach === c) n.forEach(r, i);
+                            else if (n.length === +n.length) {
+                                for (var o = 0, a = n.length; o < a; o++)
+                                    if (r.call(i, n[o], o, n) === e) return;
+                            } else {
+                                var u = t.keys(n);
+                                for (o = 0, a = u.length; o < a; o++)
+                                    if (r.call(i, n[u[o]], u[o], n) === e) return;
+                            }
+                            return n;
+                        }));
             (t.map = t.collect = function(t, e, n) {
                 var r = [];
                 return null == t ?
                     r :
                     s && t.map === s ?
-                    t.map(e, n) :
-                    (v(t, function(t, i, o) {
+                        t.map(e, n) :
+                        (v(t, function(t, i, o) {
                             r.push(e.call(n, t, i, o));
                         }),
-                        r);
+                            r);
             }),
-            (t.find = t.detect = function(t, e, n) {
-                var r;
-                return (
-                    h(t, function(t, i, o) {
-                        if (e.call(n, t, i, o)) return (r = t), !0;
-                    }),
-                    r
-                );
-            }),
-            (t.filter = t.select = function(t, e, n) {
-                var r = [];
-                return null == t ?
-                    r :
-                    f && t.filter === f ?
-                    t.filter(e, n) :
-                    (v(t, function(t, i, o) {
-                            e.call(n, t, i, o) && r.push(t);
+                (t.find = t.detect = function(t, e, n) {
+                    var r;
+                    return (
+                        h(t, function(t, i, o) {
+                            if (e.call(n, t, i, o)) return (r = t), !0;
                         }),
-                        r);
-            });
+                            r
+                    );
+                }),
+                (t.filter = t.select = function(t, e, n) {
+                    var r = [];
+                    return null == t ?
+                        r :
+                        f && t.filter === f ?
+                            t.filter(e, n) :
+                            (v(t, function(t, i, o) {
+                                e.call(n, t, i, o) && r.push(t);
+                            }),
+                                r);
+                });
             var h = (t.some = t.any = function(n, r, i) {
                 r || (r = t.identity);
                 var o = !1;
                 return null == n ?
                     o :
                     l && n.some === l ?
-                    n.some(r, i) :
-                    (v(n, function(t, n, a) {
-                        if (o || (o = r.call(i, t, n, a))) return e;
-                    }), !!o);
+                        n.some(r, i) :
+                        (v(n, function(t, n, a) {
+                            if (o || (o = r.call(i, t, n, a))) return e;
+                        }), !!o);
             });
             (t.contains = t.include = function(t, e) {
                 return (
@@ -3887,70 +3887,70 @@
                         }))
                 );
             }),
-            (t.delay = function(t, e) {
-                var n = a.call(arguments, 2);
-                return setTimeout(function() {
-                    return t.apply(null, n);
-                }, e);
-            }),
-            (t.defer = function(e) {
-                return t.delay.apply(t, [e, 1].concat(a.call(arguments, 1)));
-            }),
-            (t.throttle = function(t) {
-                var e, n, r;
-                return function() {
-                    e ||
+                (t.delay = function(t, e) {
+                    var n = a.call(arguments, 2);
+                    return setTimeout(function() {
+                        return t.apply(null, n);
+                    }, e);
+                }),
+                (t.defer = function(e) {
+                    return t.delay.apply(t, [e, 1].concat(a.call(arguments, 1)));
+                }),
+                (t.throttle = function(t) {
+                    var e, n, r;
+                    return function() {
+                        e ||
                         ((e = !0),
                             (n = arguments),
                             (r = this),
                             i.frame(function() {
                                 (e = !1), t.apply(r, n);
                             }));
-                };
-            }),
-            (t.debounce = function(e, n, r) {
-                var i,
-                    o,
-                    a,
-                    u,
-                    c,
-                    s = function s() {
-                        var f = t.now() - u;
-                        f < n ? (i = setTimeout(s, n - f)) : ((i = null), r || ((c = e.apply(a, o)), (a = o = null)));
                     };
-                return function() {
-                    (a = this), (o = arguments), (u = t.now());
-                    var f = r && !i;
-                    return i || (i = setTimeout(s, n)), f && ((c = e.apply(a, o)), (a = o = null)), c;
-                };
-            }),
-            (t.defaults = function(e) {
-                if (!t.isObject(e)) return e;
-                for (var n = 1, r = arguments.length; n < r; n++) {
-                    var i = arguments[n];
-                    for (var o in i) void 0 === e[o] && (e[o] = i[o]);
-                }
-                return e;
-            }),
-            (t.keys = function(e) {
-                if (!t.isObject(e)) return [];
-                if (p) return p(e);
-                var n = [];
-                for (var r in e) t.has(e, r) && n.push(r);
-                return n;
-            }),
-            (t.has = function(t, e) {
-                return u.call(t, e);
-            }),
-            (t.isObject = function(t) {
-                return t === Object(t);
-            }),
-            (t.now =
-                Date.now ||
-                function() {
-                    return new Date().getTime();
                 }),
-            (t.templateSettings = { evaluate: /<%([\s\S]+?)%>/g, interpolate: /<%=([\s\S]+?)%>/g, escape: /<%-([\s\S]+?)%>/g });
+                (t.debounce = function(e, n, r) {
+                    var i,
+                        o,
+                        a,
+                        u,
+                        c,
+                        s = function s() {
+                            var f = t.now() - u;
+                            f < n ? (i = setTimeout(s, n - f)) : ((i = null), r || ((c = e.apply(a, o)), (a = o = null)));
+                        };
+                    return function() {
+                        (a = this), (o = arguments), (u = t.now());
+                        var f = r && !i;
+                        return i || (i = setTimeout(s, n)), f && ((c = e.apply(a, o)), (a = o = null)), c;
+                    };
+                }),
+                (t.defaults = function(e) {
+                    if (!t.isObject(e)) return e;
+                    for (var n = 1, r = arguments.length; n < r; n++) {
+                        var i = arguments[n];
+                        for (var o in i) void 0 === e[o] && (e[o] = i[o]);
+                    }
+                    return e;
+                }),
+                (t.keys = function(e) {
+                    if (!t.isObject(e)) return [];
+                    if (p) return p(e);
+                    var n = [];
+                    for (var r in e) t.has(e, r) && n.push(r);
+                    return n;
+                }),
+                (t.has = function(t, e) {
+                    return u.call(t, e);
+                }),
+                (t.isObject = function(t) {
+                    return t === Object(t);
+                }),
+                (t.now =
+                    Date.now ||
+                    function() {
+                        return new Date().getTime();
+                    }),
+                (t.templateSettings = { evaluate: /<%([\s\S]+?)%>/g, interpolate: /<%=([\s\S]+?)%>/g, escape: /<%-([\s\S]+?)%>/g });
             var E = /(.)^/,
                 g = { "'": "'", "\\": "\\", "\r": "r", "\n": "n", "\u2028": "u2028", "\u2029": "u2029" },
                 _ = /\\|'|\r|\n|\u2028|\u2029/g,
@@ -3964,15 +3964,15 @@
                         o = 0,
                         a = "__p+='";
                     e.replace(i, function(t, n, r, i, u) {
-                            return (
-                                (a += e.slice(o, u).replace(_, m)),
+                        return (
+                            (a += e.slice(o, u).replace(_, m)),
                                 (o = u + t.length),
                                 n ? (a += "'+\n((__t=(" + n + "))==null?'':_.escape(__t))+\n'") : r ? (a += "'+\n((__t=(" + r + "))==null?'':__t)+\n'") : i && (a += "';\n" + i + "\n__p+='"),
                                 t
-                            );
-                        }),
+                        );
+                    }),
                         (a += "';\n"),
-                        n.variable || (a = "with(obj||{}){\n" + a + "}\n"),
+                    n.variable || (a = "with(obj||{}){\n" + a + "}\n"),
                         (a = "var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};\n" + a + "return __p;\n");
                     try {
                         var u = new Function(n.variable || "obj", "_", a);
@@ -3985,7 +3985,7 @@
                         s = n.variable || "obj";
                     return (c.source = "function(" + s + "){\n" + a + "}"), c;
                 }),
-                t
+                    t
             );
         })();
     },
@@ -3997,15 +3997,15 @@
             (t.exports = function(t, e, n) {
                 if (
                     ((n = n || {}),
-                        (r.env("test") || r.env("frame")) &&
-                        !n.fixture &&
-                        !(function() {
-                            try {
-                                return window.top.__Cypress__;
-                            } catch (t) {
-                                return !1;
-                            }
-                        })())
+                    (r.env("test") || r.env("frame")) &&
+                    !n.fixture &&
+                    !(function() {
+                        try {
+                            return window.top.__Cypress__;
+                        } catch (t) {
+                            return !1;
+                        }
+                    })())
                 )
                     return { exit: 1 };
                 var i,
@@ -4014,26 +4014,26 @@
                     u = document.location,
                     c = "hashchange",
                     s =
-                    n.load ||
-                    function() {
-                        (i = !0),
-                        (window.WebflowEditor = !0),
-                        o.off(c, l),
-                            (function(t) {
-                                var e = window.document.createElement("iframe");
-                                (e.src = "https://webflow.com/site/third-party-cookie-check.html"), (e.style.display = "none"), (e.sandbox = "allow-scripts allow-same-origin");
-                                var n = function n(r) {
-                                    "WF_third_party_cookies_unsupported" === r.data ? (g(e, n), t(!1)) : "WF_third_party_cookies_supported" === r.data && (g(e, n), t(!0));
-                                };
-                                (e.onerror = function() {
-                                    g(e, n), t(!1);
-                                }),
-                                window.addEventListener("message", n, !1),
-                                    window.document.body.appendChild(e);
-                            })(function(e) {
-                                t.ajax({ url: E("https://editor-api.webflow.com/api/editor/view"), data: { siteId: a.attr("data-wf-site") }, xhrFields: { withCredentials: !0 }, dataType: "json", crossDomain: !0, success: d(e) });
-                            });
-                    },
+                        n.load ||
+                        function() {
+                            (i = !0),
+                                (window.WebflowEditor = !0),
+                                o.off(c, l),
+                                (function(t) {
+                                    var e = window.document.createElement("iframe");
+                                    (e.src = "https://webflow.com/site/third-party-cookie-check.html"), (e.style.display = "none"), (e.sandbox = "allow-scripts allow-same-origin");
+                                    var n = function n(r) {
+                                        "WF_third_party_cookies_unsupported" === r.data ? (g(e, n), t(!1)) : "WF_third_party_cookies_supported" === r.data && (g(e, n), t(!0));
+                                    };
+                                    (e.onerror = function() {
+                                        g(e, n), t(!1);
+                                    }),
+                                        window.addEventListener("message", n, !1),
+                                        window.document.body.appendChild(e);
+                                })(function(e) {
+                                    t.ajax({ url: E("https://editor-api.webflow.com/api/editor/view"), data: { siteId: a.attr("data-wf-site") }, xhrFields: { withCredentials: !0 }, dataType: "json", crossDomain: !0, success: d(e) });
+                                });
+                        },
                     f = !1;
                 try {
                     f = localStorage && localStorage.getItem && localStorage.getItem("WebflowEditor");
@@ -4097,24 +4097,24 @@
                 },
             };
         (i.triggers = {}),
-        (i.types = { INTRO: "w-ix-intro.w-ix", OUTRO: "w-ix-outro.w-ix" }),
-        (i.init = function() {
-            for (var t = o.length, e = 0; e < t; e++) {
-                var n = o[e];
-                n[0](0, n[1]);
-            }
-            (o = []), r.extend(i.triggers, a);
-        }),
-        (i.async = function() {
-            for (var t in a) {
-                var e = a[t];
-                a.hasOwnProperty(t) &&
+            (i.types = { INTRO: "w-ix-intro.w-ix", OUTRO: "w-ix-outro.w-ix" }),
+            (i.init = function() {
+                for (var t = o.length, e = 0; e < t; e++) {
+                    var n = o[e];
+                    n[0](0, n[1]);
+                }
+                (o = []), r.extend(i.triggers, a);
+            }),
+            (i.async = function() {
+                for (var t in a) {
+                    var e = a[t];
+                    a.hasOwnProperty(t) &&
                     (i.triggers[t] = function(t, n) {
                         o.push([e, n]);
                     });
-            }
-        }),
-        i.async(),
+                }
+            }),
+            i.async(),
             (t.exports = i);
     },
     function(t, e, n) {
@@ -4169,10 +4169,10 @@
             i = n(76).includes,
             o = n(148);
         r({ target: "Array", proto: !0 }, {
-                includes: function(t) {
-                    return i(this, t, arguments.length > 1 ? arguments[1] : void 0);
-                },
-            }),
+            includes: function(t) {
+                return i(this, t, arguments.length > 1 ? arguments[1] : void 0);
+            },
+        }),
             o("includes");
     },
     function(t, e, n) {
@@ -4220,8 +4220,8 @@
             i = n(134),
             o = "".split;
         t.exports = r(function() {
-                return !Object("z").propertyIsEnumerable(0);
-            }) ?
+            return !Object("z").propertyIsEnumerable(0);
+        }) ?
 
             function(t) {
                 return "String" == i(t) ? o.call(t, "") : Object(t);
@@ -4252,8 +4252,8 @@
             l = s.enforce,
             d = String(c).split("toString");
         i("inspectSource", function(t) {
-                return c.call(t);
-            }),
+            return c.call(t);
+        }),
             (t.exports = function(t, e, n, i) {
                 var c = !!i && !!i.unsafe,
                     s = !!i && !!i.enumerable,
@@ -4287,24 +4287,24 @@
             (r = function(t, e) {
                 return g.call(v, t, e), e;
             }),
-            (i = function(t) {
-                return h.call(v, t) || {};
-            }),
-            (o = function(t) {
-                return E.call(v, t);
-            });
+                (i = function(t) {
+                    return h.call(v, t) || {};
+                }),
+                (o = function(t) {
+                    return E.call(v, t);
+                });
         } else {
             var _ = l("state");
             (d[_] = !0),
-            (r = function(t, e) {
-                return s(t, _, e), e;
-            }),
-            (i = function(t) {
-                return f(t, _) ? t[_] : {};
-            }),
-            (o = function(t) {
-                return f(t, _);
-            });
+                (r = function(t, e) {
+                    return s(t, _, e), e;
+                }),
+                (i = function(t) {
+                    return f(t, _) ? t[_] : {};
+                }),
+                (o = function(t) {
+                    return f(t, _);
+                });
         }
         t.exports = {
             set: r,
@@ -4450,7 +4450,7 @@
                 var n;
                 return null !== t ? ((f.prototype = r(t)), (n = new f()), (f.prototype = null), (n[s] = t)) : (n = l()), void 0 === e ? n : i(n, e);
             }),
-        (a[s] = !0);
+            (a[s] = !0);
     },
     function(t, e, n) {
         var r = n(14),
@@ -5088,9 +5088,9 @@
             d = RegExp(
                 "^" +
                 f
-                .call(l)
-                .replace(/[\\^$.*+?()[\]{}|]/g, "\\$&")
-                .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") +
+                    .call(l)
+                    .replace(/[\\^$.*+?()[\]{}|]/g, "\\$&")
+                    .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") +
                 "$"
             );
         t.exports = function(t) {
@@ -5376,7 +5376,7 @@
                 t.forEach(function(t, r) {
                     n[++e] = [r, t];
                 }),
-                n
+                    n
             );
         };
     },
@@ -5388,7 +5388,7 @@
                 t.forEach(function(t) {
                     n[++e] = t;
                 }),
-                n
+                    n
             );
         };
     },
@@ -5471,13 +5471,13 @@
             a = {};
         (a["[object Float32Array]"] = a["[object Float64Array]"] = a["[object Int8Array]"] = a["[object Int16Array]"] = a["[object Int32Array]"] = a["[object Uint8Array]"] = a["[object Uint8ClampedArray]"] = a["[object Uint16Array]"] = a[
             "[object Uint32Array]"
-        ] = !0),
-        (a["[object Arguments]"] = a["[object Array]"] = a["[object ArrayBuffer]"] = a["[object Boolean]"] = a["[object DataView]"] = a["[object Date]"] = a["[object Error]"] = a["[object Function]"] = a["[object Map]"] = a[
-            "[object Number]"
-        ] = a["[object Object]"] = a["[object RegExp]"] = a["[object Set]"] = a["[object String]"] = a["[object WeakMap]"] = !1),
-        (t.exports = function(t) {
-            return o(t) && i(t.length) && !!a[r(t)];
-        });
+            ] = !0),
+            (a["[object Arguments]"] = a["[object Array]"] = a["[object ArrayBuffer]"] = a["[object Boolean]"] = a["[object DataView]"] = a["[object Date]"] = a["[object Error]"] = a["[object Function]"] = a["[object Map]"] = a[
+                "[object Number]"
+                ] = a["[object Object]"] = a["[object RegExp]"] = a["[object Set]"] = a["[object String]"] = a["[object WeakMap]"] = !1),
+            (t.exports = function(t) {
+                return o(t) && i(t.length) && !!a[r(t)];
+            });
     },
     function(t, e) {
         t.exports = function(t) {
@@ -5556,10 +5556,10 @@
                 var e = [];
                 return (
                     46 === t.charCodeAt(0) && e.push(""),
-                    t.replace(i, function(t, n, r, i) {
-                        e.push(r ? i.replace(o, "$1") : n || t);
-                    }),
-                    e
+                        t.replace(i, function(t, n, r, i) {
+                            e.push(r ? i.replace(o, "$1") : n || t);
+                        }),
+                        e
                 );
             });
         t.exports = a;
@@ -5912,7 +5912,7 @@
                             l = i(t, D);
                         return (
                             (u = a.widthUnit === W ? (mt.test(s) ? parseFloat(s) : parseFloat(n.width)) : (0, f.default)(parseFloat(s), parseFloat(n.width))),
-                            (c = a.heightUnit === W ? (mt.test(l) ? parseFloat(l) : parseFloat(n.height)) : (0, f.default)(parseFloat(l), parseFloat(n.height))), { widthValue: u, heightValue: c }
+                                (c = a.heightUnit === W ? (mt.test(l) ? parseFloat(l) : parseFloat(n.height)) : (0, f.default)(parseFloat(l), parseFloat(n.height))), { widthValue: u, heightValue: c }
                         );
                     case ot:
                     case at:
@@ -6036,7 +6036,7 @@
                                 (f = c.xValue),
                                 (l = c.yValue),
                                 (d = c.zValue),
-                                ((s === Z && void 0 !== d) || (s === J && void 0 !== d) || (s === tt && (void 0 !== f || void 0 !== l))) && a(t, _.TRANSFORM_STYLE_PREFIXED, x);
+                            ((s === Z && void 0 !== d) || (s === J && void 0 !== d) || (s === tt && (void 0 !== f || void 0 !== l))) && a(t, _.TRANSFORM_STYLE_PREFIXED, x);
                             var u, c, s, f, l, d;
                         })(t, e, n, i, a);
                     case Q:
@@ -6107,12 +6107,12 @@
                     a = r.actionLists,
                     u = void 0 === a ? {} : a;
                 Object.keys(o).forEach(function(t) {
-                        var e = o[t],
-                            r = e.action.config,
-                            i = r.actionListId,
-                            a = u[i];
-                        a && Nt({ actionList: a, event: e, elementApi: n });
-                    }),
+                    var e = o[t],
+                        r = e.action.config,
+                        i = r.actionListId,
+                        a = u[i];
+                    a && Nt({ actionList: a, event: e, elementApi: n });
+                }),
                     Object.keys(u).forEach(function(t) {
                         Nt({ actionList: u[t], elementApi: n });
                     });
@@ -6148,7 +6148,7 @@
                             u += s.delay + l;
                         }
                     }),
-                    u > 0 ? (0, E.optimizeFloat)(c / u) : 0
+                        u > 0 ? (0, E.optimizeFloat)(c / u) : 0
                 );
             }),
             (e.reduceListToGroup = function(t) {
@@ -6172,7 +6172,7 @@
                             return t.actionItems.some(u);
                         });
                     }),
-                    (0, p.setIn)(r, ["actionLists"], (0, c.default)({}, e.id, { id: e.id, actionItemGroups: [{ actionItems: a }] }))
+                        (0, p.setIn)(r, ["actionLists"], (0, c.default)({}, e.id, { id: e.id, actionItemGroups: [{ actionItems: a }] }))
                 );
             }),
             (e.shouldNamespaceEventParameter = function(t, e) {
@@ -6339,16 +6339,16 @@
             }
             return null == C || null == N ? [] :
                 _.IS_BROWSER_ENV && u ?
-                d(N).filter(function(t) {
-                    return u.contains(t);
-                }) :
-                R === F ?
-                d(C, N) :
-                R === k ?
-                p(d(C)).filter(E(N)) :
-                R === X ?
-                v(d(C)).filter(E(N)) :
-                d(N);
+                    d(N).filter(function(t) {
+                        return u.contains(t);
+                    }) :
+                    R === F ?
+                        d(C, N) :
+                        R === k ?
+                            p(d(C)).filter(E(N)) :
+                            R === X ?
+                                v(d(C)).filter(E(N)) :
+                                d(N);
         }
         var mt = /px/,
             yt = function(t, e) {
@@ -6376,12 +6376,12 @@
             }
         };
         var Tt =
-            ((o = {}),
-                (0, c.default)(o, Z, Object.freeze({ xValue: 0, yValue: 0, zValue: 0 })),
-                (0, c.default)(o, J, Object.freeze({ xValue: 1, yValue: 1, zValue: 1 })),
-                (0, c.default)(o, tt, Object.freeze({ xValue: 0, yValue: 0, zValue: 0 })),
-                (0, c.default)(o, et, Object.freeze({ xValue: 0, yValue: 0 })),
-                o),
+                ((o = {}),
+                    (0, c.default)(o, Z, Object.freeze({ xValue: 0, yValue: 0, zValue: 0 })),
+                    (0, c.default)(o, J, Object.freeze({ xValue: 1, yValue: 1, zValue: 1 })),
+                    (0, c.default)(o, tt, Object.freeze({ xValue: 0, yValue: 0, zValue: 0 })),
+                    (0, c.default)(o, et, Object.freeze({ xValue: 0, yValue: 0 })),
+                    o),
             wt = Object.freeze({ blur: 0, "hue-rotate": 0, invert: 0, grayscale: 0, saturate: 100, sepia: 0, contrast: 100, brightness: 100 }),
             Ot = function(t, e) {
                 var n = (0, d.default)(e.filters, function(e) {
@@ -6410,7 +6410,7 @@
                         a = i(t, U);
                     if (a) {
                         var u = a.split(B).map(ft); -
-                        1 === u.indexOf(r) && o(t, U, u.concat(r).join(B));
+                            1 === u.indexOf(r) && o(t, U, u.concat(r).join(B));
                     } else o(t, U, r);
                 }
             }
@@ -6424,18 +6424,18 @@
                         o = n.setStyle,
                         a = i(t, U);
                     a &&
-                        -1 !== a.indexOf(r) &&
-                        o(
-                            t,
-                            U,
-                            a
+                    -1 !== a.indexOf(r) &&
+                    o(
+                        t,
+                        U,
+                        a
                             .split(B)
                             .map(ft)
                             .filter(function(t) {
                                 return t !== r;
                             })
                             .join(B)
-                        );
+                    );
                 }
             }
         }
@@ -6448,15 +6448,15 @@
                 o = n.actionItemGroups,
                 a = n.continuousParameterGroups;
             o &&
-                o.forEach(function(t) {
+            o.forEach(function(t) {
+                Lt({ actionGroup: t, event: r, elementApi: i });
+            }),
+            a &&
+            a.forEach(function(t) {
+                t.continuousActionGroups.forEach(function(t) {
                     Lt({ actionGroup: t, event: r, elementApi: i });
-                }),
-                a &&
-                a.forEach(function(t) {
-                    t.continuousActionGroups.forEach(function(t) {
-                        Lt({ actionGroup: t, event: r, elementApi: i });
-                    });
                 });
+            });
         }
 
         function Lt(t) {
@@ -6516,7 +6516,7 @@
                         o = i.delay + i.duration;
                     o >= e && ((e = o), (n = r));
                 }),
-                n
+                    n
             );
         }
     },
@@ -6567,7 +6567,7 @@
                 if (null == n) return n;
                 if (!r(n)) return t(n, i);
                 for (var o = n.length, a = e ? o : -1, u = Object(n);
-                    (e ? a-- : ++a < o) && !1 !== i(u[a], a, u););
+                     (e ? a-- : ++a < o) && !1 !== i(u[a], a, u););
                 return n;
             };
         };
@@ -6578,7 +6578,7 @@
                 i(t, function(t, i, o) {
                     n = r ? ((r = !1), t) : e(n, t, i, o);
                 }),
-                n
+                    n
             );
         };
     },
@@ -6736,10 +6736,10 @@
                                 o = (parseFloat(n) - r) * C + r;
                             return (t[e] = o), t;
                         }, {})),
-                        (N.current = L),
-                        (N.position = R),
+                            (N.current = L),
+                            (N.position = R),
                         1 === R && ((N.active = !1), (N.complete = !0)),
-                        (0, o.merge)(t, N)
+                            (0, o.merge)(t, N)
                     );
                 }
                 return t;
@@ -6978,9 +6978,9 @@
             });
             return (
                 (e = i(e)),
-                o(t, n, function(t, n) {
-                    return e(t, n[0]);
-                })
+                    o(t, n, function(t, n) {
+                        return e(t, n[0]);
+                    })
             );
         };
     },
@@ -7042,11 +7042,11 @@
             a = n(96),
             u = Object.getOwnPropertySymbols ?
 
-            function(t) {
-                for (var e = []; t;) r(e, o(t)), (t = i(t));
-                return e;
-            } :
-            a;
+                function(t) {
+                    for (var e = []; t;) r(e, o(t)), (t = i(t));
+                    return e;
+                } :
+                a;
         t.exports = u;
     },
     function(t, e, n) {
@@ -7113,10 +7113,10 @@
             var n = {};
             return (
                 (e = o(e, 3)),
-                i(t, function(t, i, o) {
-                    r(n, i, e(t, i, o));
-                }),
-                n
+                    i(t, function(t, i, o) {
+                        r(n, i, e(t, i, o));
+                    }),
+                    n
             );
         };
     },
@@ -7214,13 +7214,13 @@
             return (
                 (e = o(e) || 0),
                 r(n) && ((E = !!n.leading), (l = (g = "maxWait" in n) ? u(o(n.maxWait) || 0, e) : l), (_ = "trailing" in n ? !!n.trailing : _)),
-                (T.cancel = function() {
-                    void 0 !== p && clearTimeout(p), (h = 0), (s = v = f = p = void 0);
-                }),
-                (T.flush = function() {
-                    return void 0 === p ? d : b(i());
-                }),
-                T
+                    (T.cancel = function() {
+                        void 0 !== p && clearTimeout(p), (h = 0), (s = v = f = p = void 0);
+                    }),
+                    (T.flush = function() {
+                        return void 0 === p ? d : b(i());
+                    }),
+                    T
             );
         };
     },
@@ -7406,9 +7406,9 @@
                     l = J(n, f);
                 return (
                     l && (0, E.stopActionGroup)({ store: n, eventId: f, eventTarget: i, eventStateKey: f + Y + o.split(Y)[1], actionListId: (0, p.default)(l, "action.config.actionListId") }),
-                    (0, E.stopActionGroup)({ store: n, eventId: u, eventTarget: i, eventStateKey: o, actionListId: s }),
-                    (0, E.startActionGroup)({ store: n, eventId: u, eventTarget: i, eventStateKey: o, actionListId: s }),
-                    e
+                        (0, E.stopActionGroup)({ store: n, eventId: u, eventTarget: i, eventStateKey: o, actionListId: s }),
+                        (0, E.startActionGroup)({ store: n, eventId: u, eventTarget: i, eventStateKey: o, actionListId: s }),
+                        e
                 );
             },
             et = function(t, e) {
@@ -7425,21 +7425,21 @@
             ot = { types: it },
             at = { PAGE_START: W, PAGE_FINISH: G },
             ut =
-            ((c = void 0 !== window.pageXOffset),
-                (s = "CSS1Compat" === document.compatMode ? document.documentElement : document.body),
-                function() {
-                    return {
-                        scrollLeft: c ? window.pageXOffset : s.scrollLeft,
-                        scrollTop: c ? window.pageYOffset : s.scrollTop,
-                        stiffScrollTop: (0, v.default)(c ? window.pageYOffset : s.scrollTop, 0, s.scrollHeight - window.innerHeight),
-                        scrollWidth: s.scrollWidth,
-                        scrollHeight: s.scrollHeight,
-                        clientWidth: s.clientWidth,
-                        clientHeight: s.clientHeight,
-                        innerWidth: window.innerWidth,
-                        innerHeight: window.innerHeight,
-                    };
-                }),
+                ((c = void 0 !== window.pageXOffset),
+                    (s = "CSS1Compat" === document.compatMode ? document.documentElement : document.body),
+                    function() {
+                        return {
+                            scrollLeft: c ? window.pageXOffset : s.scrollLeft,
+                            scrollTop: c ? window.pageYOffset : s.scrollTop,
+                            stiffScrollTop: (0, v.default)(c ? window.pageYOffset : s.scrollTop, 0, s.scrollHeight - window.innerHeight),
+                            scrollWidth: s.scrollWidth,
+                            scrollHeight: s.scrollHeight,
+                            clientWidth: s.clientWidth,
+                            clientHeight: s.clientHeight,
+                            innerWidth: window.innerWidth,
+                            innerHeight: window.innerHeight,
+                        };
+                    }),
             ct = function(t) {
                 var e = t.element,
                     n = t.nativeEvent,
@@ -7534,231 +7534,231 @@
             Et = (0, l.default)({}, ot, {
                 handler:
                     ((f = function(t, e) {
-                            var n = e.elementVisible,
-                                r = t.event;
-                            return !t.store.getState().ixData.events[r.action.config.autoStopEventId] && e.triggered ? e : (r.eventTypeId === j) === n ? (tt(t), (0, l.default)({}, e, { triggered: !0 })) : e;
-                        }),
+                        var n = e.elementVisible,
+                            r = t.event;
+                        return !t.store.getState().ixData.events[r.action.config.autoStopEventId] && e.triggered ? e : (r.eventTypeId === j) === n ? (tt(t), (0, l.default)({}, e, { triggered: !0 })) : e;
+                    }),
                         function(t, e) {
                             var n = (0, l.default)({}, e, { elementVisible: st(t) });
                             return ((e ? n.elementVisible !== e.elementVisible : n.elementVisible) && f(t, n)) || n;
                         }),
             }),
             gt =
-            ((r = {}),
-                (0, o.default)(r, x, vt()),
-                (0, o.default)(r, R, ht()),
-                (0, o.default)(r, S, vt()),
-                (0, o.default)(r, A, ht()),
-                (0, o.default)(r, D, vt(!1)),
-                (0, o.default)(r, L, ht(!1)),
-                (0, o.default)(r, C, vt()),
-                (0, o.default)(r, N, ht()),
-                (0, o.default)(r, U, { types: "ecommerce-cart-open", handler: et(Z, tt) }),
-                (0, o.default)(r, V, { types: "ecommerce-cart-close", handler: et(Z, tt) }),
-                (0, o.default)(r, y, {
-                    types: "click",
-                    handler: et(
-                        Z,
-                        pt(function(t, e) {
-                            var n,
-                                r,
-                                i,
-                                o = e.clickCount;
-                            (r = (n = t).store), (i = n.event.action.config.autoStopEventId), Boolean(J(r, i)) ? 1 === o && tt(t) : tt(t);
-                        })
-                    ),
-                }),
-                (0, o.default)(r, I, {
-                    types: "click",
-                    handler: et(
-                        Z,
-                        pt(function(t, e) {
-                            2 === e.clickCount && tt(t);
-                        })
-                    ),
-                }),
-                (0, o.default)(r, b, (0, l.default)({}, nt, { types: "mousedown" })),
-                (0, o.default)(r, T, (0, l.default)({}, nt, { types: "mouseup" })),
-                (0, o.default)(r, w, {
-                    types: "mouseover mouseout",
-                    handler: et(
-                        Z,
-                        lt(function(t, e) {
-                            e.elementHovered && tt(t);
-                        })
-                    ),
-                }),
-                (0, o.default)(r, O, {
-                    types: "mouseover mouseout",
-                    handler: et(
-                        Z,
-                        lt(function(t, e) {
-                            e.elementHovered || tt(t);
-                        })
-                    ),
-                }),
-                (0, o.default)(r, P, {
-                    types: "mousemove mouseout scroll",
-                    handler: function(t) {
-                        var e = t.store,
-                            n = t.element,
-                            r = t.eventConfig,
-                            i = t.nativeEvent,
-                            o = t.eventStateKey,
-                            a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { clientX: 0, clientY: 0, pageX: 0, pageY: 0 },
-                            u = r.basedOn,
-                            c = r.selectedAxis,
-                            s = r.continuousParameterGroupId,
-                            f = r.reverse,
-                            l = r.restingState,
-                            d = void 0 === l ? 0 : l,
-                            p = i.clientX,
-                            v = void 0 === p ? a.clientX : p,
-                            E = i.clientY,
-                            _ = void 0 === E ? a.clientY : E,
-                            m = i.pageX,
-                            y = void 0 === m ? a.pageX : m,
-                            I = i.pageY,
-                            b = void 0 === I ? a.pageY : I,
-                            T = "X_AXIS" === c,
-                            w = "mouseout" === i.type,
-                            O = d / 100,
-                            A = s,
-                            S = !1;
-                        switch (u) {
-                            case h.EventBasedOn.VIEWPORT:
-                                O = T ? Math.min(v, window.innerWidth) / window.innerWidth : Math.min(_, window.innerHeight) / window.innerHeight;
-                                break;
-                            case h.EventBasedOn.PAGE:
-                                var x = ut(),
-                                    R = x.scrollLeft,
-                                    C = x.scrollTop,
-                                    N = x.scrollWidth,
-                                    L = x.scrollHeight;
-                                O = T ? Math.min(R + y, N) / N : Math.min(C + b, L) / L;
-                                break;
-                            case h.EventBasedOn.ELEMENT:
-                            default:
-                                A = K(o, s);
-                                var D = 0 === i.type.indexOf("mouse");
-                                if (D && !0 !== Z({ element: n, nativeEvent: i })) break;
-                                var P = n.getBoundingClientRect(),
-                                    M = P.left,
-                                    j = P.top,
-                                    F = P.width,
-                                    k = P.height;
-                                if (!D &&
-                                    !(function(t, e) {
-                                        return t.left > e.left && t.left < e.right && t.top > e.top && t.top < e.bottom;
-                                    })({ left: v, top: _ }, P)
-                                )
+                ((r = {}),
+                    (0, o.default)(r, x, vt()),
+                    (0, o.default)(r, R, ht()),
+                    (0, o.default)(r, S, vt()),
+                    (0, o.default)(r, A, ht()),
+                    (0, o.default)(r, D, vt(!1)),
+                    (0, o.default)(r, L, ht(!1)),
+                    (0, o.default)(r, C, vt()),
+                    (0, o.default)(r, N, ht()),
+                    (0, o.default)(r, U, { types: "ecommerce-cart-open", handler: et(Z, tt) }),
+                    (0, o.default)(r, V, { types: "ecommerce-cart-close", handler: et(Z, tt) }),
+                    (0, o.default)(r, y, {
+                        types: "click",
+                        handler: et(
+                            Z,
+                            pt(function(t, e) {
+                                var n,
+                                    r,
+                                    i,
+                                    o = e.clickCount;
+                                (r = (n = t).store), (i = n.event.action.config.autoStopEventId), Boolean(J(r, i)) ? 1 === o && tt(t) : tt(t);
+                            })
+                        ),
+                    }),
+                    (0, o.default)(r, I, {
+                        types: "click",
+                        handler: et(
+                            Z,
+                            pt(function(t, e) {
+                                2 === e.clickCount && tt(t);
+                            })
+                        ),
+                    }),
+                    (0, o.default)(r, b, (0, l.default)({}, nt, { types: "mousedown" })),
+                    (0, o.default)(r, T, (0, l.default)({}, nt, { types: "mouseup" })),
+                    (0, o.default)(r, w, {
+                        types: "mouseover mouseout",
+                        handler: et(
+                            Z,
+                            lt(function(t, e) {
+                                e.elementHovered && tt(t);
+                            })
+                        ),
+                    }),
+                    (0, o.default)(r, O, {
+                        types: "mouseover mouseout",
+                        handler: et(
+                            Z,
+                            lt(function(t, e) {
+                                e.elementHovered || tt(t);
+                            })
+                        ),
+                    }),
+                    (0, o.default)(r, P, {
+                        types: "mousemove mouseout scroll",
+                        handler: function(t) {
+                            var e = t.store,
+                                n = t.element,
+                                r = t.eventConfig,
+                                i = t.nativeEvent,
+                                o = t.eventStateKey,
+                                a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { clientX: 0, clientY: 0, pageX: 0, pageY: 0 },
+                                u = r.basedOn,
+                                c = r.selectedAxis,
+                                s = r.continuousParameterGroupId,
+                                f = r.reverse,
+                                l = r.restingState,
+                                d = void 0 === l ? 0 : l,
+                                p = i.clientX,
+                                v = void 0 === p ? a.clientX : p,
+                                E = i.clientY,
+                                _ = void 0 === E ? a.clientY : E,
+                                m = i.pageX,
+                                y = void 0 === m ? a.pageX : m,
+                                I = i.pageY,
+                                b = void 0 === I ? a.pageY : I,
+                                T = "X_AXIS" === c,
+                                w = "mouseout" === i.type,
+                                O = d / 100,
+                                A = s,
+                                S = !1;
+                            switch (u) {
+                                case h.EventBasedOn.VIEWPORT:
+                                    O = T ? Math.min(v, window.innerWidth) / window.innerWidth : Math.min(_, window.innerHeight) / window.innerHeight;
                                     break;
-                                (S = !0), (O = T ? (v - M) / F : (_ - j) / k);
-                        }
-                        return (
-                            w && (O > 0.95 || O < 0.05) && (O = Math.round(O)),
-                            (u !== h.EventBasedOn.ELEMENT || S || S !== a.elementHovered) && ((O = f ? 1 - O : O), e.dispatch((0, g.parameterChanged)(A, O))), { elementHovered: S, clientX: v, clientY: _, pageX: y, pageY: b }
-                        );
-                    },
-                }),
-                (0, o.default)(r, B, {
-                    types: it,
-                    handler: function(t) {
-                        var e = t.store,
-                            n = t.eventConfig,
-                            r = n.continuousParameterGroupId,
-                            i = n.reverse,
-                            o = ut(),
-                            a = o.scrollTop / (o.scrollHeight - o.clientHeight);
-                        (a = i ? 1 - a : a), e.dispatch((0, g.parameterChanged)(r, a));
-                    },
-                }),
-                (0, o.default)(r, X, {
-                    types: it,
-                    handler: function(t) {
-                        var e = t.element,
-                            n = t.store,
-                            r = t.eventConfig,
-                            i = t.eventStateKey,
-                            o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { scrollPercent: 0 },
-                            a = ut(),
-                            u = a.scrollLeft,
-                            c = a.scrollTop,
-                            s = a.scrollWidth,
-                            f = a.scrollHeight,
-                            l = a.clientHeight,
-                            d = r.basedOn,
-                            p = r.selectedAxis,
-                            v = r.continuousParameterGroupId,
-                            E = r.startsEntering,
-                            _ = r.startsExiting,
-                            m = r.addEndOffset,
-                            y = r.addStartOffset,
-                            I = r.addOffsetValue,
-                            b = void 0 === I ? 0 : I,
-                            T = r.endOffsetValue,
-                            w = void 0 === T ? 0 : T,
-                            O = "X_AXIS" === p;
-                        if (d === h.EventBasedOn.VIEWPORT) {
-                            var A = O ? u / s : c / f;
-                            return A !== o.scrollPercent && n.dispatch((0, g.parameterChanged)(v, A)), { scrollPercent: A };
-                        }
-                        var S = K(i, v),
-                            x = e.getBoundingClientRect(),
-                            R = (y ? b : 0) / 100,
-                            C = (m ? w : 0) / 100;
-                        (R = E ? R : 1 - R), (C = _ ? C : 1 - C);
-                        var N = x.top + Math.min(x.height * R, l),
-                            L = x.top + x.height * C - N,
-                            D = Math.min(l + L, f),
-                            P = Math.min(Math.max(0, l - N), D) / D;
-                        return P !== o.scrollPercent && n.dispatch((0, g.parameterChanged)(S, P)), { scrollPercent: P };
-                    },
-                }),
-                (0, o.default)(r, j, Et),
-                (0, o.default)(r, F, Et),
-                (0, o.default)(
-                    r,
-                    M,
-                    (0, l.default)({}, ot, {
-                        handler: dt(function(t, e) {
-                            e.scrollingDown && tt(t);
-                        }),
-                    })
-                ),
-                (0, o.default)(
-                    r,
-                    k,
-                    (0, l.default)({}, ot, {
-                        handler: dt(function(t, e) {
-                            e.scrollingDown || tt(t);
-                        }),
-                    })
-                ),
-                (0, o.default)(r, G, {
-                    types: "readystatechange IX2_PAGE_UPDATE",
-                    handler: et(
-                        q,
-                        (function(t) {
-                            return function(e, n) {
-                                var r = { finished: "complete" === document.readyState };
-                                return !r.finished || (n && n.finshed) || t(e), r;
-                            };
-                        })(tt)
+                                case h.EventBasedOn.PAGE:
+                                    var x = ut(),
+                                        R = x.scrollLeft,
+                                        C = x.scrollTop,
+                                        N = x.scrollWidth,
+                                        L = x.scrollHeight;
+                                    O = T ? Math.min(R + y, N) / N : Math.min(C + b, L) / L;
+                                    break;
+                                case h.EventBasedOn.ELEMENT:
+                                default:
+                                    A = K(o, s);
+                                    var D = 0 === i.type.indexOf("mouse");
+                                    if (D && !0 !== Z({ element: n, nativeEvent: i })) break;
+                                    var P = n.getBoundingClientRect(),
+                                        M = P.left,
+                                        j = P.top,
+                                        F = P.width,
+                                        k = P.height;
+                                    if (!D &&
+                                        !(function(t, e) {
+                                            return t.left > e.left && t.left < e.right && t.top > e.top && t.top < e.bottom;
+                                        })({ left: v, top: _ }, P)
+                                    )
+                                        break;
+                                    (S = !0), (O = T ? (v - M) / F : (_ - j) / k);
+                            }
+                            return (
+                                w && (O > 0.95 || O < 0.05) && (O = Math.round(O)),
+                                (u !== h.EventBasedOn.ELEMENT || S || S !== a.elementHovered) && ((O = f ? 1 - O : O), e.dispatch((0, g.parameterChanged)(A, O))), { elementHovered: S, clientX: v, clientY: _, pageX: y, pageY: b }
+                            );
+                        },
+                    }),
+                    (0, o.default)(r, B, {
+                        types: it,
+                        handler: function(t) {
+                            var e = t.store,
+                                n = t.eventConfig,
+                                r = n.continuousParameterGroupId,
+                                i = n.reverse,
+                                o = ut(),
+                                a = o.scrollTop / (o.scrollHeight - o.clientHeight);
+                            (a = i ? 1 - a : a), e.dispatch((0, g.parameterChanged)(r, a));
+                        },
+                    }),
+                    (0, o.default)(r, X, {
+                        types: it,
+                        handler: function(t) {
+                            var e = t.element,
+                                n = t.store,
+                                r = t.eventConfig,
+                                i = t.eventStateKey,
+                                o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { scrollPercent: 0 },
+                                a = ut(),
+                                u = a.scrollLeft,
+                                c = a.scrollTop,
+                                s = a.scrollWidth,
+                                f = a.scrollHeight,
+                                l = a.clientHeight,
+                                d = r.basedOn,
+                                p = r.selectedAxis,
+                                v = r.continuousParameterGroupId,
+                                E = r.startsEntering,
+                                _ = r.startsExiting,
+                                m = r.addEndOffset,
+                                y = r.addStartOffset,
+                                I = r.addOffsetValue,
+                                b = void 0 === I ? 0 : I,
+                                T = r.endOffsetValue,
+                                w = void 0 === T ? 0 : T,
+                                O = "X_AXIS" === p;
+                            if (d === h.EventBasedOn.VIEWPORT) {
+                                var A = O ? u / s : c / f;
+                                return A !== o.scrollPercent && n.dispatch((0, g.parameterChanged)(v, A)), { scrollPercent: A };
+                            }
+                            var S = K(i, v),
+                                x = e.getBoundingClientRect(),
+                                R = (y ? b : 0) / 100,
+                                C = (m ? w : 0) / 100;
+                            (R = E ? R : 1 - R), (C = _ ? C : 1 - C);
+                            var N = x.top + Math.min(x.height * R, l),
+                                L = x.top + x.height * C - N,
+                                D = Math.min(l + L, f),
+                                P = Math.min(Math.max(0, l - N), D) / D;
+                            return P !== o.scrollPercent && n.dispatch((0, g.parameterChanged)(S, P)), { scrollPercent: P };
+                        },
+                    }),
+                    (0, o.default)(r, j, Et),
+                    (0, o.default)(r, F, Et),
+                    (0, o.default)(
+                        r,
+                        M,
+                        (0, l.default)({}, ot, {
+                            handler: dt(function(t, e) {
+                                e.scrollingDown && tt(t);
+                            }),
+                        })
                     ),
-                }),
-                (0, o.default)(r, W, {
-                    types: "readystatechange IX2_PAGE_UPDATE",
-                    handler: et(
-                        q,
-                        (function(t) {
-                            return function(e, n) {
-                                return n || t(e), { started: !0 };
-                            };
-                        })(tt)
+                    (0, o.default)(
+                        r,
+                        k,
+                        (0, l.default)({}, ot, {
+                            handler: dt(function(t, e) {
+                                e.scrollingDown || tt(t);
+                            }),
+                        })
                     ),
-                }),
-                r);
+                    (0, o.default)(r, G, {
+                        types: "readystatechange IX2_PAGE_UPDATE",
+                        handler: et(
+                            q,
+                            (function(t) {
+                                return function(e, n) {
+                                    var r = { finished: "complete" === document.readyState };
+                                    return !r.finished || (n && n.finshed) || t(e), r;
+                                };
+                            })(tt)
+                        ),
+                    }),
+                    (0, o.default)(r, W, {
+                        types: "readystatechange IX2_PAGE_UPDATE",
+                        handler: et(
+                            q,
+                            (function(t) {
+                                return function(e, n) {
+                                    return n || t(e), { started: !0 };
+                                };
+                            })(tt)
+                        ),
+                    }),
+                    r);
         e.default = gt;
     },
     function(t, e, n) {
@@ -7845,12 +7845,12 @@
         t.exports = function(t, e, n) {
             return (
                 (e = i(void 0 === e ? t.length - 1 : e, 0)),
-                function() {
-                    for (var o = arguments, a = -1, u = i(o.length - e, 0), c = Array(u); ++a < u;) c[a] = o[e + a];
-                    a = -1;
-                    for (var s = Array(e + 1); ++a < e;) s[a] = o[a];
-                    return (s[e] = n(c)), r(t, this, s);
-                }
+                    function() {
+                        for (var o = arguments, a = -1, u = i(o.length - e, 0), c = Array(u); ++a < u;) c[a] = o[e + a];
+                        a = -1;
+                        for (var s = Array(e + 1); ++a < e;) s[a] = o[a];
+                        return (s[e] = n(c)), r(t, this, s);
+                    }
             );
         };
     },
@@ -7880,10 +7880,10 @@
             o = n(59),
             a = i ?
 
-            function(t, e) {
-                return i(t, "toString", { configurable: !0, enumerable: !1, value: r(e), writable: !0 });
-            } :
-            o;
+                function(t, e) {
+                    return i(t, "toString", { configurable: !0, enumerable: !1, value: r(e), writable: !0 });
+                } :
+                o;
         t.exports = a;
     },
     function(t, e) {
@@ -8040,7 +8040,7 @@
                         for (var t = document.links, e = 0; e < t.length; ++e) v(t[e]);
                         i.length && (r.scroll.on(h), h());
                     }),
-                    a
+                        a
                 );
             })
         );
@@ -8060,18 +8060,18 @@
                             return !0;
                         }
                     })() ?
-                    null :
-                    window.history,
+                        null :
+                        window.history,
                     o = t(window),
                     a = t(document),
                     u = t(document.body),
                     c =
-                    window.requestAnimationFrame ||
-                    window.mozRequestAnimationFrame ||
-                    window.webkitRequestAnimationFrame ||
-                    function(t) {
-                        window.setTimeout(t, 15);
-                    },
+                        window.requestAnimationFrame ||
+                        window.mozRequestAnimationFrame ||
+                        window.webkitRequestAnimationFrame ||
+                        function(t) {
+                            window.setTimeout(t, 15);
+                        },
                     s = r.env("editor") ? ".w-editor-body" : "body",
                     f = "header, " + s + " > .header, " + s + " > .w-nav:not([data-no-scroll])",
                     l = 'a[href="#"]',
@@ -8101,58 +8101,58 @@
                         if ("" !== l) {
                             var d = t(l);
                             d.length &&
-                                (e && (e.preventDefault(), e.stopPropagation()),
-                                    (function(t) {
-                                        if (n.hash !== t && i && i.pushState && (!r.env.chrome || "file:" !== n.protocol)) {
-                                            var e = i.state && i.state.hash;
-                                            e !== t && i.pushState({ hash: t }, "", t);
-                                        }
-                                    })(l),
-                                    window.setTimeout(
-                                        function() {
-                                            !(function(e, n) {
-                                                var r = o.scrollTop(),
-                                                    i = (function(e) {
-                                                        var n = t(f),
-                                                            r = "fixed" === n.css("position") ? n.outerHeight() : 0,
-                                                            i = e.offset().top - r;
-                                                        if ("mid" === e.data("scroll")) {
-                                                            var a = o.height() - r,
-                                                                u = e.outerHeight();
-                                                            u < a && (i -= Math.round((a - u) / 2));
-                                                        }
-                                                        return i;
-                                                    })(e);
-                                                if (r === i) return;
-                                                var a = (function(t, e, n) {
-                                                        if ("none" === document.body.getAttribute("data-wf-scroll-motion") || h.matches) return 0;
-                                                        var r = 1;
-                                                        return (
-                                                            u.add(t).each(function(t, e) {
-                                                                var n = parseFloat(e.getAttribute("data-scroll-time"));
-                                                                !isNaN(n) && n >= 0 && (r = n);
-                                                            }),
-                                                            (472.143 * Math.log(Math.abs(e - n) + 125) - 2e3) * r
-                                                        );
-                                                    })(e, r, i),
-                                                    s = Date.now();
-                                                c(function t() {
-                                                    var e = Date.now() - s;
-                                                    window.scroll(
-                                                            0,
-                                                            (function(t, e, n, r) {
-                                                                return n > r ? e : t + (e - t) * ((i = n / r) < 0.5 ? 4 * i * i * i : (i - 1) * (2 * i - 2) * (2 * i - 2) + 1);
-                                                                var i;
-                                                            })(r, i, e, a)
-                                                        ),
-                                                        e <= a ? c(t) : "function" == typeof n && n();
-                                                });
-                                            })(d, function() {
-                                                E(d, "add"), d.focus(), E(d, "remove");
+                            (e && (e.preventDefault(), e.stopPropagation()),
+                                (function(t) {
+                                    if (n.hash !== t && i && i.pushState && (!r.env.chrome || "file:" !== n.protocol)) {
+                                        var e = i.state && i.state.hash;
+                                        e !== t && i.pushState({ hash: t }, "", t);
+                                    }
+                                })(l),
+                                window.setTimeout(
+                                    function() {
+                                        !(function(e, n) {
+                                            var r = o.scrollTop(),
+                                                i = (function(e) {
+                                                    var n = t(f),
+                                                        r = "fixed" === n.css("position") ? n.outerHeight() : 0,
+                                                        i = e.offset().top - r;
+                                                    if ("mid" === e.data("scroll")) {
+                                                        var a = o.height() - r,
+                                                            u = e.outerHeight();
+                                                        u < a && (i -= Math.round((a - u) / 2));
+                                                    }
+                                                    return i;
+                                                })(e);
+                                            if (r === i) return;
+                                            var a = (function(t, e, n) {
+                                                    if ("none" === document.body.getAttribute("data-wf-scroll-motion") || h.matches) return 0;
+                                                    var r = 1;
+                                                    return (
+                                                        u.add(t).each(function(t, e) {
+                                                            var n = parseFloat(e.getAttribute("data-scroll-time"));
+                                                            !isNaN(n) && n >= 0 && (r = n);
+                                                        }),
+                                                        (472.143 * Math.log(Math.abs(e - n) + 125) - 2e3) * r
+                                                    );
+                                                })(e, r, i),
+                                                s = Date.now();
+                                            c(function t() {
+                                                var e = Date.now() - s;
+                                                window.scroll(
+                                                    0,
+                                                    (function(t, e, n, r) {
+                                                        return n > r ? e : t + (e - t) * ((i = n / r) < 0.5 ? 4 * i * i * i : (i - 1) * (2 * i - 2) * (2 * i - 2) + 1);
+                                                        var i;
+                                                    })(r, i, e, a)
+                                                ),
+                                                    e <= a ? c(t) : "function" == typeof n && n();
                                             });
-                                        },
-                                        e ? 0 : 300
-                                    ));
+                                        })(d, function() {
+                                            E(d, "add"), d.focus(), E(d, "remove");
+                                        });
+                                    },
+                                    e ? 0 : 300
+                                ));
                         }
                     }
                 }
@@ -8198,13 +8198,13 @@
                                 s = c - i;
                             (i = c),
                             Math.abs(s) > u &&
-                                n &&
-                                "" === String(n()) &&
-                                (!(function(e, n, r) {
-                                        var i = t.Event(e, { originalEvent: n });
-                                        t(n.target).trigger(i, r);
-                                    })("swipe", e, { direction: s > 0 ? "right" : "left" }),
-                                    l());
+                            n &&
+                            "" === String(n()) &&
+                            (!(function(e, n, r) {
+                                var i = t.Event(e, { originalEvent: n });
+                                t(n.target).trigger(i, r);
+                            })("swipe", e, { direction: s > 0 ? "right" : "left" }),
+                                l());
                         }
                     }
 
@@ -8237,11 +8237,11 @@
                 }
                 return (
                     (t.event.special.tap = { bindType: "click", delegateType: "click" }),
-                    (e.init = function(e) {
-                        return (e = "string" == typeof e ? t(e).get(0) : e) ? new r(e) : null;
-                    }),
-                    (e.instance = e.init(document)),
-                    e
+                        (e.init = function(e) {
+                            return (e = "string" == typeof e ? t(e).get(0) : e) ? new r(e) : null;
+                        }),
+                        (e.instance = e.init(document)),
+                        e
                 );
             })
         );
@@ -8278,113 +8278,113 @@
                     i || (i = t.data(n, p, { form: r })), I(i);
                     var a = r.closest("div.w-form");
                     (i.done = a.find("> .w-form-done")),
-                    (i.fail = a.find("> .w-form-fail")),
-                    (i.fileUploads = a.find(".w-file-upload")),
-                    i.fileUploads.each(function(e) {
-                        !(function(e, n) {
-                            if (!n.fileUploads || !n.fileUploads[e]) return;
-                            var r,
-                                i = t(n.fileUploads[e]),
-                                o = i.find("> .w-file-upload-default"),
-                                a = i.find("> .w-file-upload-uploading"),
-                                u = i.find("> .w-file-upload-success"),
-                                s = i.find("> .w-file-upload-error"),
-                                f = o.find(".w-file-upload-input"),
-                                l = o.find(".w-file-upload-label"),
-                                d = l.children(),
-                                p = s.find(".w-file-upload-error-msg"),
-                                v = u.find(".w-file-upload-file"),
-                                h = u.find(".w-file-remove-link"),
-                                E = v.find(".w-file-upload-file-name"),
-                                _ = p.attr("data-w-size-error"),
-                                m = p.attr("data-w-type-error"),
-                                y = p.attr("data-w-generic-error");
-                            if (g)
-                                f.on("click", function(t) {
-                                    t.preventDefault();
-                                }),
-                                l.on("click", function(t) {
-                                    t.preventDefault();
-                                }),
-                                d.on("click", function(t) {
-                                    t.preventDefault();
-                                });
-                            else {
-                                h.on("click", function() {
+                        (i.fail = a.find("> .w-form-fail")),
+                        (i.fileUploads = a.find(".w-file-upload")),
+                        i.fileUploads.each(function(e) {
+                            !(function(e, n) {
+                                if (!n.fileUploads || !n.fileUploads[e]) return;
+                                var r,
+                                    i = t(n.fileUploads[e]),
+                                    o = i.find("> .w-file-upload-default"),
+                                    a = i.find("> .w-file-upload-uploading"),
+                                    u = i.find("> .w-file-upload-success"),
+                                    s = i.find("> .w-file-upload-error"),
+                                    f = o.find(".w-file-upload-input"),
+                                    l = o.find(".w-file-upload-label"),
+                                    d = l.children(),
+                                    p = s.find(".w-file-upload-error-msg"),
+                                    v = u.find(".w-file-upload-file"),
+                                    h = u.find(".w-file-remove-link"),
+                                    E = v.find(".w-file-upload-file-name"),
+                                    _ = p.attr("data-w-size-error"),
+                                    m = p.attr("data-w-type-error"),
+                                    y = p.attr("data-w-generic-error");
+                                if (g)
+                                    f.on("click", function(t) {
+                                        t.preventDefault();
+                                    }),
+                                        l.on("click", function(t) {
+                                            t.preventDefault();
+                                        }),
+                                        d.on("click", function(t) {
+                                            t.preventDefault();
+                                        });
+                                else {
+                                    h.on("click", function() {
                                         f.removeAttr("data-value"), f.val(""), E.html(""), o.toggle(!0), u.toggle(!1);
                                     }),
-                                    f.on("change", function(i) {
-                                        (r = i.target && i.target.files && i.target.files[0]) &&
-                                        (o.toggle(!1),
-                                            s.toggle(!1),
-                                            a.toggle(!0),
-                                            E.text(r.name),
+                                        f.on("change", function(i) {
+                                            (r = i.target && i.target.files && i.target.files[0]) &&
+                                            (o.toggle(!1),
+                                                s.toggle(!1),
+                                                a.toggle(!0),
+                                                E.text(r.name),
                                             S() || b(n),
-                                            (n.fileUploads[e].uploading = !0),
-                                            (function(e, n) {
-                                                var r = { name: e.name, size: e.size };
-                                                t.ajax({ type: "POST", url: c, data: r, dataType: "json", crossDomain: !0 })
-                                                    .done(function(t) {
-                                                        n(null, t);
+                                                (n.fileUploads[e].uploading = !0),
+                                                (function(e, n) {
+                                                    var r = { name: e.name, size: e.size };
+                                                    t.ajax({ type: "POST", url: c, data: r, dataType: "json", crossDomain: !0 })
+                                                        .done(function(t) {
+                                                            n(null, t);
+                                                        })
+                                                        .fail(function(t) {
+                                                            n(t);
+                                                        });
+                                                })(r, O));
+                                        });
+                                    var T = l.outerHeight();
+                                    f.height(T), f.width(1);
+                                }
+
+                                function w(t) {
+                                    var r = t.responseJSON && t.responseJSON.msg,
+                                        i = y;
+                                    "string" == typeof r && 0 === r.indexOf("InvalidFileTypeError") ? (i = m) : "string" == typeof r && 0 === r.indexOf("MaxFileSizeError") && (i = _),
+                                        p.text(i),
+                                        f.removeAttr("data-value"),
+                                        f.val(""),
+                                        a.toggle(!1),
+                                        o.toggle(!0),
+                                        s.toggle(!0),
+                                        (n.fileUploads[e].uploading = !1),
+                                    S() || I(n);
+                                }
+
+                                function O(e, n) {
+                                    if (e) return w(e);
+                                    var i = n.fileName,
+                                        o = n.postData,
+                                        a = n.fileId,
+                                        u = n.s3Url;
+                                    f.attr("data-value", a),
+                                        (function(e, n, r, i, o) {
+                                            var a = new FormData();
+                                            for (var u in n) a.append(u, n[u]);
+                                            a.append("file", r, i),
+                                                t
+                                                    .ajax({ type: "POST", url: e, data: a, processData: !1, contentType: !1 })
+                                                    .done(function() {
+                                                        o(null);
                                                     })
                                                     .fail(function(t) {
-                                                        n(t);
+                                                        o(t);
                                                     });
-                                            })(r, O));
+                                        })(u, o, r, i, A);
+                                }
+
+                                function A(t) {
+                                    if (t) return w(t);
+                                    a.toggle(!1), u.css("display", "inline-block"), (n.fileUploads[e].uploading = !1), S() || I(n);
+                                }
+
+                                function S() {
+                                    var t = (n.fileUploads && n.fileUploads.toArray()) || [];
+                                    return t.some(function(t) {
+                                        return t.uploading;
                                     });
-                                var T = l.outerHeight();
-                                f.height(T), f.width(1);
-                            }
-
-                            function w(t) {
-                                var r = t.responseJSON && t.responseJSON.msg,
-                                    i = y;
-                                "string" == typeof r && 0 === r.indexOf("InvalidFileTypeError") ? (i = m) : "string" == typeof r && 0 === r.indexOf("MaxFileSizeError") && (i = _),
-                                    p.text(i),
-                                    f.removeAttr("data-value"),
-                                    f.val(""),
-                                    a.toggle(!1),
-                                    o.toggle(!0),
-                                    s.toggle(!0),
-                                    (n.fileUploads[e].uploading = !1),
-                                    S() || I(n);
-                            }
-
-                            function O(e, n) {
-                                if (e) return w(e);
-                                var i = n.fileName,
-                                    o = n.postData,
-                                    a = n.fileId,
-                                    u = n.s3Url;
-                                f.attr("data-value", a),
-                                    (function(e, n, r, i, o) {
-                                        var a = new FormData();
-                                        for (var u in n) a.append(u, n[u]);
-                                        a.append("file", r, i),
-                                            t
-                                            .ajax({ type: "POST", url: e, data: a, processData: !1, contentType: !1 })
-                                            .done(function() {
-                                                o(null);
-                                            })
-                                            .fail(function(t) {
-                                                o(t);
-                                            });
-                                    })(u, o, r, i, A);
-                            }
-
-                            function A(t) {
-                                if (t) return w(t);
-                                a.toggle(!1), u.css("display", "inline-block"), (n.fileUploads[e].uploading = !1), S() || I(n);
-                            }
-
-                            function S() {
-                                var t = (n.fileUploads && n.fileUploads.toArray()) || [];
-                                return t.some(function(t) {
-                                    return t.uploading;
-                                });
-                            }
-                        })(e, i);
-                    });
+                                }
+                            })(e, i);
+                        });
                     var u = (i.action = r.attr("action"));
                     (i.handler = null), (i.redirect = r.attr("data-redirect")), _.test(u) ? (i.handler = A) : u || (o ? (i.handler = O) : m());
                 }
@@ -8404,34 +8404,34 @@
                     var r = null;
                     return (
                         (n = n || {}),
-                        e.find(':input:not([type="submit"]):not([type="file"])').each(function(i, o) {
-                            var a = t(o),
-                                u = a.attr("type"),
-                                c = a.attr("data-name") || a.attr("name") || "Field " + (i + 1),
-                                s = a.val();
-                            if ("checkbox" === u) s = a.is(":checked");
-                            else if ("radio" === u) {
-                                if (null === n[c] || "string" == typeof n[c]) return;
-                                s = e.find('input[name="' + a.attr("name") + '"]:checked').val() || null;
-                            }
-                            "string" == typeof s && (s = t.trim(s)),
-                                (n[c] = s),
-                                (r =
-                                    r ||
-                                    (function(t, e, n, r) {
-                                        var i = null;
-                                        "password" === e
-                                            ?
-                                            (i = "Passwords cannot be submitted.") :
-                                            t.attr("required") ?
-                                            r ?
-                                            v.test(t.attr("type")) && (h.test(r) || (i = "Please enter a valid email address for: " + n)) :
-                                            (i = "Please fill out the required field: " + n) :
-                                            "g-recaptcha-response" !== n || r || (i = "Please confirm you’re not a robot.");
-                                        return i;
-                                    })(a, u, c, s));
-                        }),
-                        r
+                            e.find(':input:not([type="submit"]):not([type="file"])').each(function(i, o) {
+                                var a = t(o),
+                                    u = a.attr("type"),
+                                    c = a.attr("data-name") || a.attr("name") || "Field " + (i + 1),
+                                    s = a.val();
+                                if ("checkbox" === u) s = a.is(":checked");
+                                else if ("radio" === u) {
+                                    if (null === n[c] || "string" == typeof n[c]) return;
+                                    s = e.find('input[name="' + a.attr("name") + '"]:checked').val() || null;
+                                }
+                                "string" == typeof s && (s = t.trim(s)),
+                                    (n[c] = s),
+                                    (r =
+                                        r ||
+                                        (function(t, e, n, r) {
+                                            var i = null;
+                                            "password" === e
+                                                ?
+                                                (i = "Passwords cannot be submitted.") :
+                                                t.attr("required") ?
+                                                    r ?
+                                                        v.test(t.attr("type")) && (h.test(r) || (i = "Please enter a valid email address for: " + n)) :
+                                                        (i = "Please fill out the required field: " + n) :
+                                                    "g-recaptcha-response" !== n || r || (i = "Please confirm you’re not a robot.");
+                                            return i;
+                                        })(a, u, c, s));
+                            }),
+                            r
                     );
                 }
                 s.ready = s.design = s.preview = function() {
@@ -8441,39 +8441,39 @@
                         n.each(y);
                     })(),
                     g ||
-                        a ||
-                        (function() {
-                            (a = !0),
+                    a ||
+                    (function() {
+                        (a = !0),
                             f.on("submit", p + " form", function(e) {
                                 var n = t.data(this, p);
                                 n.handler && ((n.evt = e), n.handler(n));
                             });
-                            var e = [
-                                ["checkbox", ".w-checkbox-input"],
-                                ["radio", ".w-radio-input"],
-                            ];
-                            f.on("change", p + ' form input[type="checkbox"]:not(.w-checkbox-input)', function(e) {
-                                    t(e.target).siblings(".w-checkbox-input").toggleClass("w--redirected-checked");
-                                }),
-                                f.on("change", p + ' form input[type="radio"]', function(e) {
-                                    t('input[name="'.concat(e.target.name, '"]:not(').concat(".w-checkbox-input", ")")).map(function(e, n) {
-                                        return t(n).siblings(".w-radio-input").removeClass("w--redirected-checked");
-                                    });
-                                    var n = t(e.target);
-                                    n.hasClass("w-radio-input") || n.siblings(".w-radio-input").addClass("w--redirected-checked");
-                                }),
-                                e.forEach(function(e) {
-                                    var n = (0, r.default)(e, 2),
-                                        i = n[0],
-                                        o = n[1];
-                                    f.on("focus", p + ' form input[type="'.concat(i, '"]:not(') + o + ")", function(e) {
-                                            t(e.target).siblings(o).addClass("w--redirected-focus");
-                                        }),
-                                        f.on("blur", p + ' form input[type="'.concat(i, '"]:not(') + o + ")", function(e) {
-                                            t(e.target).siblings(o).removeClass("w--redirected-focus");
-                                        });
+                        var e = [
+                            ["checkbox", ".w-checkbox-input"],
+                            ["radio", ".w-radio-input"],
+                        ];
+                        f.on("change", p + ' form input[type="checkbox"]:not(.w-checkbox-input)', function(e) {
+                            t(e.target).siblings(".w-checkbox-input").toggleClass("w--redirected-checked");
+                        }),
+                            f.on("change", p + ' form input[type="radio"]', function(e) {
+                                t('input[name="'.concat(e.target.name, '"]:not(').concat(".w-checkbox-input", ")")).map(function(e, n) {
+                                    return t(n).siblings(".w-radio-input").removeClass("w--redirected-checked");
                                 });
-                        })();
+                                var n = t(e.target);
+                                n.hasClass("w-radio-input") || n.siblings(".w-radio-input").addClass("w--redirected-checked");
+                            }),
+                            e.forEach(function(e) {
+                                var n = (0, r.default)(e, 2),
+                                    i = n[0],
+                                    o = n[1];
+                                f.on("focus", p + ' form input[type="'.concat(i, '"]:not(') + o + ")", function(e) {
+                                    t(e.target).siblings(o).addClass("w--redirected-focus");
+                                }),
+                                    f.on("blur", p + ' form input[type="'.concat(i, '"]:not(') + o + ")", function(e) {
+                                        t(e.target).siblings(o).removeClass("w--redirected-focus");
+                                    });
+                            });
+                    })();
                 };
                 var w = { _mkto_trk: "marketo" };
 
@@ -8510,20 +8510,20 @@
                                     a = i.attr("data-value");
                                 "string" == typeof a && (a = t.trim(a)), (n[o] = a);
                             }),
-                            n
+                                n
                         );
                     })(n)),
-                    b(e),
+                        b(e),
                         o ?
-                        t
-                        .ajax({ url: u, type: "POST", data: r, dataType: "json", crossDomain: !0 })
-                        .done(function(t) {
-                            t && 200 === t.code && (e.success = !0), S(e);
-                        })
-                        .fail(function() {
+                            t
+                                .ajax({ url: u, type: "POST", data: r, dataType: "json", crossDomain: !0 })
+                                .done(function(t) {
+                                    t && 200 === t.code && (e.success = !0), S(e);
+                                })
+                                .fail(function() {
+                                    S(e);
+                                }) :
                             S(e);
-                        }) :
-                        S(e);
                 }
 
                 function A(n) {
@@ -8539,21 +8539,21 @@
                             e.each(i, function(t, e) {
                                 v.test(e) && (i.EMAIL = t), /^((full[ _-]?)?name)$/i.test(e) && (o = t), /^(first[ _-]?name)$/i.test(e) && (i.FNAME = t), /^(last[ _-]?name)$/i.test(e) && (i.LNAME = t);
                             }),
-                            o && !i.FNAME && ((o = o.split(" ")), (i.FNAME = o[0]), (i.LNAME = i.LNAME || o[1]));
+                        o && !i.FNAME && ((o = o.split(" ")), (i.FNAME = o[0]), (i.LNAME = i.LNAME || o[1]));
                         var u = n.action.replace("/post?", "/post-json?") + "&c=?",
                             c = u.indexOf("u=") + 2;
                         c = u.substring(c, u.indexOf("&", c));
                         var s = u.indexOf("id=") + 3;
                         (s = u.substring(s, u.indexOf("&", s))),
-                        (i["b_" + c + "_" + s] = ""),
-                        t
-                            .ajax({ url: u, data: i, dataType: "jsonp" })
-                            .done(function(t) {
-                                (n.success = "success" === t.result || /already/.test(t.msg)), n.success || console.info("MailChimp error: " + t.msg), S(n);
-                            })
-                            .fail(function() {
-                                S(n);
-                            });
+                            (i["b_" + c + "_" + s] = ""),
+                            t
+                                .ajax({ url: u, data: i, dataType: "jsonp" })
+                                .done(function(t) {
+                                    (n.success = "success" === t.result || /already/.test(t.msg)), n.success || console.info("MailChimp error: " + t.msg), S(n);
+                                })
+                                .fail(function() {
+                                    S(n);
+                                });
                     } else r.attr("method", "post");
                 }
 
@@ -8662,9 +8662,9 @@
                         }),
                         s.strip.empty().append(s.items),
                         N(s.content, "group")),
-                    l(L(s.lightbox, "hide").trigger("focus")).add("opacity .3s").start({ opacity: 1 }),
-                    N(s.html, "noscroll"),
-                    E.show(e || 0)
+                        l(L(s.lightbox, "hide").trigger("focus")).add("opacity .3s").start({ opacity: 1 }),
+                        N(s.html, "noscroll"),
+                        E.show(e || 0)
                 );
             }
 
@@ -8676,127 +8676,127 @@
             (E.build = function() {
                 return (
                     E.destroy(),
-                    ((s = { html: n(e.documentElement), empty: n() }).arrowLeft = P("control left inactive")),
-                    (s.arrowRight = P("control right inactive")),
-                    (s.close = P("control close")),
-                    (s.spinner = P("spinner")),
-                    (s.strip = P("strip")),
-                    (f = new x(s.spinner, R("hide"))),
-                    (s.content = P("content").append(s.spinner, s.arrowLeft, s.arrowRight, s.close)),
-                    (s.container = P("container").append(s.content, s.strip)),
-                    (s.lightbox = P("backdrop hide").append(s.container)),
-                    s.strip.on("click", C("item"), I),
-                    s.content.on("swipe", b).on("click", C("left"), _).on("click", C("right"), m).on("click", C("close"), y).on("click", C("image, caption"), m),
-                    s.container.on("click", C("view"), y).on("dragstart", C("img"), w),
-                    s.lightbox.on("keydown", O).on("focusin", T),
-                    n(r).append(s.lightbox.prop("tabIndex", 0)),
-                    E
+                        ((s = { html: n(e.documentElement), empty: n() }).arrowLeft = P("control left inactive")),
+                        (s.arrowRight = P("control right inactive")),
+                        (s.close = P("control close")),
+                        (s.spinner = P("spinner")),
+                        (s.strip = P("strip")),
+                        (f = new x(s.spinner, R("hide"))),
+                        (s.content = P("content").append(s.spinner, s.arrowLeft, s.arrowRight, s.close)),
+                        (s.container = P("container").append(s.content, s.strip)),
+                        (s.lightbox = P("backdrop hide").append(s.container)),
+                        s.strip.on("click", C("item"), I),
+                        s.content.on("swipe", b).on("click", C("left"), _).on("click", C("right"), m).on("click", C("close"), y).on("click", C("image, caption"), m),
+                        s.container.on("click", C("view"), y).on("dragstart", C("img"), w),
+                        s.lightbox.on("keydown", O).on("focusin", T),
+                        n(r).append(s.lightbox.prop("tabIndex", 0)),
+                        E
                 );
             }),
-            (E.destroy = function() {
-                s && (L(s.html, "noscroll"), s.lightbox.remove(), (s = void 0));
-            }),
-            (E.show = function(t) {
-                if (t !== o) {
-                    var e = h[t];
-                    if (!e) return E.hide();
-                    if (a(e)) {
-                        if (t < o) {
-                            var r = u(t - 1, h);
-                            t = r > -1 ? r : t;
-                        } else {
-                            var i = c(t + 1, h);
-                            t = i > -1 ? i : t;
+                (E.destroy = function() {
+                    s && (L(s.html, "noscroll"), s.lightbox.remove(), (s = void 0));
+                }),
+                (E.show = function(t) {
+                    if (t !== o) {
+                        var e = h[t];
+                        if (!e) return E.hide();
+                        if (a(e)) {
+                            if (t < o) {
+                                var r = u(t - 1, h);
+                                t = r > -1 ? r : t;
+                            } else {
+                                var i = c(t + 1, h);
+                                t = i > -1 ? i : t;
+                            }
+                            e = h[t];
                         }
-                        e = h[t];
-                    }
-                    var d,
-                        p,
-                        v = o;
-                    return (
-                        (o = t),
-                        f.show(),
-                        S((e.html && ((d = e.width), (p = e.height), "data:image/svg+xml;charset=utf-8," + encodeURI('<svg xmlns="http://www.w3.org/2000/svg" width="' + d + '" height="' + p + '"/>'))) || e.url, function(r) {
-                            if (t === o) {
-                                var i,
-                                    a,
-                                    d = P("figure", "figure").append(N(r, "image")),
-                                    p = P("frame").append(d),
-                                    E = P("view").append(p);
-                                e.html && ((a = (i = n(e.html)).is("iframe")) && i.on("load", g), d.append(N(i, "embed"))), e.caption && d.append(P("caption", "figcaption").text(e.caption)), s.spinner.before(E), a || g();
-                            }
-
-                            function g() {
-                                var e;
-                                if ((f.hide(), t === o)) {
-                                    if (
-                                        (D(
-                                                s.arrowLeft,
-                                                "inactive",
-                                                (function(t, e) {
-                                                    return -1 === u(t - 1, e);
-                                                })(t, h)
-                                            ),
-                                            D(
-                                                s.arrowRight,
-                                                "inactive",
-                                                (function(t, e) {
-                                                    return -1 === c(t + 1, e);
-                                                })(t, h)
-                                            ),
-                                            s.view ?
-                                            (l(s.view)
-                                                .add("opacity .3s")
-                                                .start({ opacity: 0 })
-                                                .then(
-                                                    ((e = s.view),
-                                                        function() {
-                                                            e.remove();
-                                                        })
-                                                ),
-                                                l(E)
-                                                .add("opacity .3s")
-                                                .add("transform .3s")
-                                                .set({ x: t > v ? "80px" : "-80px" })
-                                                .start({ opacity: 1, x: 0 })) :
-                                            E.css("opacity", 1),
-                                            (s.view = E),
-                                            s.items)
-                                    ) {
-                                        L(s.items, "active");
-                                        var n = s.items.eq(t);
-                                        N(n, "active"),
-                                            (function(t) {
-                                                var e,
-                                                    n = t.get(0),
-                                                    r = s.strip.get(0),
-                                                    i = n.offsetLeft,
-                                                    o = n.clientWidth,
-                                                    a = r.scrollLeft,
-                                                    u = r.clientWidth,
-                                                    c = r.scrollWidth - u;
-                                                i < a ? (e = Math.max(0, i + o - u)) : i + o > u + a && (e = Math.min(i, c));
-                                                null != e && l(s.strip).add("scroll-left 500ms").start({ "scroll-left": e });
-                                            })(n);
+                        var d,
+                            p,
+                            v = o;
+                        return (
+                            (o = t),
+                                f.show(),
+                                S((e.html && ((d = e.width), (p = e.height), "data:image/svg+xml;charset=utf-8," + encodeURI('<svg xmlns="http://www.w3.org/2000/svg" width="' + d + '" height="' + p + '"/>'))) || e.url, function(r) {
+                                    if (t === o) {
+                                        var i,
+                                            a,
+                                            d = P("figure", "figure").append(N(r, "image")),
+                                            p = P("frame").append(d),
+                                            E = P("view").append(p);
+                                        e.html && ((a = (i = n(e.html)).is("iframe")) && i.on("load", g), d.append(N(i, "embed"))), e.caption && d.append(P("caption", "figcaption").text(e.caption)), s.spinner.before(E), a || g();
                                     }
-                                } else E.remove();
-                            }
-                        }),
-                        E
-                    );
-                }
-            }),
-            (E.hide = function() {
-                return l(s.lightbox).add("opacity .3s").start({ opacity: 0 }).then(A), E;
-            }),
-            (E.prev = function() {
-                var t = u(o - 1, h);
-                t > -1 && E.show(t);
-            }),
-            (E.next = function() {
-                var t = c(o + 1, h);
-                t > -1 && E.show(t);
-            });
+
+                                    function g() {
+                                        var e;
+                                        if ((f.hide(), t === o)) {
+                                            if (
+                                                (D(
+                                                    s.arrowLeft,
+                                                    "inactive",
+                                                    (function(t, e) {
+                                                        return -1 === u(t - 1, e);
+                                                    })(t, h)
+                                                ),
+                                                    D(
+                                                        s.arrowRight,
+                                                        "inactive",
+                                                        (function(t, e) {
+                                                            return -1 === c(t + 1, e);
+                                                        })(t, h)
+                                                    ),
+                                                    s.view ?
+                                                        (l(s.view)
+                                                            .add("opacity .3s")
+                                                            .start({ opacity: 0 })
+                                                            .then(
+                                                                ((e = s.view),
+                                                                    function() {
+                                                                        e.remove();
+                                                                    })
+                                                            ),
+                                                            l(E)
+                                                                .add("opacity .3s")
+                                                                .add("transform .3s")
+                                                                .set({ x: t > v ? "80px" : "-80px" })
+                                                                .start({ opacity: 1, x: 0 })) :
+                                                        E.css("opacity", 1),
+                                                    (s.view = E),
+                                                    s.items)
+                                            ) {
+                                                L(s.items, "active");
+                                                var n = s.items.eq(t);
+                                                N(n, "active"),
+                                                    (function(t) {
+                                                        var e,
+                                                            n = t.get(0),
+                                                            r = s.strip.get(0),
+                                                            i = n.offsetLeft,
+                                                            o = n.clientWidth,
+                                                            a = r.scrollLeft,
+                                                            u = r.clientWidth,
+                                                            c = r.scrollWidth - u;
+                                                        i < a ? (e = Math.max(0, i + o - u)) : i + o > u + a && (e = Math.min(i, c));
+                                                        null != e && l(s.strip).add("scroll-left 500ms").start({ "scroll-left": e });
+                                                    })(n);
+                                            }
+                                        } else E.remove();
+                                    }
+                                }),
+                                E
+                        );
+                    }
+                }),
+                (E.hide = function() {
+                    return l(s.lightbox).add("opacity .3s").start({ opacity: 0 }).then(A), E;
+                }),
+                (E.prev = function() {
+                    var t = u(o - 1, h);
+                    t > -1 && E.show(t);
+                }),
+                (E.next = function() {
+                    var t = c(o + 1, h);
+                    t > -1 && E.show(t);
+                });
             var _ = g(E.prev),
                 m = g(E.next),
                 y = g(E.hide),
@@ -8830,8 +8830,8 @@
                     n.one("load", function() {
                         e(n);
                     }),
-                    n.attr("src", t),
-                    n
+                        n.attr("src", t),
+                        n
                 );
             }
 
@@ -8866,67 +8866,67 @@
                 (x.prototype.show = function() {
                     var t = this;
                     t.timeoutId ||
-                        (t.timeoutId = setTimeout(function() {
-                            t.$element.removeClass(t.className), delete t.timeoutId;
-                        }, t.delay));
+                    (t.timeoutId = setTimeout(function() {
+                        t.$element.removeClass(t.className), delete t.timeoutId;
+                    }, t.delay));
                 }),
-                (x.prototype.hide = function() {
-                    if (this.timeoutId) return clearTimeout(this.timeoutId), void delete this.timeoutId;
-                    this.$element.addClass(this.className);
-                }),
-                (function() {
-                    var n = t.navigator.userAgent,
-                        r = n.match(/(iPhone|iPad|iPod);[^OS]*OS (\d)/);
-                    if ((n.indexOf("Android ") > -1 && -1 === n.indexOf("Chrome")) || (r && !(r[2] > 7))) {
-                        var i = e.createElement("style");
-                        e.head.appendChild(i), t.addEventListener("resize", o, !0), o();
-                    }
+                    (x.prototype.hide = function() {
+                        if (this.timeoutId) return clearTimeout(this.timeoutId), void delete this.timeoutId;
+                        this.$element.addClass(this.className);
+                    }),
+                    (function() {
+                        var n = t.navigator.userAgent,
+                            r = n.match(/(iPhone|iPad|iPod);[^OS]*OS (\d)/);
+                        if ((n.indexOf("Android ") > -1 && -1 === n.indexOf("Chrome")) || (r && !(r[2] > 7))) {
+                            var i = e.createElement("style");
+                            e.head.appendChild(i), t.addEventListener("resize", o, !0), o();
+                        }
 
-                    function o() {
-                        var e = t.innerHeight,
-                            n = t.innerWidth,
-                            r =
-                            ".w-lightbox-content, .w-lightbox-view, .w-lightbox-view:before {height:" +
-                            e +
-                            "px}.w-lightbox-view {width:" +
-                            n +
-                            "px}.w-lightbox-group, .w-lightbox-group .w-lightbox-view, .w-lightbox-group .w-lightbox-view:before {height:" +
-                            0.86 * e +
-                            "px}.w-lightbox-image {max-width:" +
-                            n +
-                            "px;max-height:" +
-                            e +
-                            "px}.w-lightbox-group .w-lightbox-image {max-height:" +
-                            0.86 * e +
-                            "px}.w-lightbox-strip {padding: 0 " +
-                            0.01 * e +
-                            "px}.w-lightbox-item {width:" +
-                            0.1 * e +
-                            "px;padding:" +
-                            0.02 * e +
-                            "px " +
-                            0.01 * e +
-                            "px}.w-lightbox-thumbnail {height:" +
-                            0.1 * e +
-                            "px}@media (min-width: 768px) {.w-lightbox-content, .w-lightbox-view, .w-lightbox-view:before {height:" +
-                            0.96 * e +
-                            "px}.w-lightbox-content {margin-top:" +
-                            0.02 * e +
-                            "px}.w-lightbox-group, .w-lightbox-group .w-lightbox-view, .w-lightbox-group .w-lightbox-view:before {height:" +
-                            0.84 * e +
-                            "px}.w-lightbox-image {max-width:" +
-                            0.96 * n +
-                            "px;max-height:" +
-                            0.96 * e +
-                            "px}.w-lightbox-group .w-lightbox-image {max-width:" +
-                            0.823 * n +
-                            "px;max-height:" +
-                            0.84 * e +
-                            "px}}";
-                        i.textContent = r;
-                    }
-                })(),
-                E
+                        function o() {
+                            var e = t.innerHeight,
+                                n = t.innerWidth,
+                                r =
+                                    ".w-lightbox-content, .w-lightbox-view, .w-lightbox-view:before {height:" +
+                                    e +
+                                    "px}.w-lightbox-view {width:" +
+                                    n +
+                                    "px}.w-lightbox-group, .w-lightbox-group .w-lightbox-view, .w-lightbox-group .w-lightbox-view:before {height:" +
+                                    0.86 * e +
+                                    "px}.w-lightbox-image {max-width:" +
+                                    n +
+                                    "px;max-height:" +
+                                    e +
+                                    "px}.w-lightbox-group .w-lightbox-image {max-height:" +
+                                    0.86 * e +
+                                    "px}.w-lightbox-strip {padding: 0 " +
+                                    0.01 * e +
+                                    "px}.w-lightbox-item {width:" +
+                                    0.1 * e +
+                                    "px;padding:" +
+                                    0.02 * e +
+                                    "px " +
+                                    0.01 * e +
+                                    "px}.w-lightbox-thumbnail {height:" +
+                                    0.1 * e +
+                                    "px}@media (min-width: 768px) {.w-lightbox-content, .w-lightbox-view, .w-lightbox-view:before {height:" +
+                                    0.96 * e +
+                                    "px}.w-lightbox-content {margin-top:" +
+                                    0.02 * e +
+                                    "px}.w-lightbox-group, .w-lightbox-group .w-lightbox-view, .w-lightbox-group .w-lightbox-view:before {height:" +
+                                    0.84 * e +
+                                    "px}.w-lightbox-image {max-width:" +
+                                    0.96 * n +
+                                    "px;max-height:" +
+                                    0.96 * e +
+                                    "px}.w-lightbox-group .w-lightbox-image {max-width:" +
+                                    0.823 * n +
+                                    "px;max-height:" +
+                                    0.84 * e +
+                                    "px}}";
+                            i.textContent = r;
+                        }
+                    })(),
+                    E
             );
         }
         r.define(
@@ -8951,14 +8951,14 @@
                             console.error("Malformed lightbox JSON configuration.", t);
                         }!(function(t) {
                             t.images &&
-                                (t.images.forEach(function(t) {
-                                        t.type = "image";
-                                    }),
-                                    (t.items = t.images));
+                            (t.images.forEach(function(t) {
+                                t.type = "image";
+                            }),
+                                (t.items = t.images));
                             t.embed && ((t.embed.type = "video"), (t.items = [t.embed]));
                             t.groupId && (t.group = t.groupId);
                         })(i),
-                        i.items.forEach(function(e) {
+                            i.items.forEach(function(e) {
                                 e.$el = t.el;
                             }),
                             (e = i.group) ? ((r = n[e]) || (r = n[e] = []), (t.items = r), i.items.length && ((t.index = r.length), r.push.apply(r, i.items))) : ((t.items = i.items), (t.index = 0));
@@ -8968,31 +8968,31 @@
                     (i.ready = i.design = i.preview = function() {
                         (e = o && r.env("design")), a.destroy(), (n = {}), u.find(c).webflowLightBox();
                     }),
-                    jQuery.fn.extend({
-                        webflowLightBox: function() {
-                            t.each(this, function(n, r) {
-                                var i = t.data(r, c);
-                                i || (i = t.data(r, c, { el: t(r), mode: "images", images: [], embed: "" })),
-                                    i.el.off(c),
-                                    f(i),
-                                    e ?
-                                    i.el.on("setting" + c, f.bind(null, i)) :
-                                    i.el
-                                    .on(
-                                        "click" + c,
-                                        (function(t) {
-                                            return function() {
-                                                t.items.length && a(t.items, t.index || 0);
-                                            };
-                                        })(i)
-                                    )
-                                    .on("click" + c, function(t) {
-                                        t.preventDefault();
-                                    });
-                            });
-                        },
-                    }),
-                    i
+                        jQuery.fn.extend({
+                            webflowLightBox: function() {
+                                t.each(this, function(n, r) {
+                                    var i = t.data(r, c);
+                                    i || (i = t.data(r, c, { el: t(r), mode: "images", images: [], embed: "" })),
+                                        i.el.off(c),
+                                        f(i),
+                                        e ?
+                                            i.el.on("setting" + c, f.bind(null, i)) :
+                                            i.el
+                                                .on(
+                                                    "click" + c,
+                                                    (function(t) {
+                                                        return function() {
+                                                            t.items.length && a(t.items, t.index || 0);
+                                                        };
+                                                    })(i)
+                                                )
+                                                .on("click" + c, function(t) {
+                                                    t.preventDefault();
+                                                });
+                                });
+                            },
+                        }),
+                        i
                 );
             })
         );
@@ -9055,7 +9055,7 @@
                     var s = i.find(".w-nav-brand");
                     s && "/" === s.attr("href") && null == s.attr("aria-label") && s.attr("aria-label", "home"),
                         a.button.attr("style", "-webkit-user-select: text;"),
-                        null == a.button.attr("aria-label") && a.button.attr("aria-label", "menu"),
+                    null == a.button.attr("aria-label") && a.button.attr("aria-label", "menu"),
                         a.button.attr("role", "button"),
                         a.button.attr("tabindex", "0"),
                         a.button.attr("aria-controls", a.overlayContainerId),
@@ -9066,67 +9066,67 @@
                         a.menu.off(E),
                         R(a),
                         u ?
-                        (x(a),
-                            a.el.on(
-                                "setting" + E,
-                                (function(t) {
-                                    return function(n, r) {
-                                        r = r || {};
-                                        var i = l.width();
-                                        R(t), !0 === r.open && X(t, !0), !1 === r.open && V(t, !0),
+                            (x(a),
+                                a.el.on(
+                                    "setting" + E,
+                                    (function(t) {
+                                        return function(n, r) {
+                                            r = r || {};
+                                            var i = l.width();
+                                            R(t), !0 === r.open && X(t, !0), !1 === r.open && V(t, !0),
                                             t.open &&
                                             e.defer(function() {
                                                 i !== l.width() && N(t);
                                             });
-                                    };
-                                })(a)
-                            )) :
-                        (!(function(e) {
+                                        };
+                                    })(a)
+                                )) :
+                            (!(function(e) {
                                 if (e.overlay) return;
                                 (e.overlay = t(h).appendTo(e.el)), e.overlay.attr("id", e.overlayContainerId), (e.parent = e.menu.parent()), V(e, !0);
                             })(a),
-                            a.button.on("click" + E, L(a)),
-                            a.menu.on("click" + E, "a", D(a)),
-                            a.button.on(
-                                "keydown" + E,
-                                (function(t) {
-                                    return function(e) {
-                                        switch (e.keyCode) {
-                                            case o.SPACE:
-                                            case o.ENTER:
-                                                return L(t)(), e.preventDefault(), e.stopPropagation();
-                                            case o.ESCAPE:
-                                                return V(t), e.preventDefault(), e.stopPropagation();
-                                            case o.ARROW_RIGHT:
-                                            case o.ARROW_DOWN:
-                                            case o.HOME:
-                                            case o.END:
-                                                return t.open ? (e.keyCode === o.END ? (t.selectedIdx = t.links.length - 1) : (t.selectedIdx = 0), C(t), e.preventDefault(), e.stopPropagation()) : (e.preventDefault(), e.stopPropagation());
-                                        }
-                                    };
-                                })(a)
-                            ),
-                            a.el.on(
-                                "keydown" + E,
-                                (function(t) {
-                                    return function(e) {
-                                        if (t.open)
-                                            switch (((t.selectedIdx = t.links.index(document.activeElement)), e.keyCode)) {
-                                                case o.HOME:
-                                                case o.END:
-                                                    return e.keyCode === o.END ? (t.selectedIdx = t.links.length - 1) : (t.selectedIdx = 0), C(t), e.preventDefault(), e.stopPropagation();
+                                a.button.on("click" + E, L(a)),
+                                a.menu.on("click" + E, "a", D(a)),
+                                a.button.on(
+                                    "keydown" + E,
+                                    (function(t) {
+                                        return function(e) {
+                                            switch (e.keyCode) {
+                                                case o.SPACE:
+                                                case o.ENTER:
+                                                    return L(t)(), e.preventDefault(), e.stopPropagation();
                                                 case o.ESCAPE:
-                                                    return V(t), t.button.focus(), e.preventDefault(), e.stopPropagation();
-                                                case o.ARROW_LEFT:
-                                                case o.ARROW_UP:
-                                                    return (t.selectedIdx = Math.max(-1, t.selectedIdx - 1)), C(t), e.preventDefault(), e.stopPropagation();
+                                                    return V(t), e.preventDefault(), e.stopPropagation();
                                                 case o.ARROW_RIGHT:
                                                 case o.ARROW_DOWN:
-                                                    return (t.selectedIdx = Math.min(t.links.length - 1, t.selectedIdx + 1)), C(t), e.preventDefault(), e.stopPropagation();
+                                                case o.HOME:
+                                                case o.END:
+                                                    return t.open ? (e.keyCode === o.END ? (t.selectedIdx = t.links.length - 1) : (t.selectedIdx = 0), C(t), e.preventDefault(), e.stopPropagation()) : (e.preventDefault(), e.stopPropagation());
                                             }
-                                    };
-                                })(a)
-                            )),
+                                        };
+                                    })(a)
+                                ),
+                                a.el.on(
+                                    "keydown" + E,
+                                    (function(t) {
+                                        return function(e) {
+                                            if (t.open)
+                                                switch (((t.selectedIdx = t.links.index(document.activeElement)), e.keyCode)) {
+                                                    case o.HOME:
+                                                    case o.END:
+                                                        return e.keyCode === o.END ? (t.selectedIdx = t.links.length - 1) : (t.selectedIdx = 0), C(t), e.preventDefault(), e.stopPropagation();
+                                                    case o.ESCAPE:
+                                                        return V(t), t.button.focus(), e.preventDefault(), e.stopPropagation();
+                                                    case o.ARROW_LEFT:
+                                                    case o.ARROW_UP:
+                                                        return (t.selectedIdx = Math.max(-1, t.selectedIdx - 1)), C(t), e.preventDefault(), e.stopPropagation();
+                                                    case o.ARROW_RIGHT:
+                                                    case o.ARROW_DOWN:
+                                                        return (t.selectedIdx = Math.min(t.links.length - 1, t.selectedIdx + 1)), C(t), e.preventDefault(), e.stopPropagation();
+                                                }
+                                        };
+                                    })(a)
+                                )),
                         M(n, r);
                 }
 
@@ -9175,9 +9175,9 @@
                     if (((u = v && r.env("design")), (c = r.env("editor")), (n = t(document.body)), !(a = d.find(E)).length)) return;
                     a.each(A), w(), r.resize.on(O);
                 }),
-                (s.destroy = function() {
-                    (T = t()), w(), a && a.length && a.each(S);
-                });
+                    (s.destroy = function() {
+                        (T = t()), w(), a && a.length && a.each(S);
+                    });
                 var P = p(function(t, e) {
                     if (t.open) {
                         var n = e.closest(".w-nav-menu");
@@ -9226,11 +9226,11 @@
                             if ((t.overlay && ((T = t.menu.prev()), t.overlay.show().append(t.menu)), n.animOver))
                                 return (
                                     f(t.menu)
-                                    .add(l)
-                                    .set({ x: n.animDirect * a, height: i })
-                                    .start({ x: 0 })
-                                    .then(v),
-                                    void(t.overlay && t.overlay.width(a))
+                                        .add(l)
+                                        .set({ x: n.animDirect * a, height: i })
+                                        .start({ x: 0 })
+                                        .then(v),
+                                        void(t.overlay && t.overlay.width(a))
                                 );
                             var p = c + o;
                             f(t.menu).add(l).set({ y: -p }).start({ y: 0 }).then(v);
@@ -9259,9 +9259,9 @@
                             a = t.el.height();
                         if (n.animOver)
                             f(t.menu)
-                            .add(r)
-                            .start({ x: o * n.animDirect })
-                            .then(c);
+                                .add(r)
+                                .start({ x: o * n.animDirect })
+                                .then(c);
                         else {
                             var u = a + i;
                             f(t.menu).add(r).start({ y: -u }).then(c);
@@ -9276,7 +9276,7 @@
                             t.dropdowns.removeClass(_),
                             t.dropdownToggle.removeClass(m),
                             t.dropdownList.removeClass(y),
-                            t.overlay && t.overlay.children().length && (T.length ? t.menu.insertAfter(T) : t.menu.prependTo(t.parent), t.overlay.attr("style", "").hide()),
+                        t.overlay && t.overlay.children().length && (T.length ? t.menu.insertAfter(T) : t.menu.prependTo(t.parent), t.overlay.attr("style", "").hide()),
                             t.el.triggerHandler("w-close"),
                             t.button.attr("aria-expanded", "false");
                     }
@@ -9348,15 +9348,15 @@
                             })(a), !n)
                     ) {
                         a.links.on(
-                                "click" + p,
-                                (function(t) {
-                                    return function(e) {
-                                        e.preventDefault();
-                                        var n = e.currentTarget.getAttribute(l);
-                                        n && b(t, { tab: n });
-                                    };
-                                })(a)
-                            ),
+                            "click" + p,
+                            (function(t) {
+                                return function(e) {
+                                    e.preventDefault();
+                                    var n = e.currentTarget.getAttribute(l);
+                                    n && b(t, { tab: n });
+                                };
+                            })(a)
+                        ),
                             a.links.on(
                                 "keydown" + p,
                                 (function(t) {
@@ -9376,7 +9376,7 @@
                                         if (r in i) {
                                             e.preventDefault();
                                             var o = i[r]; -
-                                            1 === o && (o = t.links.length - 1), o === t.links.length && (o = 0);
+                                                1 === o && (o = t.links.length - 1), o === t.links.length && (o = 0);
                                             var a = t.links[o],
                                                 u = a.getAttribute(l);
                                             u && b(t, { tab: u });
@@ -9397,23 +9397,23 @@
                     if (u !== e.current) {
                         var c;
                         (e.current = u),
-                        e.links.each(function(r, o) {
-                            var a = t(o);
-                            if (n.immediate || i.immediate) {
-                                var s = e.panes[r];
-                                o.id || (o.id = e.tabIdentifier + "-" + r),
+                            e.links.each(function(r, o) {
+                                var a = t(o);
+                                if (n.immediate || i.immediate) {
+                                    var s = e.panes[r];
+                                    o.id || (o.id = e.tabIdentifier + "-" + r),
                                     s.id || (s.id = e.paneIdentifier + "-" + r),
-                                    (o.href = "#" + s.id),
-                                    o.setAttribute("role", "tab"),
-                                    o.setAttribute("aria-controls", s.id),
-                                    o.setAttribute("aria-selected", "false"),
-                                    s.setAttribute("role", "tabpanel"),
-                                    s.setAttribute("aria-labelledby", o.id);
-                            }
-                            o.getAttribute(l) === u ?
-                                ((c = o), a.addClass(v).removeAttr("tabindex").attr({ "aria-selected": "true" }).each(E.intro)) :
-                                a.hasClass(v) && a.removeClass(v).attr({ tabindex: "-1", "aria-selected": "false" }).each(E.outro);
-                        });
+                                        (o.href = "#" + s.id),
+                                        o.setAttribute("role", "tab"),
+                                        o.setAttribute("aria-controls", s.id),
+                                        o.setAttribute("aria-selected", "false"),
+                                        s.setAttribute("role", "tabpanel"),
+                                        s.setAttribute("aria-labelledby", o.id);
+                                }
+                                o.getAttribute(l) === u ?
+                                    ((c = o), a.addClass(v).removeAttr("tabindex").attr({ "aria-selected": "true" }).each(E.intro)) :
+                                    a.hasClass(v) && a.removeClass(v).attr({ tabindex: "-1", "aria-selected": "false" }).each(E.outro);
+                            });
                         var f = [],
                             d = [];
                         e.panes.each(function(e, n) {
@@ -9428,14 +9428,14 @@
                         c.focus(),
                             window.scrollTo(m, y),
                             _.length && i.outro ?
-                            (_.each(E.outro),
-                                a(_)
-                                .add("opacity " + i.outro + "ms " + o, { fallback: s })
-                                .start({ opacity: 0 })
-                                .then(function() {
-                                    return T(i, _, p);
-                                })) :
-                            T(i, _, p);
+                                (_.each(E.outro),
+                                    a(_)
+                                        .add("opacity " + i.outro + "ms " + o, { fallback: s })
+                                        .start({ opacity: 0 })
+                                        .then(function() {
+                                            return T(i, _, p);
+                                        })) :
+                                T(i, _, p);
                     }
                 }
 
@@ -9449,13 +9449,13 @@
                 }
                 return (
                     (o.ready = o.design = o.preview = _),
-                    (o.redraw = function() {
-                        (g = !0), _(), (g = !1);
-                    }),
-                    (o.destroy = function() {
-                        (e = u.find(p)).length && (e.each(y), m());
-                    }),
-                    o
+                        (o.redraw = function() {
+                            (g = !0), _(), (g = !1);
+                        }),
+                        (o.destroy = function() {
+                            (e = u.find(p)).length && (e.each(y), m());
+                        }),
+                        o
                 );
             })
         );
@@ -10898,6 +10898,30 @@ Webflow.require("ix2").init({
             config: { loop: false, playInReverse: false, scrollOffsetValue: null, scrollOffsetUnit: null, delay: null, direction: null, effectIn: null },
             createdOn: 1568385407341,
         },
+        "e-557": {
+            id: "e-557",
+            name: "",
+            animationType: "custom",
+            eventTypeId: "MOUSE_CLICK",
+            action: { id: "", actionTypeId: "GENERAL_START_ACTION", config: { delay: 0, easing: "", duration: 0, actionListId: "a-55", affectedElements: {}, playInReverse: false, autoStopEventId: "e-526" } },
+            mediaQueries: ["main", "medium", "small", "tiny"],
+            target: { id: "5d70f6f0c8ca5d73cd4392e2|8320fab2-82fb-d44f-d6ea-a5b42319c9bf3", appliesTo: "ELEMENT", styleBlockIds: [] },
+            targets: [{ id: "5d70f6f0c8ca5d73cd4392e2|8320fab2-82fb-d44f-d6ea-a5b42319c9bf3", appliesTo: "ELEMENT", styleBlockIds: [] }],
+            config: { loop: false, playInReverse: false, scrollOffsetValue: null, scrollOffsetUnit: null, delay: null, direction: null, effectIn: null },
+            createdOn: 1568385012135,
+        },
+        "e-558": {
+            id: "e-558",
+            name: "",
+            animationType: "custom",
+            eventTypeId: "MOUSE_CLICK",
+            action: { id: "", actionTypeId: "GENERAL_START_ACTION", config: { delay: 0, easing: "", duration: 0, actionListId: "a-56", affectedElements: {}, playInReverse: false, autoStopEventId: "e-528" } },
+            mediaQueries: ["main", "medium", "small", "tiny"],
+            target: { id: "5d70f6f0c8ca5d73cd4392e2|57b6f287-f8d1-4b12-4aea-8dba3eaaf15e3", appliesTo: "ELEMENT", styleBlockIds: [] },
+            targets: [{ id: "5d70f6f0c8ca5d73cd4392e2|57b6f287-f8d1-4b12-4aea-8dba3eaaf15e3", appliesTo: "ELEMENT", styleBlockIds: [] }],
+            config: { loop: false, playInReverse: false, scrollOffsetValue: null, scrollOffsetUnit: null, delay: null, direction: null, effectIn: null },
+            createdOn: 1568385407341,
+        },
     },
     actionLists: {
         a: {
@@ -10948,21 +10972,21 @@ Webflow.require("ix2").init({
             id: "a-3",
             title: "link invert – hover line scale – in",
             actionItemGroups: [{
-                    actionItems: [{
-                        id: "a-3-n",
-                        actionTypeId: "STYLE_SIZE",
-                        config: {
-                            delay: 0,
-                            easing: "outQuart",
-                            duration: 500,
-                            target: { useEventTarget: "CHILDREN", selector: ".hover-line", selectorGuids: ["c424d4ed-29a6-5c56-0451-3790484a56a2"] },
-                            widthValue: 0,
-                            widthUnit: "%",
-                            heightUnit: "PX",
-                            locked: false,
-                        },
-                    }, ],
-                },
+                actionItems: [{
+                    id: "a-3-n",
+                    actionTypeId: "STYLE_SIZE",
+                    config: {
+                        delay: 0,
+                        easing: "outQuart",
+                        duration: 500,
+                        target: { useEventTarget: "CHILDREN", selector: ".hover-line", selectorGuids: ["c424d4ed-29a6-5c56-0451-3790484a56a2"] },
+                        widthValue: 0,
+                        widthUnit: "%",
+                        heightUnit: "PX",
+                        locked: false,
+                    },
+                }, ],
+            },
                 {
                     actionItems: [{
                         id: "a-3-n-2",
@@ -11009,12 +11033,12 @@ Webflow.require("ix2").init({
             id: "a-5",
             title: "bg-image – fade in – into view",
             actionItemGroups: [{
-                    actionItems: [{
-                        id: "a-5-n",
-                        actionTypeId: "STYLE_OPACITY",
-                        config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5d5d5f4bf0aca5eb7512d5ba|f2befc4e-7480-0aec-506c-cc903fee62e4" }, value: 0, unit: "" },
-                    }, ],
-                },
+                actionItems: [{
+                    id: "a-5-n",
+                    actionTypeId: "STYLE_OPACITY",
+                    config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5d5d5f4bf0aca5eb7512d5ba|f2befc4e-7480-0aec-506c-cc903fee62e4" }, value: 0, unit: "" },
+                }, ],
+            },
                 {
                     actionItems: [{
                         id: "a-5-n-2",
@@ -11043,11 +11067,11 @@ Webflow.require("ix2").init({
             id: "a-8",
             title: "trigger – badge absolute – in",
             actionItemGroups: [{
-                    actionItems: [
-                        { id: "a-8-n", actionTypeId: "STYLE_OPACITY", config: { delay: 0, easing: "", duration: 500, target: {}, value: 0, unit: "" } },
-                        { id: "a-8-n-4", actionTypeId: "TRANSFORM_MOVE", config: { delay: 0, easing: "", duration: 500, target: {}, yValue: 12, xUnit: "PX", yUnit: "PX", zUnit: "PX" } },
-                    ],
-                },
+                actionItems: [
+                    { id: "a-8-n", actionTypeId: "STYLE_OPACITY", config: { delay: 0, easing: "", duration: 500, target: {}, value: 0, unit: "" } },
+                    { id: "a-8-n-4", actionTypeId: "TRANSFORM_MOVE", config: { delay: 0, easing: "", duration: 500, target: {}, yValue: 12, xUnit: "PX", yUnit: "PX", zUnit: "PX" } },
+                ],
+            },
                 {
                     actionItems: [
                         { id: "a-8-n-3", actionTypeId: "STYLE_OPACITY", config: { delay: 0, easing: "ease", duration: 500, target: {}, value: 1, unit: "" } },
@@ -11074,23 +11098,23 @@ Webflow.require("ix2").init({
             id: "a-7",
             title: "main – load",
             actionItemGroups: [{
-                    actionItems: [
-                        { id: "a-7-n", actionTypeId: "STYLE_OPACITY", config: { delay: 0, easing: "", duration: 500, target: { selector: ".main", selectorGuids: ["76978766-167d-daae-f498-d897803226c3"] }, value: 0, unit: "" } },
-                        { id: "a-7-n-5", actionTypeId: "STYLE_OPACITY", config: { delay: 0, easing: "", duration: 500, target: { selector: ".navbar", selectorGuids: ["bd299802-4c73-4aa1-d8ce-5a5fd2d895fc"] }, value: 0, unit: "" } },
-                        {
-                            id: "a-7-n-3",
-                            actionTypeId: "TRANSFORM_MOVE",
-                            config: { delay: 0, easing: "", duration: 500, target: { selector: ".announcement-bar-wrapper", selectorGuids: ["07ad2544-d682-443b-e1bd-7b4565bcb02f"] }, yValue: 150, xUnit: "PX", yUnit: "%", zUnit: "PX" },
-                        },
-                        { id: "a-7-n-7", actionTypeId: "GENERAL_DISPLAY", config: { delay: 0, easing: "", duration: 0, target: { selector: ".path-hider", selectorGuids: ["fb7c5fd3-0c02-49ae-66ad-03865b897cdd"] }, value: "none" } },
-                    ],
-                },
+                actionItems: [
+                    { id: "a-7-n", actionTypeId: "STYLE_OPACITY", config: { delay: 0, easing: "", duration: 500, target: { selector: ".main", selectorGuids: ["76978766-167d-daae-f498-d897803226c3"] }, value: 0, unit: "" } },
+                    { id: "a-7-n-5", actionTypeId: "STYLE_OPACITY", config: { delay: 0, easing: "", duration: 500, target: { selector: ".navbar", selectorGuids: ["bd299802-4c73-4aa1-d8ce-5a5fd2d895fc"] }, value: 0, unit: "" } },
+                    {
+                        id: "a-7-n-3",
+                        actionTypeId: "TRANSFORM_MOVE",
+                        config: { delay: 0, easing: "", duration: 500, target: { selector: ".announcement-bar-wrapper", selectorGuids: ["07ad2544-d682-443b-e1bd-7b4565bcb02f"] }, yValue: 150, xUnit: "PX", yUnit: "%", zUnit: "PX" },
+                    },
+                    { id: "a-7-n-7", actionTypeId: "GENERAL_DISPLAY", config: { delay: 0, easing: "", duration: 0, target: { selector: ".path-hider", selectorGuids: ["fb7c5fd3-0c02-49ae-66ad-03865b897cdd"] }, value: "none" } },
+                ],
+            },
                 {
                     actionItems: [{
-                            id: "a-7-n-2",
-                            actionTypeId: "STYLE_OPACITY",
-                            config: { delay: 0, easing: "inOutQuart", duration: 2000, target: { selector: ".main", selectorGuids: ["76978766-167d-daae-f498-d897803226c3"] }, value: 1, unit: "" },
-                        },
+                        id: "a-7-n-2",
+                        actionTypeId: "STYLE_OPACITY",
+                        config: { delay: 0, easing: "inOutQuart", duration: 2000, target: { selector: ".main", selectorGuids: ["76978766-167d-daae-f498-d897803226c3"] }, value: 1, unit: "" },
+                    },
                         {
                             id: "a-7-n-6",
                             actionTypeId: "STYLE_OPACITY",
@@ -11121,61 +11145,61 @@ Webflow.require("ix2").init({
             id: "a-11",
             title: "btn – scale – hover in",
             actionItemGroups: [{
-                    actionItems: [{
-                            id: "a-11-n",
-                            actionTypeId: "STYLE_SIZE",
-                            config: {
-                                delay: 0,
-                                easing: "",
-                                duration: 500,
-                                target: { useEventTarget: "CHILDREN", selector: ".btn-hover", selectorGuids: ["b0cb5751-b398-0c34-82ac-67028bc07b08"] },
-                                heightValue: 0,
-                                widthUnit: "PX",
-                                heightUnit: "%",
-                                locked: false,
-                            },
-                        },
-                        {
-                            id: "a-11-n-2",
-                            actionTypeId: "TRANSFORM_MOVE",
-                            config: {
-                                delay: 0,
-                                easing: "",
-                                duration: 500,
-                                target: { useEventTarget: "CHILDREN", selector: ".btn-hover", selectorGuids: ["b0cb5751-b398-0c34-82ac-67028bc07b08"] },
-                                yValue: 100,
-                                xUnit: "PX",
-                                yUnit: "%",
-                                zUnit: "PX",
-                            },
-                        },
-                        {
-                            id: "a-11-n-3",
-                            actionTypeId: "TRANSFORM_SCALE",
-                            config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: "PARENT", selector: ".btn", selectorGuids: ["b0cb5751-b398-0c34-82ac-67028bc07b06"] }, xValue: 1, yValue: 1, locked: true },
-                        },
-                        {
-                            id: "a-11-n-4",
-                            actionTypeId: "TRANSFORM_SCALE",
-                            config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: "CHILDREN", selector: ".btn-label", selectorGuids: ["b0cb5751-b398-0c34-82ac-67028bc07b07"] }, xValue: 1, yValue: 1, locked: true },
-                        },
-                    ],
+                actionItems: [{
+                    id: "a-11-n",
+                    actionTypeId: "STYLE_SIZE",
+                    config: {
+                        delay: 0,
+                        easing: "",
+                        duration: 500,
+                        target: { useEventTarget: "CHILDREN", selector: ".btn-hover", selectorGuids: ["b0cb5751-b398-0c34-82ac-67028bc07b08"] },
+                        heightValue: 0,
+                        widthUnit: "PX",
+                        heightUnit: "%",
+                        locked: false,
+                    },
                 },
+                    {
+                        id: "a-11-n-2",
+                        actionTypeId: "TRANSFORM_MOVE",
+                        config: {
+                            delay: 0,
+                            easing: "",
+                            duration: 500,
+                            target: { useEventTarget: "CHILDREN", selector: ".btn-hover", selectorGuids: ["b0cb5751-b398-0c34-82ac-67028bc07b08"] },
+                            yValue: 100,
+                            xUnit: "PX",
+                            yUnit: "%",
+                            zUnit: "PX",
+                        },
+                    },
+                    {
+                        id: "a-11-n-3",
+                        actionTypeId: "TRANSFORM_SCALE",
+                        config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: "PARENT", selector: ".btn", selectorGuids: ["b0cb5751-b398-0c34-82ac-67028bc07b06"] }, xValue: 1, yValue: 1, locked: true },
+                    },
+                    {
+                        id: "a-11-n-4",
+                        actionTypeId: "TRANSFORM_SCALE",
+                        config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: "CHILDREN", selector: ".btn-label", selectorGuids: ["b0cb5751-b398-0c34-82ac-67028bc07b07"] }, xValue: 1, yValue: 1, locked: true },
+                    },
+                ],
+            },
                 {
                     actionItems: [{
-                            id: "a-11-n-5",
-                            actionTypeId: "STYLE_SIZE",
-                            config: {
-                                delay: 0,
-                                easing: "outQuint",
-                                duration: 300,
-                                target: { useEventTarget: "CHILDREN", selector: ".btn-hover", selectorGuids: ["b0cb5751-b398-0c34-82ac-67028bc07b08"] },
-                                heightValue: 100,
-                                widthUnit: "PX",
-                                heightUnit: "%",
-                                locked: false,
-                            },
+                        id: "a-11-n-5",
+                        actionTypeId: "STYLE_SIZE",
+                        config: {
+                            delay: 0,
+                            easing: "outQuint",
+                            duration: 300,
+                            target: { useEventTarget: "CHILDREN", selector: ".btn-hover", selectorGuids: ["b0cb5751-b398-0c34-82ac-67028bc07b08"] },
+                            heightValue: 100,
+                            widthUnit: "PX",
+                            heightUnit: "%",
+                            locked: false,
                         },
+                    },
                         {
                             id: "a-11-n-6",
                             actionTypeId: "TRANSFORM_MOVE",
@@ -11210,47 +11234,47 @@ Webflow.require("ix2").init({
             id: "a-12",
             title: "btn – scale – hover out",
             actionItemGroups: [{
-                    actionItems: [{
-                            id: "a-12-n",
-                            actionTypeId: "TRANSFORM_MOVE",
-                            config: {
-                                delay: 0,
-                                easing: "inOutCirc",
-                                duration: 500,
-                                target: { useEventTarget: "CHILDREN", selector: ".btn-hover", selectorGuids: ["b0cb5751-b398-0c34-82ac-67028bc07b08"] },
-                                yValue: -100,
-                                xUnit: "PX",
-                                yUnit: "%",
-                                zUnit: "PX",
-                            },
-                        },
-                        {
-                            id: "a-12-n-2",
-                            actionTypeId: "TRANSFORM_SCALE",
-                            config: { delay: 0, easing: "outQuad", duration: 500, target: { selector: ".btn", selectorGuids: ["b0cb5751-b398-0c34-82ac-67028bc07b06"] }, xValue: 1, yValue: 1, locked: true },
-                        },
-                        {
-                            id: "a-12-n-3",
-                            actionTypeId: "TRANSFORM_SCALE",
-                            config: { delay: 0, easing: "outQuad", duration: 500, target: { useEventTarget: "CHILDREN", selector: ".btn-label", selectorGuids: ["b0cb5751-b398-0c34-82ac-67028bc07b07"] }, xValue: 1, yValue: 1, locked: true },
-                        },
-                    ],
+                actionItems: [{
+                    id: "a-12-n",
+                    actionTypeId: "TRANSFORM_MOVE",
+                    config: {
+                        delay: 0,
+                        easing: "inOutCirc",
+                        duration: 500,
+                        target: { useEventTarget: "CHILDREN", selector: ".btn-hover", selectorGuids: ["b0cb5751-b398-0c34-82ac-67028bc07b08"] },
+                        yValue: -100,
+                        xUnit: "PX",
+                        yUnit: "%",
+                        zUnit: "PX",
+                    },
                 },
+                    {
+                        id: "a-12-n-2",
+                        actionTypeId: "TRANSFORM_SCALE",
+                        config: { delay: 0, easing: "outQuad", duration: 500, target: { selector: ".btn", selectorGuids: ["b0cb5751-b398-0c34-82ac-67028bc07b06"] }, xValue: 1, yValue: 1, locked: true },
+                    },
+                    {
+                        id: "a-12-n-3",
+                        actionTypeId: "TRANSFORM_SCALE",
+                        config: { delay: 0, easing: "outQuad", duration: 500, target: { useEventTarget: "CHILDREN", selector: ".btn-label", selectorGuids: ["b0cb5751-b398-0c34-82ac-67028bc07b07"] }, xValue: 1, yValue: 1, locked: true },
+                    },
+                ],
+            },
                 {
                     actionItems: [{
-                            id: "a-12-n-4",
-                            actionTypeId: "STYLE_SIZE",
-                            config: {
-                                delay: 0,
-                                easing: "",
-                                duration: 0,
-                                target: { useEventTarget: "CHILDREN", selector: ".btn-hover", selectorGuids: ["b0cb5751-b398-0c34-82ac-67028bc07b08"] },
-                                heightValue: 0,
-                                widthUnit: "PX",
-                                heightUnit: "%",
-                                locked: false,
-                            },
+                        id: "a-12-n-4",
+                        actionTypeId: "STYLE_SIZE",
+                        config: {
+                            delay: 0,
+                            easing: "",
+                            duration: 0,
+                            target: { useEventTarget: "CHILDREN", selector: ".btn-hover", selectorGuids: ["b0cb5751-b398-0c34-82ac-67028bc07b08"] },
+                            heightValue: 0,
+                            widthUnit: "PX",
+                            heightUnit: "%",
+                            locked: false,
                         },
+                    },
                         {
                             id: "a-12-n-5",
                             actionTypeId: "TRANSFORM_MOVE",
@@ -11275,24 +11299,24 @@ Webflow.require("ix2").init({
             id: "a-13",
             title: "trigger – scale – in",
             actionItemGroups: [{
-                    actionItems: [{
-                            id: "a-13-n",
-                            actionTypeId: "TRANSFORM_SCALE",
-                            config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5d70f6f0c8ca5d73cd4392e2|7d31f73f-5827-879f-29e0-eb637441548b" }, xValue: 1, yValue: 1, locked: true },
-                        },
-                        {
-                            id: "a-13-n-2",
-                            actionTypeId: "TRANSFORM_SCALE",
-                            config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: "CHILDREN", selector: ".content", selectorGuids: ["d7a1bdd4-27c1-abda-8238-936443ffe3a6"] }, xValue: 1, yValue: 1, locked: true },
-                        },
-                    ],
+                actionItems: [{
+                    id: "a-13-n",
+                    actionTypeId: "TRANSFORM_SCALE",
+                    config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5d70f6f0c8ca5d73cd4392e2|7d31f73f-5827-879f-29e0-eb637441548b" }, xValue: 1, yValue: 1, locked: true },
                 },
+                    {
+                        id: "a-13-n-2",
+                        actionTypeId: "TRANSFORM_SCALE",
+                        config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: "CHILDREN", selector: ".content", selectorGuids: ["d7a1bdd4-27c1-abda-8238-936443ffe3a6"] }, xValue: 1, yValue: 1, locked: true },
+                    },
+                ],
+            },
                 {
                     actionItems: [{
-                            id: "a-13-n-3",
-                            actionTypeId: "TRANSFORM_SCALE",
-                            config: { delay: 0, easing: "swingFromTo", duration: 500, target: { useEventTarget: true, id: "5d70f6f0c8ca5d73cd4392e2|7d31f73f-5827-879f-29e0-eb637441548b" }, xValue: 1.05, yValue: 1.05, locked: true },
-                        },
+                        id: "a-13-n-3",
+                        actionTypeId: "TRANSFORM_SCALE",
+                        config: { delay: 0, easing: "swingFromTo", duration: 500, target: { useEventTarget: true, id: "5d70f6f0c8ca5d73cd4392e2|7d31f73f-5827-879f-29e0-eb637441548b" }, xValue: 1.05, yValue: 1.05, locked: true },
+                    },
                         {
                             id: "a-13-n-4",
                             actionTypeId: "TRANSFORM_SCALE",
@@ -11317,10 +11341,10 @@ Webflow.require("ix2").init({
             title: "trigger – scale – out",
             actionItemGroups: [{
                 actionItems: [{
-                        id: "a-14-n-3",
-                        actionTypeId: "TRANSFORM_SCALE",
-                        config: { delay: 0, easing: "inOutBack", duration: 500, target: { useEventTarget: true, id: "5d70f6f0c8ca5d73cd4392e2|7d31f73f-5827-879f-29e0-eb637441548b" }, xValue: 1, yValue: 1, locked: true },
-                    },
+                    id: "a-14-n-3",
+                    actionTypeId: "TRANSFORM_SCALE",
+                    config: { delay: 0, easing: "inOutBack", duration: 500, target: { useEventTarget: true, id: "5d70f6f0c8ca5d73cd4392e2|7d31f73f-5827-879f-29e0-eb637441548b" }, xValue: 1, yValue: 1, locked: true },
+                },
                     {
                         id: "a-14-n-4",
                         actionTypeId: "TRANSFORM_SCALE",
@@ -11374,13 +11398,13 @@ Webflow.require("ix2").init({
                 type: "SCROLL_PROGRESS",
                 parameterLabel: "Scroll",
                 continuousActionGroups: [{
-                        keyframe: 0,
-                        actionItems: [{
-                            id: "a-22-n",
-                            actionTypeId: "TRANSFORM_SCALE",
-                            config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5d70f6f0c8ca5d73cd4392e2|e568a116-4538-b28d-540c-0e46f889682d" }, xValue: 1, yValue: 1, locked: true },
-                        }, ],
-                    },
+                    keyframe: 0,
+                    actionItems: [{
+                        id: "a-22-n",
+                        actionTypeId: "TRANSFORM_SCALE",
+                        config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5d70f6f0c8ca5d73cd4392e2|e568a116-4538-b28d-540c-0e46f889682d" }, xValue: 1, yValue: 1, locked: true },
+                    }, ],
+                },
                     {
                         keyframe: 100,
                         actionItems: [{
@@ -11401,13 +11425,13 @@ Webflow.require("ix2").init({
                 type: "SCROLL_PROGRESS",
                 parameterLabel: "Scroll",
                 continuousActionGroups: [{
-                        keyframe: 0,
-                        actionItems: [{
-                            id: "a-20-n",
-                            actionTypeId: "TRANSFORM_MOVE",
-                            config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5d737f7f7a6dfa5d551e77ab|27be8e62-418d-71bb-0ae3-fc7ce7137f85" }, yValue: 0, xUnit: "PX", yUnit: "VH", zUnit: "PX" },
-                        }, ],
-                    },
+                    keyframe: 0,
+                    actionItems: [{
+                        id: "a-20-n",
+                        actionTypeId: "TRANSFORM_MOVE",
+                        config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5d737f7f7a6dfa5d551e77ab|27be8e62-418d-71bb-0ae3-fc7ce7137f85" }, yValue: 0, xUnit: "PX", yUnit: "VH", zUnit: "PX" },
+                    }, ],
+                },
                     {
                         keyframe: 100,
                         actionItems: [{
@@ -11424,29 +11448,29 @@ Webflow.require("ix2").init({
             id: "a-23",
             title: "show-item – on scroll – in",
             actionItemGroups: [{
-                    actionItems: [{
-                            id: "a-23-n",
-                            actionTypeId: "TRANSFORM_MOVE",
-                            config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5d70f6f0c8ca5d73cd4392e2|2b00f316-c4f8-4f6b-b8ed-44a65612b961" }, yValue: 16, xUnit: "PX", yUnit: "PX", zUnit: "PX" },
-                        },
-                        {
-                            id: "a-23-n-2",
-                            actionTypeId: "STYLE_OPACITY",
-                            config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5d70f6f0c8ca5d73cd4392e2|2b00f316-c4f8-4f6b-b8ed-44a65612b961" }, value: 0, unit: "" },
-                        },
-                        {
-                            id: "a-23-n-5",
-                            actionTypeId: "TRANSFORM_SCALE",
-                            config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5d70f6f0c8ca5d73cd4392e2|2b00f316-c4f8-4f6b-b8ed-44a65612b961" }, xValue: 0.9, yValue: 0.9, locked: true },
-                        },
-                    ],
+                actionItems: [{
+                    id: "a-23-n",
+                    actionTypeId: "TRANSFORM_MOVE",
+                    config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5d70f6f0c8ca5d73cd4392e2|2b00f316-c4f8-4f6b-b8ed-44a65612b961" }, yValue: 16, xUnit: "PX", yUnit: "PX", zUnit: "PX" },
                 },
+                    {
+                        id: "a-23-n-2",
+                        actionTypeId: "STYLE_OPACITY",
+                        config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5d70f6f0c8ca5d73cd4392e2|2b00f316-c4f8-4f6b-b8ed-44a65612b961" }, value: 0, unit: "" },
+                    },
+                    {
+                        id: "a-23-n-5",
+                        actionTypeId: "TRANSFORM_SCALE",
+                        config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5d70f6f0c8ca5d73cd4392e2|2b00f316-c4f8-4f6b-b8ed-44a65612b961" }, xValue: 0.9, yValue: 0.9, locked: true },
+                    },
+                ],
+            },
                 {
                     actionItems: [{
-                            id: "a-23-n-3",
-                            actionTypeId: "TRANSFORM_MOVE",
-                            config: { delay: 0, easing: "inOutQuad", duration: 500, target: { useEventTarget: true, id: "5d70f6f0c8ca5d73cd4392e2|2b00f316-c4f8-4f6b-b8ed-44a65612b961" }, yValue: 0, xUnit: "PX", yUnit: "PX", zUnit: "PX" },
-                        },
+                        id: "a-23-n-3",
+                        actionTypeId: "TRANSFORM_MOVE",
+                        config: { delay: 0, easing: "inOutQuad", duration: 500, target: { useEventTarget: true, id: "5d70f6f0c8ca5d73cd4392e2|2b00f316-c4f8-4f6b-b8ed-44a65612b961" }, yValue: 0, xUnit: "PX", yUnit: "PX", zUnit: "PX" },
+                    },
                         {
                             id: "a-23-n-4",
                             actionTypeId: "STYLE_OPACITY",
@@ -11468,10 +11492,10 @@ Webflow.require("ix2").init({
             title: "show-item – on scroll – out",
             actionItemGroups: [{
                 actionItems: [{
-                        id: "a-24-n-3",
-                        actionTypeId: "TRANSFORM_MOVE",
-                        config: { delay: 0, easing: "inOutCirc", duration: 0, target: { useEventTarget: true, id: "5d70f6f0c8ca5d73cd4392e2|2b00f316-c4f8-4f6b-b8ed-44a65612b961" }, yValue: 16, xUnit: "PX", yUnit: "PX", zUnit: "PX" },
-                    },
+                    id: "a-24-n-3",
+                    actionTypeId: "TRANSFORM_MOVE",
+                    config: { delay: 0, easing: "inOutCirc", duration: 0, target: { useEventTarget: true, id: "5d70f6f0c8ca5d73cd4392e2|2b00f316-c4f8-4f6b-b8ed-44a65612b961" }, yValue: 16, xUnit: "PX", yUnit: "PX", zUnit: "PX" },
+                },
                     {
                         id: "a-24-n-4",
                         actionTypeId: "STYLE_OPACITY",
@@ -11495,169 +11519,169 @@ Webflow.require("ix2").init({
                 type: "SCROLL_PROGRESS",
                 parameterLabel: "Scroll",
                 continuousActionGroups: [{
-                        keyframe: 10,
-                        actionItems: [{
-                                id: "a-25-n",
-                                actionTypeId: "TRANSFORM_MOVE",
-                                config: {
-                                    delay: 0,
-                                    easing: "inOutQuad",
-                                    duration: 500,
-                                    target: { useEventTarget: "CHILDREN", selector: ".img-stack-1", selectorGuids: ["84732e08-dffc-b017-ceda-d62891b9181a"] },
-                                    yValue: 0,
-                                    xUnit: "PX",
-                                    yUnit: "VH",
-                                    zUnit: "PX",
-                                },
-                            },
-                            {
-                                id: "a-25-n-3",
-                                actionTypeId: "TRANSFORM_ROTATE",
-                                config: {
-                                    delay: 0,
-                                    easing: "inOutQuad",
-                                    duration: 500,
-                                    target: { useEventTarget: "CHILDREN", selector: ".img-stack-1", selectorGuids: ["84732e08-dffc-b017-ceda-d62891b9181a"] },
-                                    zValue: 0,
-                                    xUnit: "DEG",
-                                    yUnit: "DEG",
-                                    zUnit: "DEG",
-                                },
-                            },
-                            {
-                                id: "a-25-n-5",
-                                actionTypeId: "TRANSFORM_MOVE",
-                                config: {
-                                    delay: 0,
-                                    easing: "inOutQuad",
-                                    duration: 500,
-                                    target: { useEventTarget: "CHILDREN", selector: ".img-stack-2", selectorGuids: ["a5919cbd-bc40-0c50-ba07-f841cbe2dc9d"] },
-                                    xValue: 0,
-                                    yValue: -10,
-                                    xUnit: "VW",
-                                    yUnit: "VH",
-                                    zUnit: "PX",
-                                },
-                            },
-                            {
-                                id: "a-25-n-6",
-                                actionTypeId: "TRANSFORM_ROTATE",
-                                config: {
-                                    delay: 0,
-                                    easing: "inOutQuad",
-                                    duration: 500,
-                                    target: { useEventTarget: "CHILDREN", selector: ".img-stack-2", selectorGuids: ["a5919cbd-bc40-0c50-ba07-f841cbe2dc9d"] },
-                                    zValue: 0,
-                                    xUnit: "DEG",
-                                    yUnit: "DEG",
-                                    zUnit: "DEG",
-                                },
-                            },
-                            {
-                                id: "a-25-n-9",
-                                actionTypeId: "TRANSFORM_MOVE",
-                                config: {
-                                    delay: 0,
-                                    easing: "inOutQuad",
-                                    duration: 500,
-                                    target: { useEventTarget: "CHILDREN", selector: ".img-stack-3", selectorGuids: ["3b3900b1-7a92-bb2d-999c-5db5a73051e2"] },
-                                    xValue: 0,
-                                    yValue: 0,
-                                    xUnit: "VW",
-                                    yUnit: "VH",
-                                    zUnit: "PX",
-                                },
-                            },
-                            {
-                                id: "a-25-n-10",
-                                actionTypeId: "TRANSFORM_ROTATE",
-                                config: {
-                                    delay: 0,
-                                    easing: "inOutQuad",
-                                    duration: 500,
-                                    target: { useEventTarget: "CHILDREN", selector: ".img-stack-3", selectorGuids: ["3b3900b1-7a92-bb2d-999c-5db5a73051e2"] },
-                                    zValue: 0,
-                                    xUnit: "DEG",
-                                    yUnit: "DEG",
-                                    zUnit: "DEG",
-                                },
-                            },
-                            {
-                                id: "a-25-n-13",
-                                actionTypeId: "TRANSFORM_MOVE",
-                                config: {
-                                    delay: 0,
-                                    easing: "inOutQuad",
-                                    duration: 500,
-                                    target: { useEventTarget: "CHILDREN", selector: ".img-stack-4", selectorGuids: ["c6cc843d-36b4-8592-b275-f9a6114c7a0e"] },
-                                    xValue: 0,
-                                    yValue: -10,
-                                    xUnit: "VW",
-                                    yUnit: "VH",
-                                    zUnit: "PX",
-                                },
-                            },
-                            {
-                                id: "a-25-n-14",
-                                actionTypeId: "TRANSFORM_ROTATE",
-                                config: {
-                                    delay: 0,
-                                    easing: "inOutQuad",
-                                    duration: 500,
-                                    target: { useEventTarget: "CHILDREN", selector: ".img-stack-4", selectorGuids: ["c6cc843d-36b4-8592-b275-f9a6114c7a0e"] },
-                                    zValue: 0,
-                                    xUnit: "DEG",
-                                    yUnit: "DEG",
-                                    zUnit: "DEG",
-                                },
-                            },
-                            {
-                                id: "a-25-n-17",
-                                actionTypeId: "TRANSFORM_MOVE",
-                                config: {
-                                    delay: 0,
-                                    easing: "inOutQuad",
-                                    duration: 500,
-                                    target: { useEventTarget: "CHILDREN", selector: ".img-stack-5", selectorGuids: ["7bb9c726-0cbc-c294-1f2f-4ec4e4292cb0"] },
-                                    xValue: 0,
-                                    yValue: -15,
-                                    xUnit: "VW",
-                                    yUnit: "VH",
-                                    zUnit: "PX",
-                                },
-                            },
-                            {
-                                id: "a-25-n-18",
-                                actionTypeId: "TRANSFORM_ROTATE",
-                                config: {
-                                    delay: 0,
-                                    easing: "inOutQuad",
-                                    duration: 500,
-                                    target: { useEventTarget: "CHILDREN", selector: ".img-stack-5", selectorGuids: ["7bb9c726-0cbc-c294-1f2f-4ec4e4292cb0"] },
-                                    zValue: 0,
-                                    xUnit: "DEG",
-                                    yUnit: "DEG",
-                                    zUnit: "DEG",
-                                },
-                            },
-                        ],
+                    keyframe: 10,
+                    actionItems: [{
+                        id: "a-25-n",
+                        actionTypeId: "TRANSFORM_MOVE",
+                        config: {
+                            delay: 0,
+                            easing: "inOutQuad",
+                            duration: 500,
+                            target: { useEventTarget: "CHILDREN", selector: ".img-stack-1", selectorGuids: ["84732e08-dffc-b017-ceda-d62891b9181a"] },
+                            yValue: 0,
+                            xUnit: "PX",
+                            yUnit: "VH",
+                            zUnit: "PX",
+                        },
                     },
+                        {
+                            id: "a-25-n-3",
+                            actionTypeId: "TRANSFORM_ROTATE",
+                            config: {
+                                delay: 0,
+                                easing: "inOutQuad",
+                                duration: 500,
+                                target: { useEventTarget: "CHILDREN", selector: ".img-stack-1", selectorGuids: ["84732e08-dffc-b017-ceda-d62891b9181a"] },
+                                zValue: 0,
+                                xUnit: "DEG",
+                                yUnit: "DEG",
+                                zUnit: "DEG",
+                            },
+                        },
+                        {
+                            id: "a-25-n-5",
+                            actionTypeId: "TRANSFORM_MOVE",
+                            config: {
+                                delay: 0,
+                                easing: "inOutQuad",
+                                duration: 500,
+                                target: { useEventTarget: "CHILDREN", selector: ".img-stack-2", selectorGuids: ["a5919cbd-bc40-0c50-ba07-f841cbe2dc9d"] },
+                                xValue: 0,
+                                yValue: -10,
+                                xUnit: "VW",
+                                yUnit: "VH",
+                                zUnit: "PX",
+                            },
+                        },
+                        {
+                            id: "a-25-n-6",
+                            actionTypeId: "TRANSFORM_ROTATE",
+                            config: {
+                                delay: 0,
+                                easing: "inOutQuad",
+                                duration: 500,
+                                target: { useEventTarget: "CHILDREN", selector: ".img-stack-2", selectorGuids: ["a5919cbd-bc40-0c50-ba07-f841cbe2dc9d"] },
+                                zValue: 0,
+                                xUnit: "DEG",
+                                yUnit: "DEG",
+                                zUnit: "DEG",
+                            },
+                        },
+                        {
+                            id: "a-25-n-9",
+                            actionTypeId: "TRANSFORM_MOVE",
+                            config: {
+                                delay: 0,
+                                easing: "inOutQuad",
+                                duration: 500,
+                                target: { useEventTarget: "CHILDREN", selector: ".img-stack-3", selectorGuids: ["3b3900b1-7a92-bb2d-999c-5db5a73051e2"] },
+                                xValue: 0,
+                                yValue: 0,
+                                xUnit: "VW",
+                                yUnit: "VH",
+                                zUnit: "PX",
+                            },
+                        },
+                        {
+                            id: "a-25-n-10",
+                            actionTypeId: "TRANSFORM_ROTATE",
+                            config: {
+                                delay: 0,
+                                easing: "inOutQuad",
+                                duration: 500,
+                                target: { useEventTarget: "CHILDREN", selector: ".img-stack-3", selectorGuids: ["3b3900b1-7a92-bb2d-999c-5db5a73051e2"] },
+                                zValue: 0,
+                                xUnit: "DEG",
+                                yUnit: "DEG",
+                                zUnit: "DEG",
+                            },
+                        },
+                        {
+                            id: "a-25-n-13",
+                            actionTypeId: "TRANSFORM_MOVE",
+                            config: {
+                                delay: 0,
+                                easing: "inOutQuad",
+                                duration: 500,
+                                target: { useEventTarget: "CHILDREN", selector: ".img-stack-4", selectorGuids: ["c6cc843d-36b4-8592-b275-f9a6114c7a0e"] },
+                                xValue: 0,
+                                yValue: -10,
+                                xUnit: "VW",
+                                yUnit: "VH",
+                                zUnit: "PX",
+                            },
+                        },
+                        {
+                            id: "a-25-n-14",
+                            actionTypeId: "TRANSFORM_ROTATE",
+                            config: {
+                                delay: 0,
+                                easing: "inOutQuad",
+                                duration: 500,
+                                target: { useEventTarget: "CHILDREN", selector: ".img-stack-4", selectorGuids: ["c6cc843d-36b4-8592-b275-f9a6114c7a0e"] },
+                                zValue: 0,
+                                xUnit: "DEG",
+                                yUnit: "DEG",
+                                zUnit: "DEG",
+                            },
+                        },
+                        {
+                            id: "a-25-n-17",
+                            actionTypeId: "TRANSFORM_MOVE",
+                            config: {
+                                delay: 0,
+                                easing: "inOutQuad",
+                                duration: 500,
+                                target: { useEventTarget: "CHILDREN", selector: ".img-stack-5", selectorGuids: ["7bb9c726-0cbc-c294-1f2f-4ec4e4292cb0"] },
+                                xValue: 0,
+                                yValue: -15,
+                                xUnit: "VW",
+                                yUnit: "VH",
+                                zUnit: "PX",
+                            },
+                        },
+                        {
+                            id: "a-25-n-18",
+                            actionTypeId: "TRANSFORM_ROTATE",
+                            config: {
+                                delay: 0,
+                                easing: "inOutQuad",
+                                duration: 500,
+                                target: { useEventTarget: "CHILDREN", selector: ".img-stack-5", selectorGuids: ["7bb9c726-0cbc-c294-1f2f-4ec4e4292cb0"] },
+                                zValue: 0,
+                                xUnit: "DEG",
+                                yUnit: "DEG",
+                                zUnit: "DEG",
+                            },
+                        },
+                    ],
+                },
                     {
                         keyframe: 40,
                         actionItems: [{
-                                id: "a-25-n-2",
-                                actionTypeId: "TRANSFORM_MOVE",
-                                config: {
-                                    delay: 0,
-                                    easing: "inOutQuad",
-                                    duration: 500,
-                                    target: { useEventTarget: "CHILDREN", selector: ".img-stack-1", selectorGuids: ["84732e08-dffc-b017-ceda-d62891b9181a"] },
-                                    yValue: -40,
-                                    xUnit: "PX",
-                                    yUnit: "VH",
-                                    zUnit: "PX",
-                                },
+                            id: "a-25-n-2",
+                            actionTypeId: "TRANSFORM_MOVE",
+                            config: {
+                                delay: 0,
+                                easing: "inOutQuad",
+                                duration: 500,
+                                target: { useEventTarget: "CHILDREN", selector: ".img-stack-1", selectorGuids: ["84732e08-dffc-b017-ceda-d62891b9181a"] },
+                                yValue: -40,
+                                xUnit: "PX",
+                                yUnit: "VH",
+                                zUnit: "PX",
                             },
+                        },
                             {
                                 id: "a-25-n-4",
                                 actionTypeId: "TRANSFORM_ROTATE",
@@ -11802,7 +11826,7 @@ Webflow.require("ix2").init({
                     id: "a-15-n",
                     actionTypeId: "TRANSFORM_MOVE",
                     config: { delay: 0, easing: "inOutBack", duration: 1000, target: { selector: ".announcement-bar", selectorGuids: ["cebb4468-d630-1fad-479d-af3d94eb009d"] }, yValue: 150, xUnit: "PX", yUnit: "%", zUnit: "PX" },
-                }, ],
+                }],
             }, ],
             useFirstGroupAsInitialState: false,
             createdOn: 1567427266151,
@@ -11811,49 +11835,49 @@ Webflow.require("ix2").init({
             id: "a-10",
             title: "hero twisted – mouse move",
             continuousParameterGroups: [{
-                    id: "a-10-p",
-                    type: "MOUSE_X",
-                    parameterLabel: "Mouse X",
-                    continuousActionGroups: [{
-                            keyframe: 0,
-                            actionItems: [{
-                                    id: "a-10-n",
-                                    actionTypeId: "TRANSFORM_SKEW",
-                                    config: { delay: 0, easing: "", duration: 500, target: { selector: ".hero-cutted-1", selectorGuids: ["2e45927f-58cf-2875-7999-4fd3f4c36e03"] }, xValue: -8, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
-                                },
-                                {
-                                    id: "a-10-n-3",
-                                    actionTypeId: "TRANSFORM_MOVE",
-                                    config: { delay: 0, easing: "", duration: 500, target: { selector: ".hero-cutted-2", selectorGuids: ["2e45927f-58cf-2875-7999-4fd3f4c36e05"] }, xValue: -1.35, xUnit: "VW", yUnit: "PX", zUnit: "PX" },
-                                },
-                                {
-                                    id: "a-10-n-5",
-                                    actionTypeId: "TRANSFORM_SKEW",
-                                    config: { delay: 0, easing: "", duration: 500, target: { selector: ".hero-cutted-3", selectorGuids: ["2e45927f-58cf-2875-7999-4fd3f4c36e06"] }, xValue: 8, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
-                                },
-                            ],
+                id: "a-10-p",
+                type: "MOUSE_X",
+                parameterLabel: "Mouse X",
+                continuousActionGroups: [{
+                    keyframe: 0,
+                    actionItems: [{
+                        id: "a-10-n",
+                        actionTypeId: "TRANSFORM_SKEW",
+                        config: { delay: 0, easing: "", duration: 500, target: { selector: ".hero-cutted-1", selectorGuids: ["2e45927f-58cf-2875-7999-4fd3f4c36e03"] }, xValue: -8, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
+                    },
+                        {
+                            id: "a-10-n-3",
+                            actionTypeId: "TRANSFORM_MOVE",
+                            config: { delay: 0, easing: "", duration: 500, target: { selector: ".hero-cutted-2", selectorGuids: ["2e45927f-58cf-2875-7999-4fd3f4c36e05"] }, xValue: -1.35, xUnit: "VW", yUnit: "PX", zUnit: "PX" },
                         },
                         {
-                            keyframe: 100,
-                            actionItems: [{
-                                    id: "a-10-n-2",
-                                    actionTypeId: "TRANSFORM_SKEW",
-                                    config: { delay: 0, easing: "", duration: 500, target: { selector: ".hero-cutted-1", selectorGuids: ["2e45927f-58cf-2875-7999-4fd3f4c36e03"] }, xValue: 8, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
-                                },
-                                {
-                                    id: "a-10-n-4",
-                                    actionTypeId: "TRANSFORM_MOVE",
-                                    config: { delay: 0, easing: "", duration: 500, target: { selector: ".hero-cutted-2", selectorGuids: ["2e45927f-58cf-2875-7999-4fd3f4c36e05"] }, xValue: 1.35, xUnit: "VW", yUnit: "PX", zUnit: "PX" },
-                                },
-                                {
-                                    id: "a-10-n-6",
-                                    actionTypeId: "TRANSFORM_SKEW",
-                                    config: { delay: 0, easing: "", duration: 500, target: { selector: ".hero-cutted-3", selectorGuids: ["2e45927f-58cf-2875-7999-4fd3f4c36e06"] }, xValue: -8, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
-                                },
-                            ],
+                            id: "a-10-n-5",
+                            actionTypeId: "TRANSFORM_SKEW",
+                            config: { delay: 0, easing: "", duration: 500, target: { selector: ".hero-cutted-3", selectorGuids: ["2e45927f-58cf-2875-7999-4fd3f4c36e06"] }, xValue: 8, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
                         },
                     ],
                 },
+                    {
+                        keyframe: 100,
+                        actionItems: [{
+                            id: "a-10-n-2",
+                            actionTypeId: "TRANSFORM_SKEW",
+                            config: { delay: 0, easing: "", duration: 500, target: { selector: ".hero-cutted-1", selectorGuids: ["2e45927f-58cf-2875-7999-4fd3f4c36e03"] }, xValue: 8, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
+                        },
+                            {
+                                id: "a-10-n-4",
+                                actionTypeId: "TRANSFORM_MOVE",
+                                config: { delay: 0, easing: "", duration: 500, target: { selector: ".hero-cutted-2", selectorGuids: ["2e45927f-58cf-2875-7999-4fd3f4c36e05"] }, xValue: 1.35, xUnit: "VW", yUnit: "PX", zUnit: "PX" },
+                            },
+                            {
+                                id: "a-10-n-6",
+                                actionTypeId: "TRANSFORM_SKEW",
+                                config: { delay: 0, easing: "", duration: 500, target: { selector: ".hero-cutted-3", selectorGuids: ["2e45927f-58cf-2875-7999-4fd3f4c36e06"] }, xValue: -8, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
+                            },
+                        ],
+                    },
+                ],
+            },
                 { id: "a-10-p-2", type: "MOUSE_Y", parameterLabel: "Mouse Y", continuousActionGroups: [] },
             ],
             createdOn: 1567327501597,
@@ -11863,10 +11887,10 @@ Webflow.require("ix2").init({
             title: "slider – size opacity – in",
             actionItemGroups: [{
                 actionItems: [{
-                        id: "a-26-n",
-                        actionTypeId: "STYLE_OPACITY",
-                        config: { delay: 0, easing: "ease", duration: 500, target: { useEventTarget: "CHILDREN", selector: ".section", selectorGuids: ["fb0bcd3b-c723-2a80-4459-2f9807643bce"] }, value: 1, unit: "" },
-                    },
+                    id: "a-26-n",
+                    actionTypeId: "STYLE_OPACITY",
+                    config: { delay: 0, easing: "ease", duration: 500, target: { useEventTarget: "CHILDREN", selector: ".section", selectorGuids: ["fb0bcd3b-c723-2a80-4459-2f9807643bce"] }, value: 1, unit: "" },
+                },
                     {
                         id: "a-26-n-2",
                         actionTypeId: "TRANSFORM_SCALE",
@@ -11890,10 +11914,10 @@ Webflow.require("ix2").init({
             title: "slider – size opacity – out",
             actionItemGroups: [{
                 actionItems: [{
-                        id: "a-27-n",
-                        actionTypeId: "STYLE_OPACITY",
-                        config: { delay: 0, easing: "ease", duration: 500, target: { useEventTarget: "CHILDREN", selector: ".section", selectorGuids: ["fb0bcd3b-c723-2a80-4459-2f9807643bce"] }, value: 0.5, unit: "" },
-                    },
+                    id: "a-27-n",
+                    actionTypeId: "STYLE_OPACITY",
+                    config: { delay: 0, easing: "ease", duration: 500, target: { useEventTarget: "CHILDREN", selector: ".section", selectorGuids: ["fb0bcd3b-c723-2a80-4459-2f9807643bce"] }, value: 0.5, unit: "" },
+                },
                     {
                         id: "a-27-n-2",
                         actionTypeId: "TRANSFORM_SCALE",
@@ -11916,32 +11940,32 @@ Webflow.require("ix2").init({
             id: "a-30",
             title: "trigger – img zoom – in",
             actionItemGroups: [{
-                    actionItems: [{
-                            id: "a-30-n-2",
-                            actionTypeId: "TRANSFORM_SCALE",
-                            config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: "CHILDREN", selector: ".img-wrapper", selectorGuids: ["4fe6b5e8-379e-11b8-f262-57a06181b52a"] }, xValue: 0.9, yValue: 0.9, locked: true },
-                        },
-                        {
-                            id: "a-30-n-3",
-                            actionTypeId: "TRANSFORM_SCALE",
-                            config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: "CHILDREN", selector: ".bg-image", selectorGuids: ["4fe6b5e8-379e-11b8-f262-57a06181b529"] }, xValue: 1.2, yValue: 1.2, locked: true },
-                        },
-                    ],
+                actionItems: [{
+                    id: "a-30-n-2",
+                    actionTypeId: "TRANSFORM_SCALE",
+                    config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: "CHILDREN", selector: ".img-wrapper", selectorGuids: ["4fe6b5e8-379e-11b8-f262-57a06181b52a"] }, xValue: 0.9, yValue: 0.9, locked: true },
                 },
+                    {
+                        id: "a-30-n-3",
+                        actionTypeId: "TRANSFORM_SCALE",
+                        config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: "CHILDREN", selector: ".bg-image", selectorGuids: ["4fe6b5e8-379e-11b8-f262-57a06181b529"] }, xValue: 1.2, yValue: 1.2, locked: true },
+                    },
+                ],
+            },
                 {
                     actionItems: [{
-                            id: "a-30-n-4",
-                            actionTypeId: "TRANSFORM_SCALE",
-                            config: {
-                                delay: 0,
-                                easing: "swingFromTo",
-                                duration: 500,
-                                target: { useEventTarget: "CHILDREN", selector: ".img-wrapper", selectorGuids: ["4fe6b5e8-379e-11b8-f262-57a06181b52a"] },
-                                xValue: 1,
-                                yValue: 1,
-                                locked: true,
-                            },
+                        id: "a-30-n-4",
+                        actionTypeId: "TRANSFORM_SCALE",
+                        config: {
+                            delay: 0,
+                            easing: "swingFromTo",
+                            duration: 500,
+                            target: { useEventTarget: "CHILDREN", selector: ".img-wrapper", selectorGuids: ["4fe6b5e8-379e-11b8-f262-57a06181b52a"] },
+                            xValue: 1,
+                            yValue: 1,
+                            locked: true,
                         },
+                    },
                         {
                             id: "a-30-n-5",
                             actionTypeId: "TRANSFORM_SCALE",
@@ -11958,18 +11982,18 @@ Webflow.require("ix2").init({
             title: "trigger – img zoom – out",
             actionItemGroups: [{
                 actionItems: [{
-                        id: "a-31-n-3",
-                        actionTypeId: "TRANSFORM_SCALE",
-                        config: {
-                            delay: 0,
-                            easing: "inOutBack",
-                            duration: 500,
-                            target: { useEventTarget: "CHILDREN", selector: ".img-wrapper", selectorGuids: ["4fe6b5e8-379e-11b8-f262-57a06181b52a"] },
-                            xValue: 0.9,
-                            yValue: 0.9,
-                            locked: true,
-                        },
+                    id: "a-31-n-3",
+                    actionTypeId: "TRANSFORM_SCALE",
+                    config: {
+                        delay: 0,
+                        easing: "inOutBack",
+                        duration: 500,
+                        target: { useEventTarget: "CHILDREN", selector: ".img-wrapper", selectorGuids: ["4fe6b5e8-379e-11b8-f262-57a06181b52a"] },
+                        xValue: 0.9,
+                        yValue: 0.9,
+                        locked: true,
                     },
+                },
                     {
                         id: "a-31-n-4",
                         actionTypeId: "TRANSFORM_SCALE",
@@ -11988,13 +12012,13 @@ Webflow.require("ix2").init({
                 type: "SCROLL_PROGRESS",
                 parameterLabel: "Scroll",
                 continuousActionGroups: [{
-                        keyframe: 0,
-                        actionItems: [{
-                            id: "a-32-n",
-                            actionTypeId: "TRANSFORM_MOVE",
-                            config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5d5d5f4bf0aca5eb7512d5ba|d2f6f2bd-7513-2c80-c6d9-ccd0bbe9ef55" }, yValue: 10, xUnit: "PX", yUnit: "VH", zUnit: "PX" },
-                        }, ],
-                    },
+                    keyframe: 0,
+                    actionItems: [{
+                        id: "a-32-n",
+                        actionTypeId: "TRANSFORM_MOVE",
+                        config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5d5d5f4bf0aca5eb7512d5ba|d2f6f2bd-7513-2c80-c6d9-ccd0bbe9ef55" }, yValue: 10, xUnit: "PX", yUnit: "VH", zUnit: "PX" },
+                    }, ],
+                },
                     {
                         keyframe: 100,
                         actionItems: [{
@@ -12015,13 +12039,13 @@ Webflow.require("ix2").init({
                 type: "SCROLL_PROGRESS",
                 parameterLabel: "Scroll",
                 continuousActionGroups: [{
-                        keyframe: 0,
-                        actionItems: [{
-                            id: "a-39-n",
-                            actionTypeId: "TRANSFORM_MOVE",
-                            config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5c095e20368c3397119e06f3|93719cca-0e3e-f50f-6907-098483790056" }, yValue: 10, xUnit: "PX", yUnit: "%", zUnit: "PX" },
-                        }, ],
-                    },
+                    keyframe: 0,
+                    actionItems: [{
+                        id: "a-39-n",
+                        actionTypeId: "TRANSFORM_MOVE",
+                        config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5c095e20368c3397119e06f3|93719cca-0e3e-f50f-6907-098483790056" }, yValue: 10, xUnit: "PX", yUnit: "%", zUnit: "PX" },
+                    }, ],
+                },
                     {
                         keyframe: 100,
                         actionItems: [{
@@ -12042,13 +12066,13 @@ Webflow.require("ix2").init({
                 type: "SCROLL_PROGRESS",
                 parameterLabel: "Scroll",
                 continuousActionGroups: [{
-                        keyframe: 0,
-                        actionItems: [{
-                            id: "a-40-n",
-                            actionTypeId: "TRANSFORM_MOVE",
-                            config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5c095e20368c3397119e06f3|93719cca-0e3e-f50f-6907-098483790056" }, yValue: 0, xUnit: "PX", yUnit: "%", zUnit: "PX" },
-                        }, ],
-                    },
+                    keyframe: 0,
+                    actionItems: [{
+                        id: "a-40-n",
+                        actionTypeId: "TRANSFORM_MOVE",
+                        config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5c095e20368c3397119e06f3|93719cca-0e3e-f50f-6907-098483790056" }, yValue: 0, xUnit: "PX", yUnit: "%", zUnit: "PX" },
+                    }, ],
+                },
                     {
                         keyframe: 100,
                         actionItems: [{
@@ -12065,53 +12089,53 @@ Webflow.require("ix2").init({
             id: "a-41",
             title: "Button Hover In",
             actionItemGroups: [{
-                    actionItems: [{
-                            id: "a-41-n",
-                            actionTypeId: "STYLE_TEXT_COLOR",
-                            config: {
-                                delay: 0,
-                                easing: "ease",
-                                duration: 300,
-                                target: { useEventTarget: "CHILDREN", selector: ".button", selectorGuids: ["e2311cec-a0e4-e061-13e5-203296af3a36"] },
-                                globalSwatchId: "168b1903",
-                                rValue: 255,
-                                bValue: 255,
-                                gValue: 255,
-                                aValue: 1,
-                            },
-                        },
-                        {
-                            id: "a-41-n-2",
-                            actionTypeId: "STYLE_SIZE",
-                            config: {
-                                delay: 0,
-                                easing: "ease",
-                                duration: 300,
-                                target: { useEventTarget: "CHILDREN", selector: ".line-2", selectorGuids: ["e2311cec-a0e4-e061-13e5-203296af3a31"] },
-                                widthValue: 10,
-                                widthUnit: "%",
-                                heightUnit: "PX",
-                                locked: false,
-                            },
-                        },
-                    ],
+                actionItems: [{
+                    id: "a-41-n",
+                    actionTypeId: "STYLE_TEXT_COLOR",
+                    config: {
+                        delay: 0,
+                        easing: "ease",
+                        duration: 300,
+                        target: { useEventTarget: "CHILDREN", selector: ".button", selectorGuids: ["e2311cec-a0e4-e061-13e5-203296af3a36"] },
+                        globalSwatchId: "168b1903",
+                        rValue: 255,
+                        bValue: 255,
+                        gValue: 255,
+                        aValue: 1,
+                    },
                 },
+                    {
+                        id: "a-41-n-2",
+                        actionTypeId: "STYLE_SIZE",
+                        config: {
+                            delay: 0,
+                            easing: "ease",
+                            duration: 300,
+                            target: { useEventTarget: "CHILDREN", selector: ".line-2", selectorGuids: ["e2311cec-a0e4-e061-13e5-203296af3a31"] },
+                            widthValue: 10,
+                            widthUnit: "%",
+                            heightUnit: "PX",
+                            locked: false,
+                        },
+                    },
+                ],
+            },
                 {
                     actionItems: [{
-                            id: "a-41-n-3",
-                            actionTypeId: "STYLE_TEXT_COLOR",
-                            config: {
-                                delay: 0,
-                                easing: "ease",
-                                duration: 300,
-                                target: { useEventTarget: "CHILDREN", selector: ".button", selectorGuids: ["e2311cec-a0e4-e061-13e5-203296af3a36"] },
-                                globalSwatchId: "9d79c7c8",
-                                rValue: 255,
-                                bValue: 80,
-                                gValue: 206,
-                                aValue: 1,
-                            },
+                        id: "a-41-n-3",
+                        actionTypeId: "STYLE_TEXT_COLOR",
+                        config: {
+                            delay: 0,
+                            easing: "ease",
+                            duration: 300,
+                            target: { useEventTarget: "CHILDREN", selector: ".button", selectorGuids: ["e2311cec-a0e4-e061-13e5-203296af3a36"] },
+                            globalSwatchId: "9d79c7c8",
+                            rValue: 255,
+                            bValue: 80,
+                            gValue: 206,
+                            aValue: 1,
                         },
+                    },
                         {
                             id: "a-41-n-4",
                             actionTypeId: "STYLE_SIZE",
@@ -12137,20 +12161,20 @@ Webflow.require("ix2").init({
             title: "Button Hover Out",
             actionItemGroups: [{
                 actionItems: [{
-                        id: "a-42-n",
-                        actionTypeId: "STYLE_TEXT_COLOR",
-                        config: {
-                            delay: 0,
-                            easing: "ease",
-                            duration: 300,
-                            target: { useEventTarget: "CHILDREN", selector: ".button", selectorGuids: ["e2311cec-a0e4-e061-13e5-203296af3a36"] },
-                            globalSwatchId: "168b1903",
-                            rValue: 255,
-                            bValue: 255,
-                            gValue: 255,
-                            aValue: 1,
-                        },
+                    id: "a-42-n",
+                    actionTypeId: "STYLE_TEXT_COLOR",
+                    config: {
+                        delay: 0,
+                        easing: "ease",
+                        duration: 300,
+                        target: { useEventTarget: "CHILDREN", selector: ".button", selectorGuids: ["e2311cec-a0e4-e061-13e5-203296af3a36"] },
+                        globalSwatchId: "168b1903",
+                        rValue: 255,
+                        bValue: 255,
+                        gValue: 255,
+                        aValue: 1,
                     },
+                },
                     {
                         id: "a-42-n-2",
                         actionTypeId: "STYLE_SIZE",
@@ -12224,13 +12248,13 @@ Webflow.require("ix2").init({
                 type: "SCROLL_PROGRESS",
                 parameterLabel: "Scroll",
                 continuousActionGroups: [{
-                        keyframe: 0,
-                        actionItems: [{
-                            id: "a-45-n",
-                            actionTypeId: "TRANSFORM_MOVE",
-                            config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5d70f6f0c8ca5d73cd4392e2|1e7b1239-747d-ce4d-0ec1-7e99236ed65d" }, yValue: 0, xUnit: "PX", yUnit: "%", zUnit: "PX" },
-                        }, ],
-                    },
+                    keyframe: 0,
+                    actionItems: [{
+                        id: "a-45-n",
+                        actionTypeId: "TRANSFORM_MOVE",
+                        config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5d70f6f0c8ca5d73cd4392e2|1e7b1239-747d-ce4d-0ec1-7e99236ed65d" }, yValue: 0, xUnit: "PX", yUnit: "%", zUnit: "PX" },
+                    }, ],
+                },
                     {
                         keyframe: 20,
                         actionItems: [{
@@ -12247,21 +12271,21 @@ Webflow.require("ix2").init({
             id: "a-46",
             title: "bg-color – scale – into view",
             actionItemGroups: [{
-                    actionItems: [{
-                        id: "a-46-n",
-                        actionTypeId: "STYLE_SIZE",
-                        config: {
-                            delay: 0,
-                            easing: "",
-                            duration: 500,
-                            target: { useEventTarget: true, id: "5d2493f660878d31bd5823bd|bbb62f63-fda8-039e-0770-022b7414b94a" },
-                            heightValue: 0,
-                            widthUnit: "PX",
-                            heightUnit: "%",
-                            locked: false,
-                        },
-                    }, ],
-                },
+                actionItems: [{
+                    id: "a-46-n",
+                    actionTypeId: "STYLE_SIZE",
+                    config: {
+                        delay: 0,
+                        easing: "",
+                        duration: 500,
+                        target: { useEventTarget: true, id: "5d2493f660878d31bd5823bd|bbb62f63-fda8-039e-0770-022b7414b94a" },
+                        heightValue: 0,
+                        widthUnit: "PX",
+                        heightUnit: "%",
+                        locked: false,
+                    },
+                }, ],
+            },
                 {
                     actionItems: [{
                         id: "a-46-n-2",
@@ -12290,13 +12314,13 @@ Webflow.require("ix2").init({
                 type: "SCROLL_PROGRESS",
                 parameterLabel: "Scroll",
                 continuousActionGroups: [{
-                        keyframe: 0,
-                        actionItems: [{
-                            id: "a-21-n",
-                            actionTypeId: "TRANSFORM_MOVE",
-                            config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5d737f7f7a6dfa5d551e77ab|2c901486-4706-c71b-80e1-40809d106148" }, yValue: 0, xUnit: "PX", yUnit: "VH", zUnit: "PX" },
-                        }, ],
-                    },
+                    keyframe: 0,
+                    actionItems: [{
+                        id: "a-21-n",
+                        actionTypeId: "TRANSFORM_MOVE",
+                        config: { delay: 0, easing: "", duration: 500, target: { useEventTarget: true, id: "5d737f7f7a6dfa5d551e77ab|2c901486-4706-c71b-80e1-40809d106148" }, yValue: 0, xUnit: "PX", yUnit: "VH", zUnit: "PX" },
+                    }, ],
+                },
                     {
                         keyframe: 100,
                         actionItems: [{
@@ -12313,19 +12337,19 @@ Webflow.require("ix2").init({
             id: "a-47",
             title: "details1 – show",
             actionItemGroups: [{
-                    actionItems: [{
-                            id: "a-47-n",
-                            actionTypeId: "TRANSFORM_MOVE",
-                            config: { delay: 0, easing: "", duration: 500, target: { selector: ".details1", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 140, xUnit: "%", yUnit: "PX", zUnit: "PX" },
-                        },
-                        {
-                            id: "a-47-n-2",
-                            actionTypeId: "TRANSFORM_SKEW",
-                            config: { delay: 0, easing: "", duration: 500, target: { selector: ".details1", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 10, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
-                        },
-                        { id: "a-47-n-3", actionTypeId: "GENERAL_DISPLAY", config: { delay: 0, easing: "", duration: 0, target: { selector: ".details1", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, value: "none" } },
-                    ],
+                actionItems: [{
+                    id: "a-47-n",
+                    actionTypeId: "TRANSFORM_MOVE",
+                    config: { delay: 0, easing: "", duration: 500, target: { selector: ".details1", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 140, xUnit: "%", yUnit: "PX", zUnit: "PX" },
                 },
+                    {
+                        id: "a-47-n-2",
+                        actionTypeId: "TRANSFORM_SKEW",
+                        config: { delay: 0, easing: "", duration: 500, target: { selector: ".details1", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 10, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
+                    },
+                    { id: "a-47-n-3", actionTypeId: "GENERAL_DISPLAY", config: { delay: 0, easing: "", duration: 0, target: { selector: ".details1", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, value: "none" } },
+                ],
+            },
                 {
                     actionItems: [
                         { id: "a-47-n-4", actionTypeId: "GENERAL_DISPLAY", config: { delay: 0, easing: "", duration: 0, target: { selector: ".details1", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, value: "flex" } },
@@ -12349,18 +12373,18 @@ Webflow.require("ix2").init({
             id: "a-48",
             title: "details1 – hide",
             actionItemGroups: [{
-                    actionItems: [{
-                            id: "a-48-n-5",
-                            actionTypeId: "TRANSFORM_MOVE",
-                            config: { delay: 0, easing: "inOutQuart", duration: 1400, target: { selector: ".details1", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 140, xUnit: "%", yUnit: "PX", zUnit: "PX" },
-                        },
-                        {
-                            id: "a-48-n-6",
-                            actionTypeId: "TRANSFORM_SKEW",
-                            config: { delay: 0, easing: "inOutQuart", duration: 1400, target: { selector: ".details1", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: -10, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
-                        },
-                    ],
+                actionItems: [{
+                    id: "a-48-n-5",
+                    actionTypeId: "TRANSFORM_MOVE",
+                    config: { delay: 0, easing: "inOutQuart", duration: 1400, target: { selector: ".details1", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 140, xUnit: "%", yUnit: "PX", zUnit: "PX" },
                 },
+                    {
+                        id: "a-48-n-6",
+                        actionTypeId: "TRANSFORM_SKEW",
+                        config: { delay: 0, easing: "inOutQuart", duration: 1400, target: { selector: ".details1", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: -10, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
+                    },
+                ],
+            },
                 {
                     actionItems: [
                         { id: "a-48-n-4", actionTypeId: "GENERAL_DISPLAY", config: { delay: 0, easing: "", duration: 0, target: { selector: ".details1", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, value: "none" } },
@@ -12406,19 +12430,19 @@ Webflow.require("ix2").init({
             id: "a-51",
             title: "faqs – show",
             actionItemGroups: [{
-                    actionItems: [{
-                            id: "a-51-n",
-                            actionTypeId: "TRANSFORM_MOVE",
-                            config: { delay: 0, easing: "", duration: 500, target: { selector: ".faqs", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 140, xUnit: "%", yUnit: "PX", zUnit: "PX" },
-                        },
-                        {
-                            id: "a-51-n-2",
-                            actionTypeId: "TRANSFORM_SKEW",
-                            config: { delay: 0, easing: "", duration: 500, target: { selector: ".faqs", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 10, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
-                        },
-                        { id: "a-51-n-3", actionTypeId: "GENERAL_DISPLAY", config: { delay: 0, easing: "", duration: 0, target: { selector: ".faqs", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, value: "none" } },
-                    ],
+                actionItems: [{
+                    id: "a-51-n",
+                    actionTypeId: "TRANSFORM_MOVE",
+                    config: { delay: 0, easing: "", duration: 500, target: { selector: ".faqs", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 140, xUnit: "%", yUnit: "PX", zUnit: "PX" },
                 },
+                    {
+                        id: "a-51-n-2",
+                        actionTypeId: "TRANSFORM_SKEW",
+                        config: { delay: 0, easing: "", duration: 500, target: { selector: ".faqs", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 10, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
+                    },
+                    { id: "a-51-n-3", actionTypeId: "GENERAL_DISPLAY", config: { delay: 0, easing: "", duration: 0, target: { selector: ".faqs", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, value: "none" } },
+                ],
+            },
                 {
                     actionItems: [
                         { id: "a-51-n-4", actionTypeId: "GENERAL_DISPLAY", config: { delay: 0, easing: "", duration: 0, target: { selector: ".faqs", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, value: "flex" } },
@@ -12442,18 +12466,18 @@ Webflow.require("ix2").init({
             id: "a-52",
             title: "faqs – hide",
             actionItemGroups: [{
-                    actionItems: [{
-                            id: "a-52-n-5",
-                            actionTypeId: "TRANSFORM_MOVE",
-                            config: { delay: 0, easing: "inOutQuart", duration: 1400, target: { selector: ".faqs", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 140, xUnit: "%", yUnit: "PX", zUnit: "PX" },
-                        },
-                        {
-                            id: "a-52-n-6",
-                            actionTypeId: "TRANSFORM_SKEW",
-                            config: { delay: 0, easing: "inOutQuart", duration: 1400, target: { selector: ".faqs", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: -10, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
-                        },
-                    ],
+                actionItems: [{
+                    id: "a-52-n-5",
+                    actionTypeId: "TRANSFORM_MOVE",
+                    config: { delay: 0, easing: "inOutQuart", duration: 1400, target: { selector: ".faqs", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 140, xUnit: "%", yUnit: "PX", zUnit: "PX" },
                 },
+                    {
+                        id: "a-52-n-6",
+                        actionTypeId: "TRANSFORM_SKEW",
+                        config: { delay: 0, easing: "inOutQuart", duration: 1400, target: { selector: ".faqs", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: -10, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
+                    },
+                ],
+            },
                 {
                     actionItems: [
                         { id: "a-52-n-4", actionTypeId: "GENERAL_DISPLAY", config: { delay: 0, easing: "", duration: 0, target: { selector: ".faqs", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, value: "none" } },
@@ -12472,19 +12496,19 @@ Webflow.require("ix2").init({
             id: "a-53",
             title: "registration – show",
             actionItemGroups: [{
-                    actionItems: [{
-                            id: "a-53-n",
-                            actionTypeId: "TRANSFORM_MOVE",
-                            config: { delay: 0, easing: "", duration: 500, target: { selector: ".registration", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 140, xUnit: "%", yUnit: "PX", zUnit: "PX" },
-                        },
-                        {
-                            id: "a-53-n-2",
-                            actionTypeId: "TRANSFORM_SKEW",
-                            config: { delay: 0, easing: "", duration: 500, target: { selector: ".registration", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 10, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
-                        },
-                        { id: "a-53-n-3", actionTypeId: "GENERAL_DISPLAY", config: { delay: 0, easing: "", duration: 0, target: { selector: ".registration", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, value: "none" } },
-                    ],
+                actionItems: [{
+                    id: "a-53-n",
+                    actionTypeId: "TRANSFORM_MOVE",
+                    config: { delay: 0, easing: "", duration: 500, target: { selector: ".registration", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 140, xUnit: "%", yUnit: "PX", zUnit: "PX" },
                 },
+                    {
+                        id: "a-53-n-2",
+                        actionTypeId: "TRANSFORM_SKEW",
+                        config: { delay: 0, easing: "", duration: 500, target: { selector: ".registration", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 10, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
+                    },
+                    { id: "a-53-n-3", actionTypeId: "GENERAL_DISPLAY", config: { delay: 0, easing: "", duration: 0, target: { selector: ".registration", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, value: "none" } },
+                ],
+            },
                 {
                     actionItems: [
                         { id: "a-53-n-4", actionTypeId: "GENERAL_DISPLAY", config: { delay: 0, easing: "", duration: 0, target: { selector: ".registration", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, value: "flex" } },
@@ -12508,18 +12532,18 @@ Webflow.require("ix2").init({
             id: "a-54",
             title: "registration – hide",
             actionItemGroups: [{
-                    actionItems: [{
-                            id: "a-54-n-5",
-                            actionTypeId: "TRANSFORM_MOVE",
-                            config: { delay: 0, easing: "inOutQuart", duration: 1400, target: { selector: ".registration", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 140, xUnit: "%", yUnit: "PX", zUnit: "PX" },
-                        },
-                        {
-                            id: "a-54-n-6",
-                            actionTypeId: "TRANSFORM_SKEW",
-                            config: { delay: 0, easing: "inOutQuart", duration: 1400, target: { selector: ".registration", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: -10, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
-                        },
-                    ],
+                actionItems: [{
+                    id: "a-54-n-5",
+                    actionTypeId: "TRANSFORM_MOVE",
+                    config: { delay: 0, easing: "inOutQuart", duration: 1400, target: { selector: ".registration", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 140, xUnit: "%", yUnit: "PX", zUnit: "PX" },
                 },
+                    {
+                        id: "a-54-n-6",
+                        actionTypeId: "TRANSFORM_SKEW",
+                        config: { delay: 0, easing: "inOutQuart", duration: 1400, target: { selector: ".registration", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: -10, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
+                    },
+                ],
+            },
                 {
                     actionItems: [
                         { id: "a-54-n-4", actionTypeId: "GENERAL_DISPLAY", config: { delay: 0, easing: "", duration: 0, target: { selector: ".registration", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, value: "none" } },
@@ -12530,6 +12554,74 @@ Webflow.require("ix2").init({
                         },
                     ],
                 },
+
+            ],
+            useFirstGroupAsInitialState: false,
+            createdOn: 1568385014301,
+        },
+        "a-55": {
+            id: "a-55",
+            title: "event-registration – show",
+            actionItemGroups: [{
+                actionItems: [{
+                    id: "a-55-n",
+                    actionTypeId: "TRANSFORM_MOVE",
+                    config: { delay: 0, easing: "", duration: 500, target: { selector: ".event-registration", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 140, xUnit: "%", yUnit: "PX", zUnit: "PX" },
+                },
+                    {
+                        id: "a-55-n-2",
+                        actionTypeId: "TRANSFORM_SKEW",
+                        config: { delay: 0, easing: "", duration: 500, target: { selector: ".event-registration", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 10, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
+                    },
+                    { id: "a-55-n-3", actionTypeId: "GENERAL_DISPLAY", config: { delay: 0, easing: "", duration: 0, target: { selector: ".event-registration", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, value: "none" } },
+                ],
+            },
+                {
+                    actionItems: [
+                        { id: "a-55-n-4", actionTypeId: "GENERAL_DISPLAY", config: { delay: 0, easing: "", duration: 0, target: { selector: ".event-registration", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, value: "flex" } },
+                        {
+                            id: "a-55-5",
+                            actionTypeId: "TRANSFORM_MOVE",
+                            config: { delay: 0, easing: "inOutQuart", duration: 1350, target: { selector: ".event-registration", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 0, xUnit: "%", yUnit: "PX", zUnit: "PX" },
+                        },
+                        {
+                            id: "a-55-n-6",
+                            actionTypeId: "TRANSFORM_SKEW",
+                            config: { delay: 0, easing: "inOutQuart", duration: 1350, target: { selector: ".event-registration", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 0, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
+                        },
+                    ],
+                },
+            ],
+            useFirstGroupAsInitialState: true,
+            createdOn: 1568385014301,
+        },
+        "a-56": {
+            id: "a-56",
+            title: "event-registration – hide",
+            actionItemGroups: [{
+                actionItems: [{
+                    id: "a-56-n-5",
+                    actionTypeId: "TRANSFORM_MOVE",
+                    config: { delay: 0, easing: "inOutQuart", duration: 1400, target: { selector: ".event-registration", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 140, xUnit: "%", yUnit: "PX", zUnit: "PX" },
+                },
+                    {
+                        id: "a-56-n-6",
+                        actionTypeId: "TRANSFORM_SKEW",
+                        config: { delay: 0, easing: "inOutQuart", duration: 1400, target: { selector: ".event-registration", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: -10, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
+                    },
+                ],
+            },
+                {
+                    actionItems: [
+                        { id: "a-56-n-4", actionTypeId: "GENERAL_DISPLAY", config: { delay: 0, easing: "", duration: 0, target: { selector: ".event-registration", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, value: "none" } },
+                        {
+                            id: "a-56-n-9",
+                            actionTypeId: "TRANSFORM_SKEW",
+                            config: { delay: 0, easing: "inOutQuart", duration: 0, target: { selector: ".event-registration", selectorGuids: ["6773476e-1669-800a-26c7-f4db695b16a5"] }, xValue: 10, xUnit: "DEG", yUnit: "DEG", zUnit: "DEG" },
+                        },
+                    ],
+                },
+
             ],
             useFirstGroupAsInitialState: false,
             createdOn: 1568385014301,

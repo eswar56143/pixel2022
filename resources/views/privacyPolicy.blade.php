@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Privacy Policy - Pixel 2022</title>
 
     <link href="{{asset('css/main-script.css')}}" rel="stylesheet" type="text/css" />
@@ -53,7 +54,7 @@
     </div>
     <div class="section">
         <h1>Privacy Policy</h1>
-        <p>Last updated: April 06, 2022</p>
+        <p>Last updated: April 08, 2022</p>
         <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
         <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.</p>
         <h1>Interpretation and Definitions</h1>

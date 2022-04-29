@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\adminController;
 use App\Http\Controllers\checkController;
 use App\Http\Controllers\eventsController;
 use App\Http\Controllers\paymentController;
 use App\Http\Controllers\registrationController;
 use App\Models\register;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,14 +29,15 @@ Route::get('/terms-and-conditions', function () {
 Route::get('/privacy-policy', function () {
     return view('privacyPolicy');
 });
+Route::get('/refund-policy', function () {
+    return view('returnAndRefundPolicy');
+});
 
-
-Route::post('/register', [registrationController::class, 'register']);
-Route::get('/payment', [paymentController::class, 'index'])->name('payment');
-Route::post('/payment', [paymentController::class, 'payment']);
-Route::post('/status', [paymentController::class, 'checkout']);
+Route::post('/p_register', [registrationController::class, 'register'])->name('p_register');
+Route::post('/createOrder', [paymentController::class, 'createOrder'])->name('createOrder');
+Route::post('/checkOut', [paymentController::class, 'checkout'])->name('checkOut');
 Route::post('/emailCheck', [checkController::class, 'emailCheck'])->name('emailCheck');
-
+Route::post('/emailCheckRegistered', [checkController::class, 'emailCheckRegistered'])->name('emailCheckRegistered');
 
 
 Route::get('/events/code-combat', [eventsController::class, 'codeCombat']);
@@ -46,4 +49,8 @@ Route::get('/events/paper-presentation', [eventsController::class, 'paperPresent
 Route::get('/events/natyakshetra', [eventsController::class, 'natyakshetra']);
 Route::get('/events/quiz', [eventsController::class, 'quiz']);
 
+Route::post('/requestTable', [adminController::class, 'fetch']);
 
+Auth::routes();
+
+Route::get('/adminController', [App\Http\Controllers\HomeController::class, 'index'])->name('admin');

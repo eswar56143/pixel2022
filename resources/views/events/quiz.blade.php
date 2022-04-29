@@ -3,8 +3,11 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Quizardry-Pixel 2022</title>
     <meta content="Quizardry" name="description" />
+    <meta name="_token" content="{{ csrf_token() }}">
+
 
     <!-- Styles -->
     <link href="{{asset('css/main-script.css')}}" rel="stylesheet" type="text/css" />
@@ -13,8 +16,10 @@
     <link href="{{ asset('css/preloader.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
+    <script src="{{ asset('js/preload.js') }}"></script>
     <script src="{{asset('js/webfont.js')}}" type="text/javascript"></script>
-    <script src="{{ asset('js/preload.js') }}" defer></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="{{ asset('js/checking.js') }}" ></script>
 
     <script type="text/javascript">
         WebFont.load({
@@ -24,29 +29,53 @@
         });
     </script>
 </head>
+<script>
+    window.onload = function() {
+        createOptions(1);
+    };
+
+    function createOptions(id) {
+
+
+        document.getElementById('team-member-details').style.display = "none";
+        if ({{$event->count()}} == 1) {
+            var teamDetails = document.getElementById("team-details");
+            teamDetails.style.display = "none";
+
+        }
+        else {
+            const select = document.getElementById("team-size");
+            select.setAttribute('required', '');
+            const teamName = document.getElementById("t_name");
+            teamName.setAttribute('required', '');
+
+
+            var str = " <option value='' style='color: #333;''>Select the Team Size</option>"
+            @foreach($event as $eve)
+                str += "<option + value=" + "'[ " + {{$eve->team_size}} + "," + {{$eve->amount}} + "]' " + " style='color: #333;'>" + {{$eve->team_size}} +
+                " Members - Rs." + {{$eve->amount}} + "</option>";
+
+            @endforeach
+
+            document.getElementById("team-size").innerHTML = str;
+        }
+        var payableAmount = document.getElementById('amount');
+        payableAmount.innerHTML = '';
+
+    }
+
+</script>
+
 
 <script type="text/javascript">
-    function userAvailability() {
-        let email = $("#email").val();
-        $.ajax({
-            type:'POST',
-            url: '{{ route("emailCheck") }}',
-            datatype: 'json',
-            data : {
-                '_token' : '{{csrf_token()}}',
-                'email': email,
-            },
-            success: function(result){
-                $("#user-availability-status1").html(result);
-            },
-        });
-    }
+
     ! function(o, c) {
         var n = c.documentElement,
             t = " w-mod-";
         n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
     }
     (window, document);
+
 </script>
 <link href="../images/pixel-logo.svg " rel="shortcut icon " type="image/x-icon " />
 <link href="../images/pixel-logo.svg" rel="apple-touch-icon" />
@@ -58,7 +87,7 @@
 </style>
 </head>
 
-<body id="body" onload="preload()">
+<body id="body">
 
 @include('layouts.preload')
 <!-- header -->
@@ -83,66 +112,9 @@
             </div>
         </a>
     </div>
-    <nav role="navigation" class="nav-menu w-nav-menu">
-        <!-- <div class="nav-menu-wrapper margin-tablet">
-            <div class="display-none-mobile">
-                <div class="caption font-white">Share</div>
-                <div class="separator-line-horiz white"></div>
-            </div>
-            <a href="https://www.instagram.com/fouroomdotco/" target="_blank" class="icn-social-small facebook w-inline-block"></a>
-            <a href="https://www.instagram.com/fouroomdotco/" target="_blank" class="icn-social-small twitter w-inline-block"></a>
-            <a href="https://www.instagram.com/fouroomdotco/" target="_blank" class="icn-social-small linkedin w-inline-block"></a>
-        </div> -->
-        <div class="nav-menu-wrapper" style="margin-left: auto;
-                padding-right: 5px;">
-            <a href="/#about" class="btn navi-1 w-inline-block">
-                <div class="btn-label">About</div>
-                <div class="btn-hover purple"></div>
-            </a>
-
-            <a href="/#events" class="btn navi-1 w-inline-block">
-                <div class="btn-label">Events</div>
-                <div class="btn-hover purple"></div>
-            </a>
-            <a href="/#schedule" class="btn navi-1 w-inline-block">
-                <div class="btn-label">Event-Schedule</div>
-                <div class="btn-hover purple"></div>
-            </a>
-            <a href="/#gallery" class="btn navi-1 w-inline-block">
-                <div class="btn-label">Gallery</div>
-                <div class="btn-hover purple"></div>
-            </a>
-            <a href="/#recs" class="btn navi-1 w-inline-block">
-                <div class="btn-label">Sponsers</div>
-                <div class="btn-hover purple"></div>
-            </a>
-            <a data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9bf" href="/#contactUs" class="btn navi-1 w-inline-block">
-                <div class="btn-label">Contact Us</div>
-                <div class="btn-hover purple"></div>
-            </a>
-            <a data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9bf1" href="#" class="btn navi-1 w-inline-block">
-                <div class="btn-label">FAQ</div>
-                <div class="btn-hover purple"></div>
-            </a>
-
-            <a data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9bf2" href="#" class="btn navi-2 w-inline-block">
-                <div class="bg-color yellow"></div>
-                <img src="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/5d73a5847149d55967004dcb_Orion_entrance.svg" alt="" class="btn-icon" />
-                <div style="-webkit-transform: translate3d(0, 0, 0)
-                        scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
-                        skew(0, 0);
-                        -moz-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
-                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                        -ms-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
-                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                        transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
-                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);" class="btn-label">
-                    Register Now
-                </div>
-
-            </a>
-        </div>
-    </nav>
+         <!-- navbar -->
+         @include('layouts.navbar')
+         <!-- navbar end -->
     <!-- TODO -->
     <div class="menu-button w-nav-button">
         <div class="w-icon-nav-menu" style="font-size: 40px;"></div>
@@ -154,7 +126,7 @@
         <div class="w-layout-grid main-grid">
             <div id="w-node-_6ca352aa-f456-95fb-2b6c-2f7d864c63d1-ce4392dc" class="content centered">
                 <div class="show-item-onload margin-paragraph" style="display: flex;flex-direction: row;align-items: center;">
-                    <img src="../images/event-icons/quiz 1.svg" style="min-height: 10px; max-height: 120px;">
+                    <img src="../images/event-icons/quiz.png" style="min-height: 10px; max-height: 120px;">
                     <h1 class="display-1 small">Quizardry</h1>
                 </div>
             </div>
@@ -190,25 +162,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="register" style="max-width: 300px; min-width: 50px ;display: inline; padding: 1rem;">
-                        <a data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9c3" href="https://webflow.com/templates/html/conferencos-conference-website-template" target="_blank" class="btn  w-inline-block" style="pointer-events: none;">
-                            <div class="bg-color yellow" style="background-color: grey;"></div>
-                            <img src="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/5d73a5847149d55967004dcb_Orion_entrance.svg" alt="" class="btn-icon" />
-                            <div style="-webkit-transform: translate3d(0, 0, 0)
-                                    scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
-                                    skew(0, 0);
-                                    -moz-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
-                                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                                    -ms-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
-                                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                                    transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
-                                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);" class="btn-label">
-                                Register for event
-                            </div>
-
-                        </a>
+                    <div class="register centered" style="max-width: 300px; min-width: 50px ;display: inline; padding: 1rem;">
+                        <p class="centered">Registrations for Quiz are closed.</p>
                     </div>
-                    <h4 style="font-size: 20px;align-content: center;"> &nbsp; &nbsp;*&nbsp;&nbsp;Registration will open soon..</h4>
                 </div>
                 <div style="height: 50px;">
 
@@ -229,13 +185,16 @@
                     <h5>Registration Rules</h5>
                     <ul>
                         <li>
-                            This is a team event, each team can contain 4 members.
+                            This is a team event, each team can contain 2-3 members.
                         </li>
                         <li>
-                            Payment of rupees 500 should be paid by one person from each team.
+                            Payment of rupees 250 should be paid by each team, if the team contains 2 memebers.
                         </li>
                         <li>
-                            Register using the same E-mail Id that was provided during Pixel Registration.
+                            Payment of rupees 300 should be paid by each team, if the team contains 3 memebers.
+                        </li>
+                        <li>
+                            Pay using the same E-mail Id that was provided during Pixel Registration.
                         </li>
                     </ul>
                     </p>
@@ -248,9 +207,7 @@
                         <li>
                             You can participate as a team and discussions are allowed.
                         </li>
-                        <li>
-                            No options will be provided for the questions.
-                        </li>
+
                         <li>
                             The team that provides the most correct answers will be declared as winner.
                         </li>
@@ -260,21 +217,19 @@
                         <div class=" grid-contact border" style="padding: 1rem;">
                             <ul>
                                 <li>
-                                    <h6>Winners will receive exiting prizes.</h6>
+                                    <h6>Winners will receive exciting prizes.</h6>
                                 </li>
                                 <li>
                                     <h6>Participation Certificates will be awarded to every participant.</h6>
                                 </li>
                                 <li>
-                                    <h6>Food will be Provided.</h6>
+                                    <h6>Lunch will be Provided.</h6>
                                 </li>
                             </ul>
                         </div>
                         <div class="hover-line white" style="margin-bottom: -2.5rem; padding: 0.01rem;"></div>
-
                     </div>
                 </div>
-
                 <h2 style="padding-top: 2rem;">Event Coordinators</h2>
                 <div id="w-node-_147ce491-59b4-98ea-0255-9dd00d533727-cd4392e2" class="content centered">
                     <div class="container medium margin-bottom">
@@ -290,9 +245,8 @@
                                             <p style="color: white;">Phone:</p><a href="tel:6303275354" class="link-block w-inline-block">6300393752</a>
                                         </div>
                                         <div class="uppercase">
-                                            <p style="color:white;">Mail Id:</p> <a href="mailto:gurusanthoshkumarmeda@gmail.com" class="link-block w-inline-block">gurusanthoshkumarmeda@gmail.comm</a>
+                                            <p style="color:white;">Mail Id:</p> <a href="mailto:gurusanthoshkumarmeda@gmail.com" class="link-block w-inline-block">gurusanthoshkumarmeda@gmail.com</a>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -302,14 +256,9 @@
                                     <div class="show-item-onload margin-paragraph">
                                         <div class="font-yellow uppercase">I Sai Nikhila</div>
                                     </div>
-                                    <div class="show-item-onload">
-                                        <a href="mailto:sainikilaindhirala424@gmail.com" class="link-block w-inline-block">
-                                            <div class="uppercase">
-                                                <p style="color:white">Mail id:</p>
-                                                <a href="mailto:sainikilaindhirala424@gmail.com" class="link-block w-inline-block">
-                                                    sainikilaindhirala424@gmail.com
-                                            </div>
-                                        </a>
+
+                                    <div class="show-item-onload margin-paragraph">
+                                        <div class="font-yellow uppercase"><br>G PRIYANKA</div>
                                     </div>
                                 </div>
                             </div>
@@ -346,6 +295,9 @@
 @include('layouts.registration')
 <!-- Registration Page -->
 
+<!-- EventRegistration -->
+@include('layouts.team-details')
+<!-- EventRegistration -->
 
 <script src="{{asset('js/jquery-3.5.1.min.js')}}?site=5d70f6f0c8ca5de04b4392d5" type="text/javascript" crossorigin="anonymous"></script>
 <script src="{{asset('js/main-script.js')}}" type="text/javascript"></script>

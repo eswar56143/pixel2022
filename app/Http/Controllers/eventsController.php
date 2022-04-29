@@ -2,40 +2,51 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\events;
 use Illuminate\Http\Request;
 
 class eventsController extends Controller
 {
     public function codeCombat() {
-        return view('events.code-combat');
+        $event = events::where('event_id',1)->get();
+
+        return view('events.code-combat', compact('event'));
     }
 
     public function debug() {
-        return view('events.debug');
+        $event = events::where('event_id',2)->get();
+        return view('events.debug', compact('event'));
     }
 
     public function gaming() {
-        return view('events.gaming');
+        $event = events::where('event_id',3)->get();
+        return view('events.gaming', compact('event'));
     }
 
     public function hackathon() {
-        return view('events.hackathon');
+        $event = events::where('event_id',4)->get();
+        return view('events.hackathon', compact('event'));
     }
 
     public function memeGram() {
-        return view('events.meme-gram');
+        $event = events::where('event_id',5)->get();
+        return view('events.meme-gram', compact('event'));
     }
 
     public function natyakshetra() {
-        return view('events.natyakshetra');
+        $event = events::where('event_id',7)->get();
+        return view('events.natyakshetra', compact('event'));
     }
 
     public function quiz() {
-        return view('events.quiz');
+        $event = events::where('event_id',8)->get();
+
+        return view('events.quiz', compact('event'));
     }
 
     public function paperPresentation() {
-        return view('events.paper-presentation');
+        $event = events::where('event_id',6)->get();
+        return view('events.paper-presentation', compact('event'));
     }
 
 }

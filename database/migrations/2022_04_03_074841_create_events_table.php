@@ -14,8 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('events', function (Blueprint $table) {
-            $table->id('event_id');
+            $table->id();
+            $table->integer('event_id');
             $table->string('event_name');
+            $table->integer('team_size');
             $table->double('amount');
         });
     }

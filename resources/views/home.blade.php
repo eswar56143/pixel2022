@@ -6,7 +6,8 @@
     <meta charset="utf-8" />
     <title>Pixel 2022</title>
     <meta content="Pixel 2022" name="description" />
-
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="_token" content="{{ csrf_token() }}">
     <!-- Styles -->
     <link href="{{asset('css/main-script.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('css/faq.css')}}" rel="stylesheet" type="text/css" />
@@ -14,15 +15,75 @@
     <link href="{{ asset('css/preloader.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
+
+    <script src="{{ asset('js/preload.js') }}" ></script>
+    <script src="{{ asset('js/checking.js') }}" ></script>
     <script src="{{asset('js/webfont.js')}}" type="text/javascript"></script>
-    <script src="{{ asset('js/preload.js') }}" defer></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <link href="{{ asset('css/sponsor.css') }}" rel="stylesheet">
 
     <script type="text/javascript">
+    function userAvailability() {
+        let email = $("#email").val();
+        console.log('email');
+        function isEmail(email) {
+            var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            console.log('email');
+            return regex.test(email);
+        }
+        if (isEmail(email)) {
+            console.log('hi')
+        $.ajax({
+            type: 'POST',
+            url: '/emailCheck',
+            datatype: 'json',
+            data: {
+                '_token': $('meta[name="_token"]').attr('content'),
+                'email': email,
+            },
+            success: function(result) {
+                $("#user-availability-status1").html(result);
+            },
+        });
+        }
+        else {
+            $("#user-availability-status1").html("invalid Email ID");
+        }
+    }
+    function mobile_validate() {
+    let mob = $("#mob").val();
+    function isValidMob(mobile) {
+        var regex = /^[6-9]\d{9}$/;
+        return regex.test(mobile);
+    }
+    if (isValidMob(mob)) {
+        document.getElementById('submit').disabled = false;
+        $("#mob-error").html("");
+    }
+    else {
+        document.getElementById('submit').disabled = true;
+        $("#mob-error").html("Enter valid Mobile Number excluding 0 and +91");
+    }
+}
+    function showbar(str){
+        console.log(str);
+        document.getElementById('announcement-bar-wrapper').style.display = "block";
+        if(str == 'schedule')
+        $('#announcement-content').html("The Event Schedule will be add soon.");
+        else{
+            $('#announcement-content').html("The Sponser will be updated soon.");
+        }
+
+
+
+    }
         WebFont.load({
             google: {
                 families: ["Barlow Condensed:regular,500,600,700,800,900", "Barlow:300,regular,italic,500,600,700"]
             }
         });
+
+        
     </script>
 </head>
 
@@ -49,6 +110,90 @@
     }
     (window, document);
 </script>
+<script>
+    function reset() {
+
+        $('#body').css({overflow: 'scroll'});
+        document.getElementById("register-form").reset();
+        document.getElementById("register-form").style.display = "block";
+        document.getElementById("form-done").style.display = "none";
+        document.getElementById("form-fail").style.display = "none";
+        $("#mob-error").html("");
+        $("#user-availability-status1").html("");
+
+
+    }
+
+    function save_data() {
+
+        var form_element = document.getElementsByClassName('form_data');
+
+        var form_data = new FormData();
+        if (form_element.length != 0) {
+
+
+
+            for (var count = 0; count < form_element.length; count++) {
+                form_data.append(form_element[count].name, form_element[count].value);
+
+                if (form_element[count].value.length == 0) {
+                    return;
+                }
+            }
+
+            document.getElementById('submit').disabled = true;
+
+            $.ajax({
+                type: 'POST',
+                url: '{{ route("p_register") }}',
+                datatype: 'json',
+                data: {
+                    '_token': '{{csrf_token()}}',
+                    'name' : form_data.get('name'),
+                    'email' : form_data.get('email'),
+                    'contact' : form_data.get('contact'),
+                    'branch' : form_data.get('branch'),
+                    'admnno' : form_data.get('admnno'),
+                    'college' : form_data.get('college'),
+                    'location' : form_data.get('location'),
+
+                },
+                success: function(result) {
+                    document.getElementById("register-form").style.display = "none";
+                    if(result=="true"){
+
+
+
+                        document.getElementById("form-done").style.display = "block";
+                    }else{
+
+
+
+                        document.getElementById("form-fail").style.display = "block";
+
+                    }
+                    document.getElementById("register-form").reset();
+
+
+                    document.getElementById('submit').disabled = false;
+
+
+
+                },
+                error: function (request, status, error) {
+
+                    document.getElementById("register-form").reset();
+
+                    document.getElementById("register-form").style.display = "none";
+                    document.getElementById("form-fail").style.display = "block";
+                    document.getElementById('submit').disabled = false;
+                }
+            });
+
+
+        }
+    }
+</script>
 <link href="images/pixel-logo.svg " rel="shortcut icon " type="image/x-icon " />
 <link href="images/pixel-logo.svg" rel="apple-touch-icon" />
 <style>
@@ -67,7 +212,7 @@
 </style>
 </head>
 
-<body id="body" onload="preload()">
+<body id="body">
 
 @include('layouts.preload')
 
@@ -79,7 +224,7 @@
                 w-nav-brand w--current">
             <div style="display: flex;flex-direction: row;align-items:
                     center;">
-                <img class="logo" src="images/pixel-logo.svg" alt="" srcset="" width="80px">
+                <img class="logo" src="images/pixel-logo.svg" alt="" loading="lazy" srcset="" width="80px">
 
                 <h4 class="uppercase" style="padding-left: 10px;
                         padding-right:
@@ -120,8 +265,8 @@
                 <div class="btn-label">Gallery</div>
                 <div class="btn-hover purple"></div>
             </a>
-            <a href="#recs" class="btn navi-1 w-inline-block">
-                <div class="btn-label">Sponsers</div>
+            <a href="#sponsers" class="btn navi-1 w-inline-block">
+                <div class="btn-label">Sponsors</div>
                 <div class="btn-hover purple"></div>
             </a>
             <a data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9bf" href="#contactUs" class="btn navi-1 w-inline-block">
@@ -133,7 +278,7 @@
                 <div class="btn-hover purple"></div>
             </a>
 
-            <a data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9bf2" href="#" class="btn navi-2 w-inline-block">
+            <a data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9bf2" href="#" class="btn navi-2 w-inline-block" onclick="$('#body').css({overflow: 'hidden'});">
                 <div class="bg-color yellow"></div>
                 <img src="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/5d73a5847149d55967004dcb_Orion_entrance.svg" alt="" class="btn-icon" />
                 <div style="-webkit-transform: translate3d(0, 0, 0)
@@ -147,7 +292,6 @@
                         rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);" class="btn-label">
                     Register Now
                 </div>
-
             </a>
         </div>
     </nav>
@@ -169,11 +313,12 @@
                 </div>
                 <div class="show-item-onload">
                     <div class="show-item-onload">
-                        <h5 class="display-3">From the Department of <span style="font-weight: bold;">CSE</span>, Jawaharlal Nehru Technological University, Anantapur !</h5>
+                        <h5 class="display-3">From the Department of <span style="font-weight: bold;">CSE</span>, Jawaharlal Nehru Technological University, Anantapur </h5>
+                          <h4 class="display-3 introduction font-yellow" style="font-weight: bold;"> Spot Registrations are Available. </h3>
                     </div>
                 </div>
                 <div class="register">
-                    <a data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9bf2" href="#" class="register btn  w-inline-block " style="margin: 2rem;">
+                    <a data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9bf2" href="#" class="register btn  w-inline-block " style="margin: 2rem;" onclick="$('#body').css({overflow: 'hidden'});">
                         <div class="bg-color yellow"></div>
                         <img src="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/5d73a5847149d55967004dcb_Orion_entrance.svg" alt="" class="btn-icon" />
                         <div style="-webkit-transform: translate3d(0, 0, 0)
@@ -185,19 +330,35 @@
                                 rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
                                 transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
                                 rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);" class="btn-label">
-                            Register Now
+                            Register
                         </div>
 
                     </a>
-
                 </div>
+
+{{--                <div class="video-player">--}}
+{{--                    <div class="play-backdrop"></div>--}}
+{{--                    <div class="play-button">--}}
+{{--                        <svg class="play-circles" viewBox="0 0 152 152">--}}
+{{--                            <circle class="play-circle-01" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="343 343" cx="76" cy="76" r="72.7"/>--}}
+{{--                            <circle class="play-circle-02" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="309 309" cx="76" cy="76" r="65.5"/>--}}
+{{--                        </svg>--}}
+{{--                        <div class="play-perspective">--}}
+{{--                            <button class="play-close"></button>--}}
+{{--                            <div class="play-triangle">--}}
+{{--                                <div class="play-video">--}}
+{{--                                    <iframe width="600" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
             </div>
         </div>
 
     </div>
-    <script type="text/javascript" src="js/particleJs/particles.js"></script>
-    <script type="text/javascript" src="js/particleJs/app.js"></script>
+
     <div class="section">
         <div class="container medium">
             <div class="content centered margin-bottom">
@@ -225,7 +386,11 @@
                                     <div id="w-node-_2011552c-4754-9f48-438c-9b6de46fdc09-cd4392e2" class="section padding-2rem">
                                         <div class="line-left"></div>
                                         <div class="content horizontal middle">
-                                            <img src="images/icons/location.svg" alt="" class="icn-32" />
+                                           
+                                                <img src="images/icons/location.svg" alt="" class="icn-32" />
+                                            
+                                           
+                                           
                                             <div class="margin-left">
                                                 <div>Location</div>
                                                 <h5 class="display-3 font-yellow">JNTUACEA, Anantapur</h5>
@@ -240,7 +405,6 @@
                                             <div class="margin-left">
                                                 <div>Organized by</div>
                                                 <h5 class="display-3 font-yellow">Department of CSE</h5>
-
                                             </div>
                                         </div>
                                     </div>
@@ -250,47 +414,9 @@
                     </div>
 
 
-
-
-                    <a href="#" class="w-inline-block w-lightbox">
-
-                        <div class="img-wrapper small margin-paragraph" style="transform: translate3d(0px, 0px, 0px)
-                                        scale3d(0.9, 0.9, 1) rotateX(0deg)
-                                        rotateY(0deg)
-                                        rotateZ(0deg) skew(0deg, 0deg);
-                                        transform-style:
-                                        preserve-3d;">
-                            <div class="bg-image programme_3" style="transform:
-                                            translate3d(0px, 0px, 0px) scale3d(1.2,
-                                            1.2, 1)
-                                            rotateX(0deg) rotateY(0deg)
-                                            rotateZ(0deg)
-                                            skew(0deg, 0deg); transform-style:
-                                            preserve-3d;"></div><img src="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/5d7e713a28ecca071bd9fd6a_Orion_play.svg" alt="" style="width:120px;" class="icn-64">
-                        </div>
-                        <script type="application/json" class="w-json">
-                                {
-                                    "items": [{
-                                        "type": "video",
-                                        "originalUrl": "https://www.youtube.com/watch?v=v1M4ydNlgP0",
-                                        "url": "https://www.youtube.com/watch?v=v1M4ydNlgP0",
-                                        "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2Fv1M4ydNlgP0%3Ffeature%3Doembed&url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dv1M4ydNlgP0&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fv1M4ydNlgP0%2Fhqdefault.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=youtube\" width=\"940\" height=\"528\" scrolling=\"no\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
-                                        "thumbnailUrl": "https://i.ytimg.com/vi/v1M4ydNlgP0/hqdefault.jpg",
-                                        "width": 940,
-                                        "height": 528
-                                    }]
-                                }
-                            </script>
-                    </a>
-
                     <!-- partial -->
 
 
-
-                    <!-- <div class="show-item-onscroll "><img src="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/61600498bf22366e62151035_logo-01-white.svg " alt=" " class="logo-hosted " /></div>
-                    <div class="show-item-onscroll "><img src="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/616004b088bb2a8a746d6a03_logo-02-white.svg " alt=" " class="logo-hosted " /></div>
-                    <div class="show-item-onscroll "><img src="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/616004b80b18baca531023c9_logo-03-white.svg " alt=" " class="logo-hosted " /></div>
-                -->
                 </div>
             </div>
         </div>
@@ -315,80 +441,17 @@
     <div class="section" id="about">
         <div class="w-layout-grid main-grid">
             <div id="w-node-_7eb1babb-3dd0-7d38-92d5-8ebb6bcab5bf-cd4392e2" data-w-id="7eb1babb-3dd0-7d38-92d5-8ebb6bcab5bf" class="section">
-                <div class="content">
+                <div class="content centered" >
                     <div data-w-id="7eb1babb-3dd0-7d38-92d5-8ebb6bcab5c1" style="-webkit-transform:translate3d(0, 16PX, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 16PX, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 16PX, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 16PX, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
                          class="show-item-onscroll">
-                        <h2 class="display-1 small">What is Pixel</h2>
+                        <h2 class="display-1 small" style="margin: 2rem" mar>About Pixel</h2>
                     </div>
-                    <div data-w-id="7eb1babb-3dd0-7d38-92d5-8ebb6bcab5c4" style="-webkit-transform:translate3d(0, 16PX, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 16PX, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 16PX, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 16PX, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
-                         class="show-item-onscroll">
-                        <h2 class="display-1 small">and</h2>
-                    </div>
-                    <div data-w-id="7eb1babb-3dd0-7d38-92d5-8ebb6bcab5c7" style="-webkit-transform:translate3d(0, 16PX, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 16PX, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 16PX, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 16PX, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
-                         class="show-item-onscroll">
-                        <h2 class="display-1 small">why do we all</h2>
-                    </div>
-                    <div data-w-id="7eb1babb-3dd0-7d38-92d5-8ebb6bcab5ca" style="-webkit-transform:translate3d(0, 16PX, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 16PX, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 16PX, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 16PX, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
-                         class="show-item-onscroll">
-                        <h2 class="display-1 small">&amp; Love it?</h2>
-                    </div>
+                   
+                    
                 </div>
                 <div data-w-id="7eb1babb-3dd0-7d38-92d5-8ebb6bcab5cd" style="height:0%" class="bg-color-animate dark-purple"></div>
             </div>
-            <!-- Working of the play button
-                 <a href="#" class="w-inline-block w-lightbox">
-                <div class="play-button">
-                    <svg class="play-circles" viewBox="0 0 152 152">
-                        <circle class="play-circle-01"fill="none"stroke="#fff"stroke-width="3"stroke-dasharray="343
-                            343"cx="76"cy="76"r="72.7"/>
-                            <circle class="play-circle-02"fill="none"stroke="#fff"stroke-width="3"stroke-dasharray="309
-                                309"cx="76"cy="76"r="65.5"/>
-                            </svg>
-                    <div class="play-perspective">
-                        <button class="play-close"></button>
-                        <div class="play-triangle">
-                            <div class="play-video">
-                                <div width="600" height="400" src="https://www.youtube.com/watch?v=Mz86plRUqzo" frameborder="0" allow="autoplay;
-                                            encrypted-media" allowfullscreen></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="img-wrapper small margin-paragraph" style="transform: translate3d(0px, 0px, 0px)
-                            scale3d(0.9, 0.9, 1) rotateX(0deg)
-                            rotateY(0deg)
-                            rotateZ(0deg) skew(0deg, 0deg);
-                            transform-style:
-                            preserve-3d;">
-                    <div class="bg-image programme_3" style="transform:
-                                translate3d(0px, 0px, 0px) scale3d(1.2,
-                                1.2, 1)
-                                rotateX(0deg) rotateY(0deg)
-                                rotateZ(0deg)
-                                skew(0deg, 0deg); transform-style:
-                                preserve-3d;"></div><img src="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/5d7e713a28ecca071bd9fd6a_Orion_play.svg" alt="" class="icn-64"></div>
-                <script type="application/json" class="w-json">
-                    {
-                        "items": [{
-                            "type": "video",
-                            "originalUrl": "https://www.youtube.com/watch?v=v1M4ydNlgP0",
-                            "url": "https://www.youtube.com/watch?v=v1M4ydNlgP0",
-                            "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2Fv1M4ydNlgP0%3Ffeature%3Doembed&url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dv1M4ydNlgP0&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fv1M4ydNlgP0%2Fhqdefault.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=youtube\" width=\"940\" height=\"528\" scrolling=\"no\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
-                            "thumbnailUrl": "https://i.ytimg.com/vi/v1M4ydNlgP0/hqdefault.jpg",
-                            "width": 940,
-                            "height": 528
-                        }]
-                    }
-                </script>
-            </a> -->
-
-            <!-- <div id="w-node-_7eb1babb-3dd0-7d38-92d5-8ebb6bcab5bf-cd4392e2" data-w-id="7eb1babb-3dd0-7d38-92d5-8ebb6bcab5bf" class="section">
-                <div class="content">
-                    <img src="images/web/about.png" alt="" srcset="" height="100%" width="100%">
-                </div>
-                <div data-w-id="7eb1babb-3dd0-7d38-92d5-8ebb6bcab5cd" style="height:0%" class="bg-color-animate
-                            dark-purple"></div>
-            </div> -->
+           
             <div id="w-node-_7eb1babb-3dd0-7d38-92d5-8ebb6bcab5ce-cd4392e2" data-w-id="7eb1babb-3dd0-7d38-92d5-8ebb6bcab5ce" class="section">
                 <div class="content font-dark-grey">
                     <div data-w-id="061d75a7-65e2-9069-ae44-033e61f41b23" style="transform:
@@ -411,14 +474,7 @@
                                     rotateZ(0) skew(0, 0);opacity:0" class="show-item-onscroll">
                         <div class="introduction small
                                         margin-paragraph_4x">
-                            Pixel is an endaevour by the students and faculty of Computer Science and Engineering form Jawahrlal Nahru Technological University's College of Engineering Anantapur, to extend their family around the country, impart technical knowledge, test out the
-                            boundaries of intelligence and skill in the fields of comupter science and of course have FUN!
-                            </br>It is a 2 day annual event and has been a tradition of the CSE department, to celebrate education, friendship, cooperation and growth imbued with joy and excitement.
-                            </br> Filled with competitions and social events Pixel acts as the gateway for the world to glimpse the department of CSE and all that we are.
-                            </br>
-                            </br> Isn't this a good enough reason to love Pixel? Of course it is. </br>
-                            And now that you're here, we're pleased to make you acquaintance and like you we can't wait enough for Pixel to begin!
-                            </br>See you there!
+                                        Pixel is a National Level Technical Symposium for undergrads and postgrads organised by Department of Computer Science and Engineering, JNTUA College of Engineering, Ananthapuramu. The fest is a high profile event which will lure the students of all colleges in and around the country to uncover their all-round expertise by competing emulously on a large scale that paves the way for all-round development of a budding professional.
                         </div>
                     </div>
 
@@ -446,7 +502,7 @@
         <div class="container">
             <div class="item-container show-item-onscroll">
                 <div class="img-container">
-                    <img src="images/events/codewar.jpeg" alt="Event image">
+                    <img src="images/events/codewar.jpeg"style="height: 200px" alt="Event image">
                 </div>
 
                 <div class="body-container">
@@ -474,13 +530,13 @@
                         </div>
                         -->
                     </div>
-                    <a href="events/code-combat"><button class="action">Participate</button></a>
+                    <a href="events/code-combat"><button class="action" style="width: 90%; ">Participate</button></a>
                 </div>
             </div>
 
             <div class="item-container show-item-onscroll">
                 <div class="img-container">
-                    <img src="images/events/bugging.jpg" alt="Event image">
+                    <img src="images/events/bugging.jpg"style="height: 200px" alt="Event image">
                 </div>
 
                 <div class="body-container">
@@ -492,24 +548,24 @@
                         <p class="info">Apr 29,2022</p>
                         <p class="price">Rs.200</p>
 
-                        <div class="additional-info">
-                            <p class="info">
-                                <i class="fas fa-map-marker-alt"></i> 245 W 52nd St, New York
-                            </p>
-                            <p class="info">
-                                <i class="far fa-calendar-alt"></i> Sat, Sep 19, 10:00 AM EDT
-                            </p>
+{{--                        <div class="additional-info">--}}
+{{--                            <p class="info">--}}
+{{--                                <i class="fas fa-map-marker-alt"></i> 245 W 52nd St, New York--}}
+{{--                            </p>--}}
+{{--                            <p class="info">--}}
+{{--                                <i class="far fa-calendar-alt"></i> Sat, Sep 19, 10:00 AM EDT--}}
+{{--                            </p>--}}
 
 
-                        </div>
+{{--                        </div>--}}
                     </div>
-                    <a href="events/debug"><button class="action">Participate</button></a>
+                    <a href="events/debug"><button class="action" style="width: 90%; ">Participate</button></a>
                 </div>
             </div>
 
             <div class="item-container show-item-onscroll">
                 <div class="img-container">
-                    <img src="images/events/gaming.jpg" alt="Event image">
+                    <img src="images/events/gaming.jpg" style="height: 200px"alt="Event image">
                 </div>
 
                 <div class="body-container">
@@ -519,28 +575,28 @@
                         <p class="title">Gaming Arena</p>
                         <div class="separator"></div>
                         <p class="info">Apr 29,2022</p>
-                        <p class="price">Rs.100-Rs.200</p>
+                        <p class="price">Rs.50-Rs.100</p>
 
-                        <div class="additional-info">
-                            <p class="info">
-                                <i class="fas fa-map-marker-alt"></i> 245 W 52nd St, New York
-                            </p>
-                            <p class="info">
-                                <i class="far fa-calendar-alt"></i> Sat, Sep 19, 10:00 AM EDT
-                            </p>
+{{--                        <div class="additional-info">--}}
+{{--                            <p class="info">--}}
+{{--                                <i class="fas fa-map-marker-alt"></i> 245 W 52nd St, New York--}}
+{{--                            </p>--}}
+{{--                            <p class="info">--}}
+{{--                                <i class="far fa-calendar-alt"></i> Sat, Sep 19, 10:00 AM EDT--}}
+{{--                            </p>--}}
 
-                            <p class="info description">
-                                Welcome! Everyone has a unique perspective after reading a book, and we would love you to share yours with us! We meet one Sunday evening
-                                <span>more...</span>
-                            </p>
-                        </div>
+{{--                            <p class="info description">--}}
+{{--                                Welcome! Everyone has a unique perspective after reading a book, and we would love you to share yours with us! We meet one Sunday evening--}}
+{{--                                <span>more...</span>--}}
+{{--                            </p>--}}
+{{--                        </div>--}}
                     </div>
-                    <a href="events/gaming"><button class="action">Participate</button></a>
+                    <a href="events/gaming"><button class="action" style="width: 90%; ">Participate</button></a>
                 </div>
             </div>
             <div class="item-container show-item-onscroll">
                 <div class="img-container">
-                    <img src="images/events/hackathon.jpeg" alt="Event
+                    <img src="images/events/hackathon.jpeg"style="height: 200px" loading="lazy"  alt="Event
                                     image">
                 </div>
 
@@ -553,27 +609,27 @@
                         <p class="info">Apr 29,2022</p>
                         <p class="price">Rs.350</p>
 
-                        <div class="additional-info">
-                            <p class="info">
-                                <i class="fas fa-map-marker-alt"></i> 245 W 52nd St, New York
-                            </p>
-                            <p class="info">
-                                <i class="far fa-calendar-alt"></i> Sat, Sep 19, 10:00 AM EDT
-                            </p>
+{{--                        <div class="additional-info">--}}
+{{--                            <p class="info">--}}
+{{--                                <i class="fas fa-map-marker-alt"></i> 245 W 52nd St, New York--}}
+{{--                            </p>--}}
+{{--                            <p class="info">--}}
+{{--                                <i class="far fa-calendar-alt"></i> Sat, Sep 19, 10:00 AM EDT--}}
+{{--                            </p>--}}
 
-                            <p class="info description">
-                                Welcome! Everyone has a unique perspective after reading a book, and we would love you to share yours with us! We meet one Sunday evening
-                                <span>more...</span>
-                            </p>
-                        </div>
+{{--                            <p class="info description">--}}
+{{--                                Welcome! Everyone has a unique perspective after reading a book, and we would love you to share yours with us! We meet one Sunday evening--}}
+{{--                                <span>more...</span>--}}
+{{--                            </p>--}}
+{{--                        </div>--}}
                     </div>
-                    <a href="events/hackathon"><button class="action">Participate</button></a>
+                    <a href="events/hackathon"><button class="action" style="width: 90%; ">Participate</button></a>
                 </div>
             </div>
 
             <div class="item-container show-item-onscroll">
                 <div class="img-container">
-                    <img src="images/events/blog-detail-image.jpg" alt="Event
+                    <img src="images/events/memegram.jpg"style="height: 200px" loading="lazy"  alt="Event
                                     image">
                 </div>
 
@@ -586,27 +642,27 @@
                         <p class="info">Apr 29,2022</p>
                         <p class="price">Free</p>
 
-                        <div class="additional-info">
-                            <p class="info">
-                                <i class="fas fa-map-marker-alt"></i> 245 W 52nd St, New York
-                            </p>
-                            <p class="info">
-                                <i class="far fa-calendar-alt"></i> Sat, Sep 19, 10:00 AM EDT
-                            </p>
+{{--                        <div class="additional-info">--}}
+{{--                            <p class="info">--}}
+{{--                                <i class="fas fa-map-marker-alt"></i> 245 W 52nd St, New York--}}
+{{--                            </p>--}}
+{{--                            <p class="info">--}}
+{{--                                <i class="far fa-calendar-alt"></i> Sat, Sep 19, 10:00 AM EDT--}}
+{{--                            </p>--}}
 
-                            <p class="info description">
-                                Welcome! Everyone has a unique perspective after reading a book, and we would love you to share yours with us! We meet one Sunday evening
-                                <span>more...</span>
-                            </p>
-                        </div>
+{{--                            <p class="info description">--}}
+{{--                                Welcome! Everyone has a unique perspective after reading a book, and we would love you to share yours with us! We meet one Sunday evening--}}
+{{--                                <span>more...</span>--}}
+{{--                            </p>--}}
+{{--                        </div>--}}
                     </div>
-                    <a href="events/meme-gram"><button class="action">Participate</button></a>
+                    <a href="events/meme-gram"><button class="action" style="width: 90%; ">Participate</button></a>
                 </div>
             </div>
 
             <div class="item-container show-item-onscroll">
                 <div class="img-container">
-                    <img src="images/events/ppt.jpg" alt="Event image">
+                    <img src="images/events/ppt.jpg"  style="height: 200px" loading="lazy"  alt="Event image">
                 </div>
 
                 <div class="body-container">
@@ -618,27 +674,27 @@
                         <p class="info">Apr 29,2022</p>
                         <p class="price">Rs.200-Rs.300</p>
 
-                        <div class="additional-info">
-                            <p class="info">
-                                <i class="fas fa-map-marker-alt"></i> 245 W 52nd St, New York
-                            </p>
-                            <p class="info">
-                                <i class="far fa-calendar-alt"></i> Sat, Sep 19, 10:00 AM EDT
-                            </p>
+{{--                        <div class="additional-info">--}}
+{{--                            <p class="info">--}}
+{{--                                <i class="fas fa-map-marker-alt"></i> 245 W 52nd St, New York--}}
+{{--                            </p>--}}
+{{--                            <p class="info">--}}
+{{--                                <i class="far fa-calendar-alt"></i> Sat, Sep 19, 10:00 AM EDT--}}
+{{--                            </p>--}}
 
-                            <p class="info description">
-                                Welcome! Everyone has a unique perspective after reading a book, and we would love you to share yours with us! We meet one Sunday evening
-                                <span>more...</span>
-                            </p>
-                        </div>
+{{--                            <p class="info description">--}}
+{{--                                Welcome! Everyone has a unique perspective after reading a book, and we would love you to share yours with us! We meet one Sunday evening--}}
+{{--                                <span>more...</span>--}}
+{{--                            </p>--}}
+{{--                        </div>--}}
                     </div>
-                    <a href="events/paper-presentation"><button class="action">Participate</button></a>
+                    <a href="events/paper-presentation"><button class="action" style="width: 90%; ">Participate</button></a>
                 </div>
             </div>
 
             <div class="item-container show-item-onscroll">
                 <div class="img-container">
-                    <img src="images/events/natyakshetra.jpeg" alt="Event image">
+                    <img src="images/events/natyakshetra.jpeg"style="height: 200px" loading="lazy"  alt="Event image">
                 </div>
 
                 <div class="body-container">
@@ -650,27 +706,27 @@
                         <p class="info">Apr 29,2022</p>
                         <p class="price">Rs.200-Rs.500</p>
 
-                        <div class="additional-info">
-                            <p class="info">
-                                <i class="fas fa-map-marker-alt"></i> 245 W 52nd St, New York
-                            </p>
-                            <p class="info">
-                                <i class="far fa-calendar-alt"></i> Sat, Sep 19, 10:00 AM EDT
-                            </p>
+{{--                        <div class="additional-info">--}}
+{{--                            <p class="info">--}}
+{{--                                <i class="fas fa-map-marker-alt"></i> 245 W 52nd St, New York--}}
+{{--                            </p>--}}
+{{--                            <p class="info">--}}
+{{--                                <i class="far fa-calendar-alt"></i> Sat, Sep 19, 10:00 AM EDT--}}
+{{--                            </p>--}}
 
-                            <p class="info description">
-                                Welcome! Everyone has a unique perspective after reading a book, and we would love you to share yours with us! We meet one Sunday evening
-                                <span>more...</span>
-                            </p>
-                        </div>
+{{--                            <p class="info description">--}}
+{{--                                Welcome! Everyone has a unique perspective after reading a book, and we would love you to share yours with us! We meet one Sunday evening--}}
+{{--                                <span>more...</span>--}}
+{{--                            </p>--}}
+{{--                        </div>--}}
                     </div>
-                    <a href="events/natyakshetra"><button class="action">Participate</button></a>
+                    <a href="events/natyakshetra"><button class="action" style="width: 90%; ">Participate</button></a>
                 </div>
             </div>
 
             <div class="item-container show-item-onscroll">
                 <div class="img-container">
-                    <img src="images/events/questionbout.jpeg" alt="Event image">
+                    <img src="images/events/questionbout.jpeg" style="height: 200px" loading="lazy" alt="Event image">
                 </div>
 
                 <div class="body-container">
@@ -682,32 +738,172 @@
                         <p class="info">Apr 29,2022</p>
                         <p class="price">Rs.250-Rs.300</p>
 
-                        <div class="additional-info">
-                            <p class="info">
-                                <i class="fas fa-map-marker-alt"></i> 245 W 52nd St, New York
-                            </p>
-                            <p class="info">
-                                <i class="far fa-calendar-alt"></i> Sat, Sep 19, 10:00 AM EDT
-                            </p>
+{{--                        <div class="additional-info">--}}
+{{--                            <p class="info">--}}
+{{--                                <i class="fas fa-map-marker-alt"></i> 245 W 52nd St, New York--}}
+{{--                            </p>--}}
+{{--                            <p class="info">--}}
+{{--                                <i class="far fa-calendar-alt"></i> Sat, Sep 19, 10:00 AM EDT--}}
+{{--                            </p>--}}
 
-                            <p class="info description">
-                                Welcome! Everyone has a unique perspective after reading a book, and we would love you to share yours with us! We meet one Sunday evening
-                                <span>more...</span>
-                            </p>
-                        </div>
+{{--                            <p class="info description">--}}
+{{--                                Welcome! Everyone has a unique perspective after reading a book, and we would love you to share yours with us! We meet one Sunday evening--}}
+{{--                                <span>more...</span>--}}
+{{--                            </p>--}}
+{{--                        </div>--}}
                     </div>
-                    <a href="events/quiz"><button class="action">Participate</button></a>
+                    <a href="events/quiz"><button class="action" style="width: 90%; ">Participate</button></a>
                 </div>
             </div>
         </div>
     </div>
+  {{-- Combo Events --}}
+  
+        <div class="section" id="events">
+            <div id="w-node-_061d75a7-65e2-9069-ae44-033e61f41b22-cd4392e2"
+                class="content
+                        xs centered">
+                <div data-w-id="061d75a7-65e2-9069-ae44-033e61f41b23" style="padding-bottom: 3rem; transform:
+                            translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
+                            rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg,
+                            0deg); transform-style: preserve-3d; opacity: 1;" class="show-item-onscroll">
+                    <h2 class="display-2">Combo Events<br></h2>
+                </div>
+            </div>
+            <div class="container">
+                <div class="item-container show-item-onscroll" style="height: fit-content">
+                    
 
+                    <div class="body-container" >
+                        <img src="images/events/coding.jpg" style="height: 200px;width:100%" loading="lazy"   alt="Event image">
 
+                        <div class="event-info">
+                            
+                            <p class="title centered">Code Combat <br> + <br>Debugging Apocalypse</p>
+                            <div class="separator"></div>
+                            <p class="info">Apr 29,2022</p>
+                            <p class="price">Rs.300</p>
+                            
+
+                            
+                             <div class="additional-info">
+                                <div class="register" style="max-width: 300px; min-width: 50px ;display: inline; ">
+                                    <a data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9bf3" href="#" onclick="combo('codeCombo')"
+                                       class="btn navi-2 w-inline-block" >
+                                        <div class="bg-color yellow"></div>
+                                        <img src="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/5d73a5847149d55967004dcb_Orion_entrance.svg"
+                                             alt="" class="btn-icon" />
+                                        <div style="-webkit-transform: translate3d(0, 0, 0)
+                                                    scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
+                                                    skew(0, 0);
+                                                    -moz-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
+                                                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                                                    -ms-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
+                                                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                                                    transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
+                                                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);" class="btn-label">
+                                            Participate
+                                        </div>
+                                    </a>
+                                </div>
+                                <div style="padding-bottom: 20px"></div>
+                                
+            
+
+                            
+                          </div> 
+                        </div>
+                       
+                    </div>
+                </div>
+
+                <div class="item-container show-item-onscroll" style="height: fit-content">
+                    
+
+                    <div class="body-container" >
+                        <img src="images/events/pptt.jpg" style="height: 200px;width:100%" loading="lazy"  alt="Event image">
+
+                        <div class="event-info">
+                            
+                            <p class="title centered">Quizardry<br> + <br>Paper Presentation</p>
+                            <div class="separator"></div>
+                            <p class="info">Apr 29,2022</p>
+                            <p class="price">Rs.400</p>
+                            
+
+                            
+                             <div class="additional-info">
+                                <div class="register" style="max-width: 300px; min-width: 50px ;display: inline; ">
+                                    <a data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9bf3" href="#" onclick="combo('pptQuizCombo')"
+                                       class="btn navi-2 w-inline-block"  >
+                                        <div class="bg-color yellow"></div>
+                                        <img src="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/5d73a5847149d55967004dcb_Orion_entrance.svg"
+                                             alt="" class="btn-icon" />
+                                        <div style="-webkit-transform: translate3d(0, 0, 0)
+                                                    scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
+                                                    skew(0, 0);
+                                                    -moz-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
+                                                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                                                    -ms-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
+                                                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                                                    transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
+                                                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);" class="btn-label">
+                                            Participate
+                                        </div>
+                                    </a>
+                                </div>
+                                <div style="padding-bottom: 20px"></div>
+                                
+            
+
+                            
+                          </div> 
+                        </div>
+                       
+                    </div>
+                </div>
+
+                     
+               
+
+               
+                
+            </div>
+        </div>
+        <script>
+            function combo(type){
+                if(type==="pptQuizCombo"){
+                     $('#pptQuizCombo').css({overflow: 'scroll'});
+                      
+                document.getElementById('pptQuizCombo').style.display = "block";
+               
+                document.getElementById('codeCombo').style.display = "none";
+                }else{
+                    document.getElementById('pptQuizCombo').style.display = "none";
+                document.getElementById('codeCombo').style.display = "block";
+                    
+                }
+                
+                
+           
+            }
+            
+        </script>
+        {{-- Combo Events --}}
 
     <!-------
+
+
+       <div class="section"  style=" padding-top:0.5rem; text-align:center" >
+        <a id="adImg1" href="https://goo.gl/maps/2Qc2f5qHsLCnRKoM8" target="_blank">
+            <img src="./images/sponsors/winni 2.jpeg" loading="lazy" alt="WINNI CAKES & MORE" 
+           id="adImg" style="padding: 0.5rem " ></a>
+       </div>
+       
        -->
 
-    <div class="section" style="margin-top: 20px;" id="schedule">
+      
+    <div class="section" style="margin-top: 20px; " id="schedule" >
         <div class="container">
             <div id="w-node-_061d75a7-65e2-9069-ae44-033e61f41b22-cd4392e2" class="content
                 xs centered">
@@ -748,31 +944,41 @@
                                                         font-purple
                                                         margin-paragraph_2x">Friday</h2>
                                     </div>
-                                    <img src="images/web/5d73da5c7149d511b9015edc_landing-onepage-website-template-10.png " alt=" " class="badge-absolute top-right " />
-                                    <ul role="list " class="w-list-unstyled ">
+                                     <ul role="list " class="w-list-unstyled ">
+                                        <li class="schedule-list ">
+                                            <h5 class="display-3 ">Inauguration 
+                                            </h5>
+                                            <div class="font-purple ">9:30AM</div>
+                                        </li>
+                                        <li class="schedule-list ">
+                                            <h5 class="display-3 ">Paper Presentation</h5>
+                                            <div class="font-purple ">11:30AM</div>
+                                        </li>
+                                        <li class="schedule-list ">
+                                            <h5 class="display-3 ">Lunch</h5>
+                                            <div class="font-purple ">1PM</div>
+                                        </li>
                                         <li class="schedule-list ">
                                             <h5 class="display-3 ">Code Combat
                                             </h5>
-                                            <div class="font-purple ">9AM</div>
+                                            <div class="font-purple ">2PM</div>
                                         </li>
                                         <li class="schedule-list ">
-                                            <h5 class="display-3 ">Debugging</h5>
-                                            <div class="font-purple ">10AM–4PM</div>
+                                            <h5 class="display-3 ">Debugging Apocalypse
+                                            </h5>
+                                            <div class="font-purple ">3PM</div>
                                         </li>
-                                        <li class="schedule-list ">
-                                            <h5 class="display-3 ">Gaming</h5>
-                                            <div class="font-purple ">6PM</div>
-                                        </li>
-                                        <li class="schedule-list ">
+                                         <li class="schedule-list ">
                                             <h5 class="display-3 ">Quiz
                                             </h5>
-                                            <div class="font-purple ">7PM</div>
+                                            <div class="font-purple ">3:30PM</div>
                                         </li>
                                         <li class="schedule-list ">
                                             <h5 class="display-3 ">Natyakshetra
                                             </h5>
-                                            <div class="font-purple ">8PM</div>
+                                            <div class="font-purple ">6PM</div>
                                         </li>
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -788,32 +994,13 @@
                                                         font-purple
                                                         margin-paragraph_2x">Saturday</h2>
                                     </div>
-                                    <img src="images/web/5d73da5cfc69ff2470da119f_landing-onepage-website-template-09.png " sizes="(max-width: 991px) 100vw, 128px " srcset="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/5d73da5cfc69ff2470da119f_landing-onepage-website-template-09-p-500.png
-                                            500w, https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/5d73da5cfc69ff2470da119f_landing-onepage-website-template-09.png 800w " alt=" " class="badge-absolute top-right " />
-                                    <ul role="list " class="w-list-unstyled ">
+                                   <ul role="list " class="w-list-unstyled ">
                                         <li class="schedule-list ">
-                                            <h5 class="display-3 ">Gaming
+                                            <h5 class="display-3 ">Ethnic Day
                                             </h5>
-                                            <div class="font-purple ">9AM</div>
+                                            <div class="font-purple ">9AM-12PM</div>
                                         </li>
-                                        <li class="schedule-list ">
-                                            <h5 class="display-3 ">Culturals</h5>
-                                            <div class="font-purple ">10AM–4PM</div>
-                                        </li>
-                                        <li class="schedule-list ">
-                                            <h5 class="display-3 ">Hackathon</h5>
-                                            <div class="font-purple ">6PM</div>
-                                        </li>
-                                        <li class="schedule-list ">
-                                            <h5 class="display-3 ">Paper Presentation
-                                            </h5>
-                                            <div class="font-purple ">7PM</div>
-                                        </li>
-                                        <li class="schedule-list ">
-                                            <h5 class="display-3 ">Group discussion
-                                            </h5>
-                                            <div class="font-purple ">8PM</div>
-                                        </li>
+                                       
                                     </ul>
                                 </div>
                             </div>
@@ -825,7 +1012,6 @@
     </div>
     <!----
     -->
-
 
     <div data-w-id="1ca55bec-30b7-92be-b0b5-3ba969375c1f" class="section
                     _100vh margin-bottom_2x" id="gallery">
@@ -872,19 +1058,19 @@
             </div>
         </div>
         <div class="absolute-img-stack">
-            <img src="./images/gallery/2.jpg" sizes="(max-width:
+            <img src="./images/gallery/2.jpg"  loading="lazy"sizes="(max-width:
                             350px) 47vw, (max-width: 500px) 46vw, (max-width:
-                            991px) 45vw, 512px" alt="" class="img-stack-1" />
-            <img src="./images/gallery/1.jpg" sizes="(max-width:
+                            991px) 45vw, 512px"  alt="" class="img-stack-1" />
+            <img src="./images/gallery/1.jpg"loading="lazy" sizes="(max-width:
                             479px) 47vw, (max-width: 767px) 46vw, (max-width:
                             991px) 45vw, 512px" alt="" class="img-stack-2" />
-            <img src="./images/gallery/6.jpg" sizes="(max-width:
+            <img src="./images/gallery/6.jpg" loading="lazy"sizes="(max-width:
                             479px) 47vw, (max-width: 767px) 46vw, (max-width:
                             991px) 45vw, 512px" alt="" class="img-stack-3" />
-            <img src="./images/gallery/3.jpg" sizes="(max-width:
+            <img src="./images/gallery/3.jpg" loading="lazy"sizes="(max-width:
                             479px) 47vw, (max-width: 767px) 46vw, (max-width:
                             991px) 45vw, 512px" alt="" class="img-stack-4" />
-            <img src="./images/gallery/4.jpg" sizes="(max-width:
+            <img src="./images/gallery/4.jpg" loading="lazy"sizes="(max-width:
                             479px) 47vw, (max-width: 767px) 46vw, (max-width:
                             991px) 45vw, 512px" alt="" class="img-stack-5" />
         </div>
@@ -974,143 +1160,116 @@
                     </div>
 
                 </a>
+                <a id="w-node-_40a07bba-7c84-960c-7e4d-f3ffb25e61d9-cd4392e2">
+                    <div class="content font-white">
+                        <div class="show-item-onscroll">
+                            <img src="./images/team/m.png" alt="" class="margin-paragraph_2x" style="max-width: 250px;" />
+                        </div>
+                        <div class="profile-description-shift right-padding" style="margin-top: 2rem;">
+                            <div class="show-item-onscroll">
+                                <h4 class="uppercase margin-paragraph_half">
+                                    Machavaram Jaswanth
+                                </h4>
+                            </div>
+                            <div class="show-item-onscroll">
+                                <div class="font-yellow margin-paragraph">Student</div>
+                            </div>
+
+                            <div href="#" data-w-id="505fbf65-8f10-cec4-8fca-fc5f367f69bb" style="color: rgb(255, 255, 255);  padding-top: 0px;" class="button">
+                                <div>STUDENT COORDINATOR</div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </a>
 
             </div>
         </div>
     </div>
     <!-------------------------------------------------------------------------------->
 
-    <!-- <div class="container" id="sponsers">
-        <div class="section" id="recs">
-            <div class="w-layout-grid grid-programme" id="">
-                <div id="w-node-_061d75a7-65e2-9069-ae44-033e61f41b22-cd4392e2" class="content
+    <div class="container" id="sponsers">
+            <div class="section" id="recs" style="padding-top:2rem; ">
+                <div class="" id="">
+                    <div id="w-node-_061d75a7-65e2-9069-ae44-033e61f41b22-cd4392e2"
+                        class="content
                             xs centered">
-                    <div data-w-id="061d75a7-65e2-9069-ae44-033e61f41b23" style="transform:
+                        <div data-w-id="061d75a7-65e2-9069-ae44-033e61f41b23" style="transform:
                                 translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
                                 rotateX(0deg) rotateY(0deg) rotateZ(0deg)
                                 skew(0deg, 0deg); transform-style: preserve-3d;
-                                opacity: 1;" class="show-item-onscroll">
-                        <h2 class="display-2">Sponsers<br></h2>
-                    </div>
-                </div>
-                <div id="w-node-_061d75a7-65e2-9069-ae44-033e61f41b2a-cd4392e2" class="trigger
-                            img-zoom">
-
-                    <div class="img-wrapper small margin-paragraph" style="transform:
-                                    translate3d(0px, 0px, 0px) scale3d(0.9, 0.9,
-                                    1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
-                                    skew(0deg, 0deg); transform-style:
-                                    preserve-3d;">
-                        <div class="bg-image programme_1" style="transform:
-                                        translate3d(0px, 0px, 0px) scale3d(1.2,
-                                        1.2, 1) rotateX(0deg) rotateY(0deg)
-                                        rotateZ(0deg) skew(0deg, 0deg);
-                                        transform-style: preserve-3d;">
-                        </div>
-
-                    </div>
-
-
-                    <div class="horizontal">
-                        <div data-w-id="061d75a7-65e2-9069-ae44-033e61f41b2e" style="transform: translate3d(0px, 0px, 0px)
-                                    scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
-                                    rotateZ(0deg) skew(0deg, 0deg);
-                                    transform-style:
-                                    preserve-3d; opacity: 1;" class="show-item-onscroll
-                                    margin-right">
-                            <div class="font-yellow uppercase"> </div>
-                        </div>
-                        <div data-w-id="061d75a7-65e2-9069-ae44-033e61f41b31" style="transform: translate3d(0px, 0px, 0px)
-                                    scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
-                                    rotateZ(0deg) skew(0deg, 0deg);
-                                    transform-style:
-                                    preserve-3d; opacity: 1;" class="show-item-onscroll">
-                            <div class="font-yellow uppercase"></div>
-                            <h4 class="uppercase">Sponser 1</h4>
+                                opacity: 1; padding:1rem" class="show-item-onscroll">
+                            <h2 class="display-2">Sponsors<br></h2>
                         </div>
                     </div>
-                </div>
-
-                <div id="w-node-_061d75a7-65e2-9069-ae44-033e61f41b36-cd4392e2" class="trigger img-zoom">
-                    <a href="#" class="w-inline-block w-lightbox">
-                        <div class="img-wrapper small margin-paragraph" style="transform: translate3d(0px, 0px, 0px)
-                                    scale3d(0.9, 0.9, 1) rotateX(0deg)
-                                    rotateY(0deg)
-                                    rotateZ(0deg) skew(0deg, 0deg);
-                                    transform-style:
-                                    preserve-3d;">
-                            <div class="bg-image programme_1" style="transform:
-                                        translate3d(0px, 0px, 0px) scale3d(1.2,
-                                        1.2, 1)
-                                        rotateX(0deg) rotateY(0deg)
-                                        rotateZ(0deg)
-                                        skew(0deg, 0deg); transform-style:
-                                        preserve-3d;">
+                    <div class="sponsors-card">
+                        <div class="card">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="./images/sponsors/jaykey.png" loading="lazy" alt="Jaykey"
+                                            style="width:100%;height:100%;">
+                                        <a href=""></a>
+                                    </div>
+                                    <div class="flip-card-back" style="display:flex;flex-direction: column; justify-content: center">
+                                        <h4>Jaykey Marketing Associates <br>Dell Exclusive Store <br>Anantapur</h4>
+                                        <a href="https://g.page/JAYKAYATP?share" target="_blank">Learn More</a>
+    
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                    <div class="horizontal">
-                        <div data-w-id="62bd9068-8b9e-8cf0-d261-329df2ea83b8" style="transform: translate3d(0px, 0px, 0px)
-                                    scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
-                                    rotateZ(0deg) skew(0deg, 0deg);
-                                    transform-style:
-                                    preserve-3d; opacity: 1;" class="show-item-onscroll
-                                    margin-right">
-                            <div class="font-yellow uppercase"></div>
+                        <div class="card">
+                            <div class="flip-card">
+                                 <div class="flip-card-inner">
+                                    <div class="flip-card-front" style="background-color: white;">
+                                        <img src="./images/sponsors/winni.jpeg" alt="WINNI CAKES & MORE" loading="lazy"
+                                            style="width:100%;height:100%;">
+                                        
+                                    </div>
+                                    <div class="flip-card-back" style="display:flex;flex-direction: column; justify-content: center; padding:0.2rem;">
+                                        <h3 style="line-height: 0.1px">WINNI<br> <h5 style="line-height: 0.1px">Cakes & More</h5></h3>
+
+                                        <p >Celebrate and Make Your Loved One's Anniversary,Birthday 
+                                        a Very Special Moment with WINNI. Trusted Brand, 
+                                    Top Variation in Cakes, FLower bouquets, 
+                                Chocolates, Pizza's & More. Assured Quality. Special in designer & Fondent Cakes</p>
+                                        <a href="https://goo.gl/maps/2Qc2f5qHsLCnRKoM8" target="_blank">Learn More</a>
+                                                
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div data-w-id="62bd9068-8b9e-8cf0-d261-329df2ea83bb" style="transform: translate3d(0px, 0px, 0px)
-                                    scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
-                                    rotateZ(0deg) skew(0deg, 0deg);
-                                    transform-style:
-                                    preserve-3d; opacity: 1;" class="show-item-onscroll">
-                            <div class="font-yellow uppercase"></div>
-                            <h4 class="uppercase">Sponser 1
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div id="w-node-de249962-d2d0-0021-5c4d-fe843a55148c-cd4392e2" class="trigger img-zoom">
-                    <a href="#" class="w-inline-block w-lightbox">
-                        <div class="img-wrapper small margin-paragraph" style="transform: translate3d(0px, 0px, 0px)
-                                    scale3d(0.9, 0.9, 1) rotateX(0deg)
-                                    rotateY(0deg)
-                                    rotateZ(0deg) skew(0deg, 0deg);
-                                    transform-style:
-                                    preserve-3d;">
-                            <div class="bg-image programme_1" style="transform:
-                                        translate3d(0px, 0px, 0px) scale3d(1.2,
-                                        1.2, 1)
-                                        rotateX(0deg) rotateY(0deg)
-                                        rotateZ(0deg)
-                                        skew(0deg, 0deg); transform-style:
-                                        preserve-3d;"></div>
+                        <div class="card">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front" style="background-color: white;">
+                                        <img src="./images/sponsors/pulse.JPG" alt=""
+                                            style="width:100%;height:100%;">
+                                        
+                                    </div>
+                                    <div class="flip-card-back" style="display:flex;flex-direction: column; justify-content: center; padding:0.2rem;">
+                                        <h3 style="line-height: 0.1px">PULSE<br> <h5 style=""> FITNESS STUDIO 2.0</h5></h3>
+
+                                        <p >Healthy life always leads to happy life. Achieve your fitness goals with Pulse Fitness Studio. You dream it we make it. We are now with our second branch opp JNTUA. <br> Join us today.</p>
+                                        <a href="https://g.co/kgs/NAfkd8" target="_blank">Learn More</a>
+                                                
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                    </a>
-                    <div class="horizontal">
-                        <div data-w-id="de249962-d2d0-0021-5c4d-fe843a551490" style="transform: translate3d(0px, 0px, 0px)
-                                    scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
-                                    rotateZ(0deg) skew(0deg, 0deg);
-                                    transform-style:
-                                    preserve-3d; opacity: 1;" class="show-item-onscroll
-                                    margin-right">
-                            <div class="font-yellow uppercase"></div>
-                        </div>
-                        <div data-w-id="de249962-d2d0-0021-5c4d-fe843a551493" style="transform: translate3d(0px, 0px, 0px)
-                                    scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
-                                    rotateZ(0deg) skew(0deg, 0deg);
-                                    transform-style:
-                                    preserve-3d; opacity: 1;" class="show-item-onscroll">
-                            <div class="font-yellow uppercase"></div>
-                            <h4 class="uppercase">Sponser 3</h4>
-                        </div>
-                    </div>
-                </div>
 
+                      
+
+
+                    </div>
+                   
+
+                </div>
             </div>
         </div>
-    </div>
-    <div>-->
 
 
     <!-- venue -->
@@ -1128,10 +1287,10 @@
             </div>
         </div>
         <div class="w-layout-grid main-grid">
-            <div id="w-node-_147ce491-59b4-98ea-0255-9dd00d53371a-cd4392e2" class="content centered">
+            <div id="w-node-_147ce491-59b4-98ea-0255-9dd00d53371a-cd4392e2"  class="content centered">
                 <div class="show-item-onload
                                             margin-paragraph">
-                    <a href="#">
+                    <a href="https://goo.gl/maps/xH3ishA95tdCXp157" target="_blank">
                         <img src="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/5d7b8c59f5b5b2ce4abb032e_Orion_world-map.svg" alt="" class="icn-64
                                                 margin-paragraph_2x" />
                     </a>
@@ -1149,6 +1308,22 @@
             </div>
 
         </div>
+        <div style="-webkit-transform:translate3d(0, 150%, 0) scale3d(1, 1,
+                1) rotateX(0) rotateY(0) rotateZ(0) skew(0,
+                0);-moz-transform:translate3d(0, 150%, 0) scale3d(1, 1, 1)
+                rotateX(0) rotateY(0) rotateZ(0) skew(0,
+                0);-ms-transform:translate3d(0, 150%,
+                0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0,
+                0);transform:translate3d(0, 150%, 0) scale3d(1, 1, 1) rotateX(0)
+                rotateY(0) rotateZ(0) skew(0, 0); display:none;" class="announcement-bar-wrapper" id="announcement-bar-wrapper"  >
+                 <div class="announcement-bar">
+                    <div class="centered-horiz margin-right" id="announcement-content">Here’s a notice bar to bring attention to new features of your website.</div>
+                    <a data-w-id="6c5af89c-0cd9-a89c-8bd1-faae3036c940" href="#" class="btn
+                    close-btn w-inline-block"><img src="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/5d7a5d7526acc66065eecb26_btn_close.svg" alt="" class="btn-label" />
+                        <div class="btn-hover purple"></div>
+                    </a>
+                </div>
+            </div>
     </div>
     <!-- footer -->
         @include('layouts.footer')
@@ -1172,7 +1347,7 @@
                             0)" class="announcement-bar-wrapper">
     <div class="announcement-bar">
         <div class="centered-horiz margin-right"><span class="badge-small">HEYY!!</span> we're glad that you're checking out pixel, share us with the world, let's have fun together!.</div>
-        <a data-w-id="cffe87ca-212b-0eea-a486-fc1f5b5dd7cf" href="#" class="btn close-btn w-inline-block"><img src="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/5d7a5d7526acc66065eecb26_btn_close.svg" alt="" class="btn-label" />
+        <a data-w-id="cffe87ca-212b-0eea-a486-fc1f5b5dd7cf" href="#" class="btn closebtn close-btn w-inline-block"><img src="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/5d7a5d7526acc66065eecb26_btn_close.svg" alt="" class="btn-label" />
             <div class="btn-hover purple"></div>
         </a>
     </div>
@@ -1232,11 +1407,98 @@
     <!-- Registration  Page -->
         @include('layouts.registration')
     <!-- Registration Page end -->
+    @include('layouts.comboRegistration')
     <script src="{{asset('js/jquery-3.5.1.min.js')}}?site=5d70f6f0c8ca5de04b4392d5" type="text/javascript" crossorigin="anonymous"></script>
     <script src="{{asset('js/main-script.js')}}" type="text/javascript"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/tsparticles@1.37.4/tsparticles.min.js'></script>
     <script src="{{asset('js/particleJs/app.js')}}"></script>
+{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>--}}
+{{--<script>--}}
+{{--    TweenMax.set(".play-circle-01", {--}}
+{{--        rotation: 90,--}}
+{{--        transformOrigin: "center"--}}
+{{--    })--}}
+
+{{--    TweenMax.set(".play-circle-02", {--}}
+{{--        rotation: -90,--}}
+{{--        transformOrigin: "center"--}}
+{{--    })--}}
+
+{{--    TweenMax.set(".play-perspective", {--}}
+{{--        xPercent: 6.5,--}}
+{{--        scale: .175,--}}
+{{--        transformOrigin: "center",--}}
+{{--        perspective: 1--}}
+{{--    })--}}
+
+{{--    TweenMax.set(".play-video", {--}}
+{{--        visibility: "hidden",--}}
+{{--        opacity: 0,--}}
+{{--    })--}}
+
+{{--    TweenMax.set(".play-triangle", {--}}
+{{--        transformOrigin: "left center",--}}
+{{--        transformStyle: "preserve-3d",--}}
+{{--        rotationY: 10,--}}
+{{--        scaleX: 2--}}
+{{--    })--}}
+{{--    const rotateTL = new TimelineMax({ paused: true })--}}
+{{--        .to(".play-circle-01", .7, {--}}
+{{--            opacity: .1,--}}
+{{--            rotation: '+=360',--}}
+{{--            strokeDasharray: "456 456",--}}
+{{--            ease: Power1.easeInOut--}}
+{{--        }, 0)--}}
+{{--        .to(".play-circle-02", .7, {--}}
+{{--            opacity: .1,--}}
+{{--            rotation: '-=360',--}}
+{{--            strokeDasharray: "411 411",--}}
+{{--            ease: Power1.easeInOut--}}
+{{--        }, 0)--}}
+
+{{--    const openTL = new TimelineMax({ paused: true })--}}
+{{--        .to(".play-backdrop", 1, {--}}
+{{--            opacity: .95,--}}
+{{--            visibility: "visible",--}}
+{{--            ease: Power2.easeInOut--}}
+{{--        }, 0)--}}
+{{--        .to(".play-close", 1, {--}}
+{{--            opacity: 1,--}}
+{{--            ease: Power2.easeInOut--}}
+{{--        }, 0)--}}
+{{--        .to(".play-perspective", 1, {--}}
+{{--            xPercent: 0,--}}
+{{--            scale: 1,--}}
+{{--            ease: Power2.easeInOut--}}
+{{--        }, 0)--}}
+{{--        .to(".play-triangle", 1, {--}}
+{{--            scaleX: 1,--}}
+{{--            ease: ExpoScaleEase.config(2, 1, Power2.easeInOut)--}}
+{{--        }, 0)--}}
+{{--        .to(".play-triangle", 1, {--}}
+{{--            rotationY: 0,--}}
+{{--            ease: ExpoScaleEase.config(10, .01, Power2.easeInOut)--}}
+{{--        }, 0)--}}
+{{--        .to(".play-video", 1, {--}}
+{{--            visibility: "visible",--}}
+{{--            opacity: 1--}}
+{{--        }, .5)--}}
+
+
+{{--    const button = document.querySelector(".play-button")--}}
+{{--    const backdrop = document.querySelector(".play-backdrop")--}}
+{{--    const close = document.querySelector(".play-close")--}}
+
+{{--    button.addEventListener("mouseover", () => rotateTL.play())--}}
+{{--    button.addEventListener("mouseleave", () => rotateTL.reverse())--}}
+{{--    button.addEventListener("click", () => openTL.play())--}}
+{{--    backdrop.addEventListener("click", () => openTL.reverse())--}}
+{{--    close.addEventListener("click", e => {--}}
+{{--        e.stopPropagation()--}}
+{{--        openTL.reverse()--}}
+{{--    })--}}
+{{--</script>--}}
 </body>
 
 </html>

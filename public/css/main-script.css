@@ -2,7 +2,7 @@
 
 
 /* ==========================================================================
-   normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css 
+   normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css
    ========================================================================== */
 
 
@@ -24,7 +24,7 @@ html {
 }
 
 body {
-    margin: 0
+    margin: 0;
 }
 
 article,
@@ -4317,6 +4317,9 @@ blockquote {
 }
 
 @media screen and (max-width: 767px) {
+    .overlay {
+        height: 150px;
+    }
     .section {
         padding: 2rem;
     }

@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Terms And Conditions - Pixel 2022</title>
 
     <link href="{{asset('css/main-script.css')}}" rel="stylesheet" type="text/css" />
@@ -53,7 +54,7 @@
     </div>
     <div class="section">
         <h1>Terms and Conditions</h1>
-        <p>Last updated: April 06, 2022</p>
+        <p>Last updated: April 08, 2022</p>
         <p>Please read these terms and conditions carefully before using Our Service.</p>
         <h1>Interpretation and Definitions</h1>
         <h2>Interpretation</h2>

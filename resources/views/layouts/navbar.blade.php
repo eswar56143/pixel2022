@@ -28,7 +28,7 @@
             <div class="btn-hover purple"></div>
         </a>
         <a href="/#recs" class="btn navi-1 w-inline-block">
-            <div class="btn-label">Sponsers</div>
+            <div class="btn-label">Sponsors</div>
             <div class="btn-hover purple"></div>
         </a>
         <a data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9bf" href="/#contactUs" class="btn navi-1 w-inline-block">
@@ -40,7 +40,7 @@
             <div class="btn-hover purple"></div>
         </a>
 
-        <a data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9bf2" href="#" class="btn navi-2 w-inline-block">
+        <a data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9bf2" href="#" class="btn navi-2 w-inline-block" onclick="$('#body').css({overflow: 'hidden'});">
             <div class="bg-color yellow"></div>
             <img src="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/5d73a5847149d55967004dcb_Orion_entrance.svg" alt="" class="btn-icon" />
             <div style="-webkit-transform: translate3d(0, 0, 0)

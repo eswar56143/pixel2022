@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="_token" content="{{ csrf_token() }}">
     <title>Code Combat-Pixel 2022</title>
     <meta content="Code-Combat" name="description" />
 
@@ -14,8 +16,9 @@
     <link href="{{ asset('css/preloader.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
+    <script src="{{ asset('js/preload.js') }}" ></script>
+    <script src="{{ asset('js/checking.js') }}" ></script>
     <script src="{{asset('js/webfont.js')}}" type="text/javascript"></script>
-    <script src="{{ asset('js/preload.js') }}" defer></script>
 
     <script type="text/javascript">
         WebFont.load({
@@ -27,21 +30,6 @@
 </head>
 
 <script type="text/javascript">
-    function userAvailability() {
-        let email = $("#email").val();
-        $.ajax({
-            type:'POST',
-            url: '{{ route("emailCheck") }}',
-            datatype: 'json',
-            data : {
-                '_token' : '{{csrf_token()}}',
-                'email': email,
-            },
-            success: function(result){
-                $("#user-availability-status1").html(result);
-            },
-        });
-    }
     ! function(o, c) {
         var n = c.documentElement,
             t = " w-mod-";
@@ -59,10 +47,11 @@
 </style>
 </head>
 
-<body id="body" onload="preload()">
+<body id="body">
 
 @include('layouts.preload')
 <!-- header -->
+
 
 <div data-collapse="medium" data-animation="default" data-duration="400" style="opacity: 0; display: flex; flex-direction: row; align-items:
         center;" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
@@ -99,7 +88,7 @@
         <div class="w-layout-grid main-grid">
             <div id="w-node-_6ca352aa-f456-95fb-2b6c-2f7d864c63d1-ce4392dc" class="content centered">
                 <div class="show-item-onload margin-paragraph">
-                    <h1 class="display-1 small"><img src="../images/event-icons/coding.svg" style="min-height: 20px; max-height: 150px;">Code Combat</h1>
+                    <h1 class="display-1 small"><img src="../images/event-icons/coding.png" style="min-height: 20px; max-height: 150px;">Code Combat</h1>
                 </div>
             </div>
         </div><img src="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/5d7b5d4b3a8c25e18e4d155d_shape-bottom-2.svg" alt="" class="img-shape-bottom" />
@@ -132,27 +121,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="register" style="max-width: 300px; min-width: 50px ;display: inline; padding: 1rem;">
-                        <a data-w-id="8320fab2-82fb-d44f-d6ea-a5b42319c9c3" href="https://webflow.com/templates/html/conferencos-conference-website-template" target="_blank" class="btn  w-inline-block" style="pointer-events: none;">
-                            <div class="bg-color yellow" style="background-color: grey;"></div>
-                            <img src="https://assets.website-files.com/5d70f6f0c8ca5de04b4392d5/5d73a5847149d55967004dcb_Orion_entrance.svg" alt="" class="btn-icon" />
-                            <div style="-webkit-transform: translate3d(0, 0, 0)
-                                    scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
-                                    skew(0, 0);
-                                    -moz-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
-                                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                                    -ms-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
-                                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                                    transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
-                                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);" class="btn-label">
-                                Register for event
-
-                            </div>
-
-                        </a>
+                    <div class="register centered" style="max-width: 300px; min-width: 50px ;display: inline; padding: 1rem;">
+                        <p class="centered">Registrations for Code-Combat are closed.</p>
                     </div>
-                    <h4 style="font-size: 20px;align-content: center;"> &nbsp; &nbsp;*&nbsp;&nbsp;Registration will open soon..</h4>
-
                 </div>
                 <div style="height: 50px;">
 
@@ -165,7 +136,7 @@
                 <div class="margin-paragraph w-richtext">
                     <h2>About the event</h2>
                     <img src="../images/events/codecombat.jpg" style="width: 100%;margin-top: 1rem;max-height: 280px; margin-bottom: 1rem;" alt="">
-                    <p>An Event to test your coding skills, a problem statement will be provided and you are expected to write a program to solve and execute it without any errors using a programming language of your choice. </p>
+                    <p>An Event to test your coding skills, a set of problem statements will be provided and you are expected to solve the problem and execute it without any errors using a programming language of your choice. </p>
                     <p>This is an in person event, and you need to be present to participate, computers will be provided by us. </p>
                     <p>
                     <h5>Registration Rules</h5>
@@ -177,7 +148,7 @@
                             Payment of rupees 200 should be paid by each individual.
                         </li>
                         <li>
-                            Register using the same E-mail Id that was provided during Pixel Registration.
+                            Pay using the same E-mail Id that was provided during Pixel Registration.
                         </li>
                     </ul>
                     </p>
@@ -185,7 +156,7 @@
                     <p>
                     <ul>
                         <li>
-                            The problem statement will be provided during the event only.
+                        A set of problem statements will be provided during the event only.
                         </li>
                         <li>
                             Programming language is your choice.
@@ -202,13 +173,13 @@
                         <div class=" grid-contact border" style="padding: 1rem;">
                             <ul>
                                 <li>
-                                    <h6>Winners will receive exiting prizes.</h6>
+                                    <h6>Winners will receive exciting prizes.</h6>
                                 </li>
                                 <li>
                                     <h6>Participation Certificates will be awarded to every participant.</h6>
                                 </li>
                                 <li>
-                                    <h6>Food will be Provided.</h6>
+                                    <h6>Lunch will be Provided.</h6>
                                 </li>
                             </ul>
                         </div>
@@ -250,16 +221,11 @@
                                     <div class="show-item-onload margin-paragraph">
                                         <div class="font-yellow uppercase">Devisetty Jayaprada</div>
                                     </div>
-                                    <div class="show-item-onload">
-                                        <a href="mailto:djayaprada65@gmail.com" class="link-block w-inline-block">
-                                            <div class="uppercase">
-                                                <p style="color:white;">Mail Id:
-                                                </p>
-                                                djayaprada65@gmail.com
-                                            </div>
 
-                                        </a>
+                                    <div class="show-item-onload margin-paragraph">
+                                        <div class="font-yellow uppercase">G SURYA TEJA</div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -288,6 +254,7 @@
 @include('layouts.footer')
 <!-- footer end -->
 </div>
+
 <!-- FAQ's Page -->
 @include('layouts.faqs')
 <!-- FAQ's Page -->
@@ -295,10 +262,17 @@
 @include('layouts.registration')
 <!-- Registration Page -->
 
+<!-- CDRegistration -->
+@include('layouts.CDRegistration')
+<!-- CDRegistration -->
 
 <script src="{{asset('js/jquery-3.5.1.min.js')}}?site=5d70f6f0c8ca5de04b4392d5" type="text/javascript" crossorigin="anonymous"></script>
 <script src="{{asset('js/main-script.js')}}" type="text/javascript"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+
+</script>
 </body>
 
 </html>

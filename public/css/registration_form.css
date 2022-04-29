@@ -60,7 +60,19 @@ form .text .field a {
     text-decoration: none;
 }
 
+.w-form-done {
+    display: none;
+    padding: 20px;
+    text-align: center;
+    background-color: #a093ff;
+}
 
+.w-form-fail {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #de3b3b;
+}
 /* form .text .field a:hover {
     text-decoration: underline;
     width: 60px;
